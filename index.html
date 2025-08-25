@@ -1,159 +1,72 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>김시온 · 이력서 / Résumé</title>
-  <meta name="description" content="김시온의 포트폴리오와 이력서. 데이터 분석, 데이터 사이언스, 그리고 비즈니스 가치 창출에 집중합니다." />
-  <meta name="author" content="김시온" />
-  <meta property="og:title" content="김시온 · 이력서 / Résumé" />
-  <meta property="og:description" content="프로젝트, 기술 스택, 교육 및 자격 정보." />
-  <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://avatars.githubusercontent.com/u/000000?v=4" />
-  <meta property="og:url" content="https://sion1043.github.io/" />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
-  <style>
-    :root{
-      --bg:#0b0e14; --fg:#e6eaf2; --muted:#a7b0c0; --card:#121722; --accent:#7c9cff; --line:#243049;
-      --ink:#0b0e14; --paper:#ffffff;
-    }
-    @media (prefers-color-scheme: light){
-      :root{ --bg:#f7f8fb; --fg:#0b0e14; --muted:#4a5568; --card:#ffffff; --accent:#355cff; --line:#e8edf7; }
-    }
-    *{box-sizing:border-box}
-    html,body{margin:0;padding:0}
-    body{font-family:ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, "Noto Sans KR", Apple SD Gothic Neo, "Malgun Gothic", Arial, "Apple Color Emoji", "Segoe UI Emoji"; background:var(--bg); color:var(--fg); line-height:1.65}
-    a{color:var(--accent); text-decoration:none}
-    a:hover{text-decoration:underline}
-    .wrap{max-width:980px; margin:0 auto; padding:48px 20px}
-    header{display:flex; gap:24px; align-items:center; margin-bottom:28px}
-    header img{width:92px; height:92px; border-radius:20px; border:1px solid var(--line)}
-    .title h1{font-size:32px; margin:0 0 6px}
-    .title p{margin:0; color:var(--muted)}
-    .meta{display:flex; flex-wrap:wrap; gap:10px 16px; margin-top:10px; color:var(--muted); font-size:14px}
-    .grid{display:grid; grid-template-columns: 1.1fr 1fr; gap:20px}
-    @media (max-width:900px){ .grid{grid-template-columns:1fr} header{flex-direction:column; align-items:flex-start} }
-    section{background:var(--card); border:1px solid var(--line); padding:22px; border-radius:16px}
-    h2{margin:0 0 14px; font-size:20px}
-    h3{margin:0; font-size:16px}
-    .pill{display:inline-block; padding:6px 10px; border:1px solid var(--line); border-radius:999px; font-size:12px; color:var(--muted)}
-    .row{display:flex; justify-content:space-between; gap:12px}
-    .row .r{color:var(--muted); white-space:nowrap}
-    ul{margin:10px 0 0 18px}
-    .tags{display:flex; flex-wrap:wrap; gap:8px}
-    .tags span{font-size:12px; padding:6px 10px; border:1px solid var(--line); border-radius:999px; color:var(--muted)}
-    .kbd{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace; font-size:12px}
-    footer{margin-top:22px; color:var(--muted); font-size:13px; text-align:center}
-    .print-only{display:none}
-    @media print{
-      body{background:white; color:var(--ink)}
-      section{background:var(--paper); border-color:#ddd}
-      a{color:#0645ad}
-      header img{border:1px solid #ccc}
-      .print-only{display:block}
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>김시온 | 데이터 분석가</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="wrap">
-    <header>
-      <img src="https://avatars.githubusercontent.com/u/000000?v=4" alt="프로필" />
-      <div class="title">
-        <h1>김시온</h1>
-        <p>데이터 분석가, 데이터 사이언티스트</p>
-        <div class="meta">
-          <span>✉️ <a href="mailto:ksmon117@naver.com">ksmon117@naver.com</a></span>
-          <span>🌐 <a href="https://github.com/sion1043">github.com/sion1043</a></span>
-          <span>🔗 <a href="https://www.linkedin.com/in/%EC%8B%9C%EC%98%A8-%EA%B9%80-460786345/">LinkedIn</a></span>
-        </div>
-      </div>
-    </header>
+  <header>
+    <img src="profile.png" alt="프로필 이미지" class="profile-img" />
+    <h1>김시온</h1>
+    <p>데이터 분석가, 데이터 사이언티스트</p>
+    <p>
+      <a href="mailto:ksmon117@naver.com">ksmon117@naver.com</a> |
+      <a href="https://github.com/sion1043" target="_blank">github.com/sion1043</a>
+    </p>
+  </header>
 
-    <div class="grid">
-      <main class="left">
-        <section id="about">
-          <h2>소개</h2>
-          <p>
-            데이터 분석가이자 데이터 사이언티스트로서, 데이터를 분석하고 시각화하여 비즈니스 가치를 창출하는 데 목표를 두고 있습니다. 
-            데이터에서 인사이트를 발견하고, 이를 기반으로 의사결정을 지원하는 과정에서 큰 즐거움을 느낍니다.
-          </p>
-        </section>
+  <section>
+    <h2>소개</h2>
+    <p>데이터 분석가이자 데이터 사이언티스트로서, 데이터를 분석하고 시각화하여 비즈니스 가치를 창출하는 데 목표를 두고 있습니다. 데이터를 통해 인사이트를 발견하고, 이를 바탕으로 의사결정을 지원하는 과정에서 큰 즐거움을 느낍니다.</p>
+  </section>
 
-        <section id="projects">
-          <h2>프로젝트</h2>
-          <article>
-            <div class="row">
-              <h3>Steam 플랫폼 게임 성공요인 분석 및 시각화</h3>
-              <div class="r kbd">Python · SQL · Selenium · Databricks · Power BI</div>
-            </div>
-            <ul>
-              <li>Steam 플랫폼의 게임 데이터를 API와 크롤링을 통해 자동 수집 및 전처리 파이프라인 구축</li>
-              <li>게임 리뷰 감성 분석 및 성공·비성공 모델 분류</li>
-              <li>Power BI로 대시보드를 제작하여 인사이트 시각화</li>
-              <li>
-                <a href="https://github.com/sion1043/MS-DT-SCHOOL-1st-project-Steam" target="_blank">프로젝트 링크</a>
-              </li>
-            </ul>
-          </article>
-          <article>
-            <div class="row">
-              <h3>공항 출국 전 종합 서비스 앱/웹 (ROAD 2 AIR)</h3>
-              <div class="r kbd">Python · SQL · Power BI · Cosmos DB · Azure Stream Analytics · Azure ML</div>
-            </div>
-            <ul>
-              <li>실시간 공항 정보(출국장 혼잡도, 주차장, 지연 현황 등) 수집 파이프라인 설계 및 구현</li>
-              <li>Cosmos DB와 Stream Analytics를 통해 실시간 데이터 처리 및 시각화</li>
-              <li>Power BI로 대시보드 제작 및 Azure OpenAI를 활용한 챗봇 구현</li>
-            </ul>
-          </article>
-          <article>
-            <div class="row">
-              <h3>추가 프로젝트</h3>
-              <div class="r kbd">업데이트 예정</div>
-            </div>
-            <p>세 번째 프로젝트는 추후 업데이트 예정입니다.</p>
-          </article>
-        </section>
-      </main>
-
-      <aside class="right">
-        <section>
-          <h2>기술</h2>
-          <div class="tags">
-            <span>Python</span><span>MySQL</span><span>Oracle SQL</span><span>C</span><span>C++</span>
-            <span>Azure</span><span>Databricks</span><span>Power BI</span><span>GitHub</span>
-          </div>
-        </section>
-        <section>
-          <h2>교육</h2>
-          <ul>
-            <li>수원대학교 · 전자공학 졸업</li>
-            <li>서울 ICT 스퀘어 - AI(중급) 우수 수료</li>
-            <li>Microsoft · 대한상공회의소 - MS Data School 1st 수료</li>
-          </ul>
-        </section>
-        <section>
-          <h2>자격/수상</h2>
-          <ul>
-            <li>정보처리기사 취득</li>
-            <li>SQLD(SQL Developer) 취득</li>
-            <li>컴퓨터활용능력 2급 취득</li>
-            <li>OPIC IM1 취득</li>
-          </ul>
-        </section>
-      </aside>
+  <section>
+    <h2>프로젝트</h2>
+    <div class="project">
+      <h3>Steam 플랫폼 게임 성공요인 분석 및 시각화</h3>
+      <p class="stack">Python · SQL · Selenium · Databricks · Power BI</p>
+      <ul>
+        <li>Steam 플랫폼의 게임 데이터를 API와 크롤링을 통해 자동 수집 및 전처리 파이프라인 구축</li>
+        <li>게임 리뷰 감성 분석 및 성공/비성공 모델 분류</li>
+        <li>Power BI로 대시보드를 제작하여 인사이트 시각화</li>
+      </ul>
     </div>
+    <div class="project">
+      <h3>공항 혼잡도 분석 시스템 (ROAD 2 AIR)</h3>
+      <p class="stack">Python · SQL · Power BI · Cosmos DB · Azure Stream Analytics · Azure ML</p>
+      <ul>
+        <li>실시간 공항 정보(혼잡도, 주차장, 지연 현황 등) 수집 파이프라인 설계 및 구현</li>
+        <li>Cosmos DB & Stream Analytics로 실시간 데이터 처리 및 시각화</li>
+        <li>Power BI 대시보드 제작 및 Azure OpenAI를 활용한 챗봇 구현</li>
+        <li><a href="https://github.com/sion1043/MS-DT-SCHOOL-2nd-project-IncheonAirport" target="_blank">프로젝트 링크</a></li>
+      </ul>
+    </div>
+  </section>
 
-    <footer>
-      <div>© <span id="y"></span> 김시온 · 이력서. 마지막 업데이트: <span id="updated"></span></div>
-      <div class="print-only">이 페이지는 GitHub Pages에서 인쇄 최적화되었습니다.</div>
-    </footer>
-  </div>
-  <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    const d = new Date(document.lastModified);
-    const z = `${d.getFullYear()}.${String(d.getMonth()+1).padStart(2,'0')}.${String(d.getDate()).padStart(2,'0')}`;
-    document.getElementById('updated').textContent = z;
-  </script>
+  <section>
+    <h2>기술</h2>
+    <p>Python · MySQL · Oracle SQL · C++ · Azure · Databricks · Power BI · GitHub</p>
+  </section>
+
+  <section>
+    <h2>교육</h2>
+    <ul>
+      <li>수원대학교 - 전자공학 졸업</li>
+      <li>서울 ICT 스퀘어 - AI(중급) 우수 수료</li>
+      <li>Microsoft - 대한상공회의소 MS Data School 1st 수료</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>자격/수상</h2>
+    <ul>
+      <li>정보처리기사 취득</li>
+      <li>SQLD(SQL Developer) 취득</li>
+      <li>컴퓨터활용능력 2급 취득</li>
+      <li>OPIC IM1 취득</li>
+    </ul>
+  </section>
 </body>
 </html>
