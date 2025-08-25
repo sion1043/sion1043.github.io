@@ -4,69 +4,80 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>김시온 | 데이터 분석가</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
 </head>
-<body>
-  <header>
-    <img src="profile.png" alt="프로필 이미지" class="profile-img" />
-    <h1>김시온</h1>
-    <p>데이터 분석가, 데이터 사이언티스트</p>
-    <p>
-      <a href="mailto:ksmon117@naver.com">ksmon117@naver.com</a> |
-      <a href="https://github.com/sion1043" target="_blank">github.com/sion1043</a>
-    </p>
-  </header>
+<body class="bg-gray-900 text-gray-100 font-sans">
+  <div class="max-w-4xl mx-auto p-6">
+    <!-- Header -->
+    <header class="flex items-center space-x-6 mb-10">
+      <img src="profile.png" alt="프로필 이미지" class="w-24 h-24 rounded-full shadow-lg">
+      <div>
+        <h1 class="text-3xl font-bold">김시온</h1>
+        <p class="text-gray-400">데이터 분석가 · 데이터 사이언티스트</p>
+        <p class="mt-2 text-sm">
+          <a href="mailto:ksmon117@naver.com" class="underline">ksmon117@naver.com</a> ·
+          <a href="https://github.com/sion1043" target="_blank" class="underline">github.com/sion1043</a>
+        </p>
+      </div>
+    </header>
 
-  <section>
-    <h2>소개</h2>
-    <p>데이터 분석가이자 데이터 사이언티스트로서, 데이터를 분석하고 시각화하여 비즈니스 가치를 창출하는 데 목표를 두고 있습니다. 데이터를 통해 인사이트를 발견하고, 이를 바탕으로 의사결정을 지원하는 과정에서 큰 즐거움을 느낍니다.</p>
-  </section>
+    <!-- 소개 -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-4">소개</h2>
+      <p class="leading-relaxed">데이터 분석가이자 데이터 사이언티스트로서, 데이터를 분석하고 시각화하여 비즈니스 가치를 창출하는 데 목표를 두고 있습니다. 데이터를 통해 인사이트를 발견하고, 이를 바탕으로 의사결정을 지원하는 과정에서 큰 즐거움을 느낍니다.</p>
+    </section>
 
-  <section>
-    <h2>프로젝트</h2>
-    <div class="project">
-      <h3>Steam 플랫폼 게임 성공요인 분석 및 시각화</h3>
-      <p class="stack">Python · SQL · Selenium · Databricks · Power BI</p>
-      <ul>
-        <li>Steam 플랫폼의 게임 데이터를 API와 크롤링을 통해 자동 수집 및 전처리 파이프라인 구축</li>
-        <li>게임 리뷰 감성 분석 및 성공/비성공 모델 분류</li>
-        <li>Power BI로 대시보드를 제작하여 인사이트 시각화</li>
+    <!-- 프로젝트 -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-4">프로젝트</h2>
+      <div class="mb-6">
+        <h3 class="text-lg font-bold">Steam 플랫폼 게임 성공요인 분석 및 시각화</h3>
+        <p class="text-sm text-gray-400 mb-2">Python · SQL · Selenium · Databricks · Power BI</p>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li>Steam 플랫폼의 게임 데이터를 API와 크롤링을 통해 자동 수집 및 전처리 파이프라인 구축</li>
+          <li>게임 리뷰 감성 분석 및 성공/비성공 모델 분류</li>
+          <li>Power BI로 대시보드를 제작하여 인사이트 시각화</li>
+        </ul>
+        <a href="https://github.com/sion1043/Steam-Game-Analysis" class="text-blue-400 underline text-sm" target="_blank">프로젝트 링크</a>
+      </div>
+      <div>
+        <h3 class="text-lg font-bold">공항 혼잡도 분석 시스템 (ROAD 2 AIR)</h3>
+        <p class="text-sm text-gray-400 mb-2">Python · SQL · Power BI · Cosmos DB · Azure Stream Analytics · Azure ML</p>
+        <ul class="list-disc list-inside space-y-1 text-sm">
+          <li>실시간 공항 정보(혼잡도, 주차장, 지연 현황 등) 수집 파이프라인 설계 및 구현</li>
+          <li>Cosmos DB & Stream Analytics로 실시간 데이터 처리 및 시각화</li>
+          <li>Power BI 대시보드 제작 및 Azure OpenAI를 활용한 챗봇 구현</li>
+        </ul>
+        <a href="https://github.com/sion1043/MS-DT-SCHOOL-2nd-project-IncheonAirport" class="text-blue-400 underline text-sm" target="_blank">프로젝트 링크</a>
+      </div>
+    </section>
+
+    <!-- 기술 -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-4">기술</h2>
+      <p class="text-sm">Python · MySQL · Oracle SQL · C++ · Azure · Databricks · Power BI · GitHub</p>
+    </section>
+
+    <!-- 교육 -->
+    <section class="mb-8">
+      <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-4">교육</h2>
+      <ul class="list-disc list-inside text-sm space-y-1">
+        <li>수원대학교 - 전자공학 졸업</li>
+        <li>서울 ICT 스퀘어 - AI(중급) 우수 수료</li>
+        <li>Microsoft - 대한상공회의소 MS Data School 1st 수료</li>
       </ul>
-    </div>
-    <div class="project">
-      <h3>공항 혼잡도 분석 시스템 (ROAD 2 AIR)</h3>
-      <p class="stack">Python · SQL · Power BI · Cosmos DB · Azure Stream Analytics · Azure ML</p>
-      <ul>
-        <li>실시간 공항 정보(혼잡도, 주차장, 지연 현황 등) 수집 파이프라인 설계 및 구현</li>
-        <li>Cosmos DB & Stream Analytics로 실시간 데이터 처리 및 시각화</li>
-        <li>Power BI 대시보드 제작 및 Azure OpenAI를 활용한 챗봇 구현</li>
-        <li><a href="https://github.com/sion1043/MS-DT-SCHOOL-2nd-project-IncheonAirport" target="_blank">프로젝트 링크</a></li>
+    </section>
+
+    <!-- 자격/수상 -->
+    <section>
+      <h2 class="text-xl font-semibold border-b border-gray-700 pb-2 mb-4">자격/수상</h2>
+      <ul class="list-disc list-inside text-sm space-y-1">
+        <li>정보처리기사 취득</li>
+        <li>SQLD(SQL Developer) 취득</li>
+        <li>컴퓨터활용능력 2급 취득</li>
+        <li>OPIC IM1 취득</li>
       </ul>
-    </div>
-  </section>
-
-  <section>
-    <h2>기술</h2>
-    <p>Python · MySQL · Oracle SQL · C++ · Azure · Databricks · Power BI · GitHub</p>
-  </section>
-
-  <section>
-    <h2>교육</h2>
-    <ul>
-      <li>수원대학교 - 전자공학 졸업</li>
-      <li>서울 ICT 스퀘어 - AI(중급) 우수 수료</li>
-      <li>Microsoft - 대한상공회의소 MS Data School 1st 수료</li>
-    </ul>
-  </section>
-
-  <section>
-    <h2>자격/수상</h2>
-    <ul>
-      <li>정보처리기사 취득</li>
-      <li>SQLD(SQL Developer) 취득</li>
-      <li>컴퓨터활용능력 2급 취득</li>
-      <li>OPIC IM1 취득</li>
-    </ul>
-  </section>
+    </section>
+  </div>
 </body>
 </html>
