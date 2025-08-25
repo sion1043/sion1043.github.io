@@ -8,15 +8,17 @@
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;700&display=swap" rel="stylesheet">
   <style>
     body { font-family: 'Noto Sans KR', sans-serif; font-size: 1.25rem; }
+    section h2 { text-shadow: 1px 1px 2px #000; }
+    .project-content p, .list-content li { text-shadow: 0.5px 0.5px 1px #000; }
   </style>
 </head>
 <body class="bg-[#151d23] text-gray-100">
 
   <!-- Header -->
   <header class="max-w-5xl mx-auto py-12 px-6 flex flex-col md:flex-row items-center gap-8">
-    <img src="profile.png" alt="Profile" class="w-24 h-24 rounded-xl shadow-2xl border-4 border-gray-600" />
+    <img src="profile.png" alt="Profile" class="w-28 h-28 rounded-xl shadow-2xl border-4 border-gray-600" />
     <div>
-      <h1 class="text-5xl font-bold text-white mb-2">김시온</h1>
+      <h1 class="text-5xl font-extrabold text-white mb-2">김시온</h1>
       <p class="text-2xl text-blue-300">데이터 분석가 · 데이터 사이언티스트</p>
       <div class="flex gap-6 mt-4 text-blue-400 text-xl">
         <a href="mailto:ksmon117@naver.com" class="hover:underline">📧 Email</a>
@@ -32,8 +34,8 @@
     <div class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 transform hover:scale-105 transition-transform duration-300">
       <p class="leading-relaxed text-gray-200">
         데이터 분석가이자 데이터 사이언티스트로서, 데이터를 분석하고 시각화하며
-        비즈니스 가치를 창출하는 것에 집중합니다.  
-        데이터 속에서 유의미한 인사이트를 도출하고 이를 기반으로 의사결정을 지원하는 과정에서 깊은 몰입과 즐거움을 느낍니다.  
+        비즈니스 가치를 창출하는 것에 집중합니다.<br>
+        데이터 속에서 유의미한 인사이트를 도출하고 이를 기반으로 의사결정을 지원하는 과정에서 깊은 몰입과 즐거움을 느낍니다.<br>
         새로운 도전과 기술 습득을 즐기며, 비즈니스와 기술을 연결하는 가교 역할을 해내고자 합니다.
       </p>
     </div>
@@ -53,7 +55,7 @@
   <section class="max-w-5xl mx-auto px-6 mb-16">
     <h2 class="text-3xl font-bold text-blue-300 mb-4">교육</h2>
     <div class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 transform hover:scale-105 transition-transform duration-300">
-      <ul class="list-disc list-inside text-gray-200 leading-relaxed space-y-2">
+      <ul class="list-disc list-inside text-gray-200 leading-relaxed space-y-3 list-content">
         <li>
           수원대학교 - 전자공학과 학사 졸업
           <div class="text-sm text-gray-400">2018. 03. - 2025. 02.</div>
@@ -78,10 +80,11 @@
     <div class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 mb-10 transform hover:scale-105 transition-transform duration-300">
       <h3 class="text-2xl font-bold text-blue-200 mb-3">Steam 플랫폼 게임 성공요인 분석 및 시각화</h3>
       <p class="text-lg text-gray-300 mb-4">기술 스택: Python · SQL · Selenium · Databricks · Power BI</p>
-      <div class="space-y-4 leading-relaxed text-gray-200">
-        <p><strong>프로젝트 목적:</strong> Steam 플랫폼의 다양한 게임 데이터를 분석하여 성공 요인을 파악하고, 게임사들이 자사 게임의 차이점과 발전 방향을 모니터링할 수 있는 대시보드를 제작.</p>
-        <p><strong>비즈니스 모델:</strong> 무료/유료 모델로 설계, 무료 체험 후 유료 서비스로 확장 가능.</p>
-        <p><strong>프로젝트 내용:</strong> Steam API와 크롤링으로 리뷰·게임·유저 데이터를 대량 수집, Databricks 파이프라인으로 수집/전처리 자동화. 분석 후 Power BI로 시각화된 대시보드 제작하여 성공과 실패 패턴을 한눈에 파악 가능하게 구현. </p>
+      <div class="space-y-3 leading-relaxed text-gray-200 project-content">
+        <p>· Steam API와 크롤링으로 <strong>리뷰(리뷰 내용, 작성 날짜, 수정 날짜, 좋아요 수 등)</strong> · <strong>게임(장르, 출시일, 업데이트 날짜 등)</strong> · <strong>유저(총 리뷰 수, 보유 게임 수, 레벨, 프로필 공개여부 등)</strong> 데이터를 대량 수집</p>
+        <p>· Databricks 파이프라인으로 <strong>수집/전처리 자동화 및 메달리온 아키텍처 구성</strong></p>
+        <p>· 수집 데이터를 <strong>통계량 확인 및 검정, 리뷰 키워드 분석, 반복 검증</strong>을 통하여 분석 후 대시보드를 통해 보여줄 항목들 선정</p>
+        <p>· <strong>Power BI로 시각화된 대시보드 제작(리뷰 수정율, 리뷰 근황, 유저 종합, 리뷰 분류, 위험 리뷰, 유저 이탈 분석, 키워드 분석 트리)</strong>하여 성공과 실패 패턴을 한눈에 파악 가능하게 구현</p>
       </div>
       <a href="https://github.com/sion1043/MS-DT-SCHOOL-1st-project-Steam" target="_blank" class="block mt-4 text-blue-400 hover:underline">🔗 프로젝트 링크</a>
     </div>
@@ -90,10 +93,16 @@
     <div class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 mb-10 transform hover:scale-105 transition-transform duration-300">
       <h3 class="text-2xl font-bold text-blue-200 mb-3">공항 출국 전 종합 서비스 앱·웹 (ROAD 2 AIR)</h3>
       <p class="text-lg text-gray-300 mb-4">기술 스택: Python · SQL · Power BI · Cosmos DB · Azure Stream Analytics · Azure ML</p>
-      <div class="space-y-4 leading-relaxed text-gray-200">
-        <p><strong>프로젝트 목표:</strong> 출국 전 불편함을 한 번에 해결할 수 있는 실시간 데이터 기반 앱·웹 서비스 구축.</p>
-        <p><strong>비즈니스 모델:</strong> 공항, 항공사, 상업시설의 프로모션/광고 연계로 비즈니스 가치 실현.</p>
-        <p><strong>프로젝트 내용:</strong> Google Forms 설문 → 데이터 파이프라인 설계 → 인천공항 API와 Azure Function App으로 실시간 데이터 수집 → Azure Stream Analytics → Cosmos DB 저장 → Power BI 대시보드 시각화 → Azure OpenAI 챗봇과 카카오맵 API 내비게이션 통합. 다양한 접속 환경 고려하여 데스크탑, 모바일 환경 구축. 언어의 다양성을 고려하여 한국어, 영어, 일본어 등 추가 지원.</p>
+      <div class="space-y-3 leading-relaxed text-gray-200 project-content">
+        <p>· Google Forms를 통하여 <strong>설문을 진행해 실제 사용자들의 출국간에 느끼는 불편</strong>을 수집하여 필요한 서비스를 구상하고 전체적인 서비스 파이프라인 설계</p>
+        <p>· <strong>인천공항 API을 Azure Function App의 Time Trigger에 의해 실시간 데이터 수집</strong></p>
+        <p>· 데이터와 서비스의 실시간 성을 보장하기 위해 <strong>Azure Stream Analytics에서 쿼리를 통한 전처리 → Cosmos DB 저장(처리 속도가 빠르고, 갑작스런 처리량 증가에 대응성이 좋음)</strong></p>
+        <p>· <strong>Power BI 대시보드 시각화(의미체계의 Direct Query를 사용하여 실시간성 확보)</strong></p>
+        <p>· <strong>Azure OpenAI를 통해 통합 챗-봇 서비스 구현</strong></p>
+        <p>· <strong>카카오맵 API와 공항 내 상업 시설 데이터를 통한 내비게이션 서비스 구현</strong></p>
+        <p>· 모든 서비스를 <strong>하나의 웹, 앱에서 사용 가능하도록 Azure Static Web, App을 통해 UI 구현</strong></p>
+        <p>· 다양한 접속 환경 고려하여 <strong>데스크탑, 모바일 환경 구축</strong></p>
+        <p>· 언어의 다양성을 고려하여 <strong>한국어, 영어, 일본어 등 추가 지원</strong></p>
       </div>
       <a href="https://github.com/sion1043/MS-DT-SCHOOL-2nd-project-IncheonAirport" target="_blank" class="block mt-4 text-blue-400 hover:underline">🔗 프로젝트 링크</a>
     </div>
@@ -103,7 +112,7 @@
   <section class="max-w-5xl mx-auto px-6 mb-16">
     <h2 class="text-3xl font-bold text-blue-300 mb-4">자격 / 수상</h2>
     <div class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 transform hover:scale-105 transition-transform duration-300">
-      <ul class="list-disc list-inside text-gray-200 leading-relaxed space-y-2">
+      <ul class="list-disc list-inside text-gray-200 leading-relaxed space-y-3 list-content">
         <li>정보처리기사<div class="text-sm text-gray-400">2024. 06. 18</div></li>
         <li>SQLD (SQL Developer)<div class="text-sm text-gray-400">2024. 12. 13</div></li>
         <li>컴퓨터활용능력 2급<div class="text-sm text-gray-400">2024. 11. 01</div></li>
@@ -112,11 +121,11 @@
     </div>
   </section>
 
-  <!-- Overall -->
+  <!-- Work Philosophy -->
   <section class="max-w-5xl mx-auto px-6 mb-16">
     <h2 class="text-3xl font-bold text-blue-300 mb-4">업무 철학</h2>
     <div class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 transform hover:scale-105 transition-transform duration-300">
-      <ul class="list-disc list-inside text-gray-200 leading-relaxed space-y-2">
+      <ul class="list-disc list-inside text-gray-200 leading-relaxed space-y-3 list-content">
         <li>업무에 필요하다면 능숙하지 않은 분야라도 적극적으로 탐색하여 최적의 결과를 도출합니다. (특히 데이터 분석 관련 도메인 지식이 부족할 경우)</li>
         <li>회사 또는 팀의 프로세스와 문화를 개선하거나 발전시키려는 시도를 적극적으로 합니다.</li>
         <li>최신 기술만 맹목적으로 따르지 않고 상황에 맞는 최적 선택을 중시합니다.</li>
@@ -128,7 +137,7 @@
   <section class="max-w-5xl mx-auto px-6 mb-16">
     <h2 class="text-3xl font-bold text-blue-300 mb-4">커뮤니케이션</h2>
     <div class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 transform hover:scale-105 transition-transform duration-300">
-      <ul class="list-disc list-inside text-gray-200 leading-relaxed space-y-2">
+      <ul class="list-disc list-inside text-gray-200 leading-relaxed space-y-3 list-content">
         <li>포지션에 관계없이 적극적으로 생각을 표현하며, 다른 팀원의 의견을 편견 없이 경청하고 고려합니다.</li>
         <li>지적 겸손함을 유지하려 노력하며, 커뮤니케이션은 적은 것보다 많은 것이 좋다고 믿습니다.</li>
         <li>회의 주제에 대해 빠짐없이 준비하여 회의에 참여합니다.</li>
@@ -137,4 +146,9 @@
   </section>
 
   <!-- Footer -->
-  <footer
+  <footer class="max-w-5xl mx-auto px-6 py-10 text-gray-500 text-center">
+    © 2025 김시온. All rights reserved.
+  </footer>
+
+</body>
+</html>
