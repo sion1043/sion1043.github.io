@@ -10,14 +10,15 @@
     body { font-family: 'Noto Sans KR', sans-serif; font-size: 1.25rem; }
   </style>
 </head>
-<body class="bg-[#fdf6e3] text-gray-900">
+<body class="bg-[#151d23] text-gray-100">
+
   <!-- Header -->
   <header class="max-w-5xl mx-auto py-12 px-6 flex flex-col md:flex-row items-center gap-8">
-    <img src="profile.png" alt="Profile" class="w-40 h-40 rounded-full shadow-lg" />
+    <img src="profile.png" alt="Profile" class="w-48 h-48 rounded-xl shadow-lg border-4 border-gray-600" />
     <div>
-      <h1 class="text-5xl font-bold mb-2">김시온</h1>
-      <p class="text-2xl text-gray-700">데이터 분석가 · 데이터 사이언티스트</p>
-      <div class="flex gap-6 mt-4 text-blue-700 text-xl">
+      <h1 class="text-5xl font-bold text-white mb-2">김시온</h1>
+      <p class="text-2xl text-blue-300">데이터 분석가 · 데이터 사이언티스트</p>
+      <div class="flex gap-6 mt-4 text-blue-400 text-xl">
         <a href="mailto:ksmon117@naver.com" class="hover:underline">📧 Email</a>
         <a href="https://github.com/sion1043" target="_blank" class="hover:underline">💻 GitHub</a>
         <a href="https://linkedin.com" target="_blank" class="hover:underline">🔗 LinkedIn</a>
@@ -27,84 +28,102 @@
 
   <!-- About -->
   <section class="max-w-5xl mx-auto px-6 mb-16">
-    <h2 class="text-3xl font-bold border-b-4 border-gray-400 pb-2 mb-6">소개</h2>
-    <p class="leading-relaxed">
-      데이터 분석가이자 데이터 사이언티스트로서, 데이터를 분석하고 시각화하며
-      비즈니스 가치를 창출하는 것에 집중합니다.  
-      데이터 속에서 유의미한 인사이트를 도출하고 이를 기반으로
-      의사결정을 지원하는 과정에서 깊은 몰입과 즐거움을 느낍니다.
-    </p>
+    <div class="bg-[#253746] rounded-2xl shadow-lg p-8">
+      <h2 class="text-3xl font-bold text-blue-300 mb-6">소개</h2>
+      <p class="leading-relaxed text-gray-200">
+        데이터 분석가이자 데이터 사이언티스트로서, 데이터를 분석하고 시각화하며
+        비즈니스 가치를 창출하는 것에 집중합니다.  
+        데이터 속에서 유의미한 인사이트를 도출하고 이를 기반으로 의사결정을 지원하는 과정에서 깊은 몰입과 즐거움을 느낍니다.  
+        새로운 도전과 기술 습득을 즐기며, 비즈니스와 기술을 연결하는 가교 역할을 해내고자 합니다.
+      </p>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section class="max-w-5xl mx-auto px-6 mb-16">
+    <div class="bg-[#253746] rounded-2xl shadow-lg p-8">
+      <h2 class="text-3xl font-bold text-blue-300 mb-6">기술</h2>
+      <p class="text-gray-200 leading-relaxed">
+        Python · MySQL · Oracle SQL · C · C++ · GitHub · Power BI · Databricks · Selenium · Azure · Azure Functions · Azure Stream Analytics · Cosmos DB
+      </p>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section class="max-w-5xl mx-auto px-6 mb-16">
+    <div class="bg-[#253746] rounded-2xl shadow-lg p-8">
+      <h2 class="text-3xl font-bold text-blue-300 mb-6">교육</h2>
+      <ul class="list-disc list-inside text-gray-200 leading-relaxed">
+        <li>수학과 물리학 전공</li>
+        <li>서울 ICT 스쿨 - AI/딥러닝 과정 수료</li>
+        <li>Microsoft - 대한항공 AI 분석 과정 (MS Data School 1st) 수료</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Awards -->
+  <section class="max-w-5xl mx-auto px-6 mb-16">
+    <div class="bg-[#253746] rounded-2xl shadow-lg p-8">
+      <h2 class="text-3xl font-bold text-blue-300 mb-6">자격 / 수상</h2>
+      <ul class="list-disc list-inside text-gray-200 leading-relaxed">
+        <li>정보처리기사</li>
+        <li>SQLD (SQL Developer)</li>
+        <li>컴퓨터활용능력 2급</li>
+        <li>OPIC IM1</li>
+      </ul>
+    </div>
   </section>
 
   <!-- Projects -->
   <section class="max-w-5xl mx-auto px-6 mb-16">
-    <h2 class="text-3xl font-bold border-b-4 border-gray-400 pb-2 mb-6">프로젝트</h2>
+    <h2 class="text-3xl font-bold text-blue-300 mb-6">프로젝트</h2>
 
     <!-- Project 1 -->
-    <div class="bg-white rounded-2xl shadow-lg p-8 mb-10">
-      <h3 class="text-2xl font-bold text-blue-800 mb-3">
+    <div class="bg-[#253746] rounded-2xl shadow-lg p-8 mb-10">
+      <h3 class="text-2xl font-bold text-blue-200 mb-3">
         Steam 플랫폼 게임 성공요인 분석 및 시각화
       </h3>
-      <p class="text-lg text-gray-600 mb-4">기술 스택: Python · SQL · Selenium · Databricks · Power BI</p>
-      <div class="space-y-4 leading-relaxed">
+      <p class="text-lg text-gray-300 mb-4">기술 스택: Python · SQL · Selenium · Databricks · Power BI</p>
+      <div class="space-y-4 leading-relaxed text-gray-200">
         <p><strong>프로젝트 목적:</strong> Steam 플랫폼을 통해 유통되는 다양한 게임 데이터를 분석하고, 성공한 게임들의 특징을
-        파악하여 게임사들이 자사 게임과의 차이점과 발전 방향을 모니터링할 수 있는
-        종합 대시보드를 제작하는 것이 목표였습니다.</p>
+        파악하여 게임사들이 자사 게임과의 차이점과 발전 방향을 모니터링할 수 있는 종합 대시보드를 제작.</p>
 
-        <p><strong>비즈니스 모델:</strong> 대시보드는 <b>무료</b>와 <b>유료</b> 버전으로 구분하였습니다. 게임사들은 무료 버전을
-        사용해보고 더 많은 데이터와 인사이트를 필요로 할 경우 유료 버전을 구독하도록 설계했습니다.</p>
+        <p><strong>비즈니스 모델:</strong> 무료/유료 모델로 설계하여, 무료 대시보드로 체험 후
+        더 깊은 인사이트를 원할 경우 유료 서비스로 전환하도록 구성.</p>
 
         <p><strong>프로젝트 내용:</strong>  
-          Steam API와 웹 크롤링을 통해 리뷰 데이터(작성 날짜, 반응, 감성 분석),
-          게임 데이터(장르, 순위, 업데이트 내역), 유저 데이터(플레이 시간, 보유 게임 수, 리뷰 수)를 수집하였습니다.  
-          Databricks의 파이프라인을 통해 데이터 수집·전처리·병합 과정을 자동화하였으며, 분석 결과를 기반으로 성공과
-          비성공 게임을 분류하고, Power BI로 직관적이고 시각화된 대시보드를 제작하였습니다.
+          Steam API와 크롤링으로 리뷰·게임·유저 데이터를 대량 수집, Databricks 파이프라인으로 수집/전처리 자동화.  
+          분석 후 Power BI로 시각화된 대시보드 제작하여 성공과 실패 패턴을 한눈에 파악 가능하게 구현.
         </p>
       </div>
       <a href="https://github.com/sion1043/MS-DT-SCHOOL-1st-project-Steam"
          target="_blank"
-         class="block mt-4 text-blue-600 text-lg hover:underline">
+         class="block mt-4 text-blue-400 hover:underline">
         🔗 프로젝트 링크
       </a>
     </div>
 
     <!-- Project 2 -->
-    <div class="bg-white rounded-2xl shadow-lg p-8 mb-10">
-      <h3 class="text-2xl font-bold text-blue-800 mb-3">
+    <div class="bg-[#253746] rounded-2xl shadow-lg p-8 mb-10">
+      <h3 class="text-2xl font-bold text-blue-200 mb-3">
         공항 출국 전 종합 서비스 앱·웹 (ROAD 2 AIR)
       </h3>
-      <p class="text-lg text-gray-600 mb-4">기술 스택: Python · SQL · Power BI · Cosmos DB · Azure Stream Analytics · Azure ML</p>
-      <div class="space-y-4 leading-relaxed">
-        <p><strong>프로젝트 목표:</strong> 출국 전 공항 이용자가 겪는 다양한 불편함 — 언제 출발해야 할지, 항공편 지연 여부, 공항 내 길찾기, 주차장 정보, 신속한 수속 등 — 을
-        한 번에 해결할 수 있는 앱과 웹 플랫폼을 구현했습니다.</p>
+      <p class="text-lg text-gray-300 mb-4">기술 스택: Python · SQL · Power BI · Cosmos DB · Azure Stream Analytics · Azure ML</p>
+      <div class="space-y-4 leading-relaxed text-gray-200">
+        <p><strong>프로젝트 목표:</strong> 출국 전의 다양한 불편함을 한 번에 해결할 수 있는
+        실시간 데이터 기반 앱·웹 서비스 구축.</p>
 
-        <p><strong>비즈니스 모델:</strong> 공항에서 제공하는 공식 앱·웹 서비스로, 항공사와의 제휴를 통해 항공권 프로모션과 광고를 진행하며,
-        공항 내 상업시설과의 협력을 통한 추가 수익 모델을 설계했습니다.</p>
+        <p><strong>비즈니스 모델:</strong> 공항과 항공사, 상업시설의 프로모션·광고 연계로 비즈니스 가치 실현.</p>
 
         <p><strong>프로젝트 내용:</strong>  
-          Google Forms 설문을 통해 사용자 불편 사항을 조사하고 이를 기반으로 서비스 파이프라인을 기획했습니다.  
-          인천공항의 다양한 API(상업시설, 주차 현황, 출국장 혼잡도, 항공 운항 정보, 환율 등)를 <b>Azure Function App</b>으로 주기적으로 수집하고,
-          실시간성이 중요한 혼잡도·지연 데이터는 <b>Azure Stream Analytics</b>로 처리하여 빠르고 안정적인 응답 속도를 구현했습니다.  
-          모든 데이터는 <b>Cosmos DB</b>에 저장해 빠르고 유연한 확장성을 지원했습니다.  
-          또한 <b>Power BI</b>로 실시간 대시보드를 제작하여 항공편 정보, 도착지 날씨, 환율, 출국장 혼잡도, 실시간 주차 현황 등
-          출국 전 필요한 모든 정보를 한눈에 확인할 수 있도록 구성했습니다.  
-          추가로 <b>Azure OpenAI</b> 기반 챗봇과 카카오맵 API 연동 내비게이션 서비스를 구현하여,
-          사용자가 텍스트나 음성 입력을 통해 쉽고 빠르게 필요한 정보를 얻도록 했습니다.
+          Google Forms 설문으로 니즈 조사 → 데이터 파이프라인 설계 → 인천공항 API와 Azure Function App으로 실시간 데이터 수집 → Azure Stream Analytics로 빠른 쿼리 처리 → Cosmos DB에 저장 및 Power BI 대시보드 시각화 → Azure OpenAI 챗봇과 카카오맵 API를 활용한 길찾기 내비게이션 통합.
         </p>
       </div>
-    </div>
-
-    <!-- Project 3 -->
-    <div class="bg-white rounded-2xl shadow-lg p-8">
-      <h3 class="text-2xl font-bold text-blue-800 mb-3">추가 프로젝트</h3>
-      <p class="text-gray-700 leading-relaxed">
-        세 번째 프로젝트는 현재 준비 중이며, 곧 업데이트될 예정입니다.
-      </p>
     </div>
   </section>
 
   <!-- Footer -->
-  <footer class="text-center text-gray-600 text-lg py-6">
+  <footer class="text-center text-gray-400 text-lg py-6">
     © 2025 김시온 · 마지막 업데이트: 2025.08.25
   </footer>
 </body>
