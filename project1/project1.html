@@ -267,13 +267,52 @@
     
     <!-- 문제 상황 발생 및 해결 -->
     <h2 class="text-3xl font-bold text-blue-200 mb-4">문제 상황 발생 및 해결</h2>
-    <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-      <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
-        <li>Steam 리뷰 크롤링 시, 성인 인증/Steam 로그인 등 인증 문제 발생 → Selenium 자동화로 해결</li>
-        <li>데이터 병합 시 컬럼 불일치/결측치 발생 → 전처리 코드 개선 및 결측치 처리</li>
-        <li>리뷰 텍스트 분석 중 한글/영어 혼합 → 텍스트 전처리 표준화</li>
-      </ul>
+    <div class="space-y-6">
+      
+      <!-- 문제 1 -->
+      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+        <h3 class="text-xl font-semibold text-blue-200 mb-2">1. 데이터 선정 문제</h3>
+        <p class="text-gray-300 mb-1"><strong>문제:</strong> E-commerce 데이터 부족 및 출처 불명 → 데이터셋 선정 어려움</p>
+        <p class="text-gray-300"><strong>해결:</strong> Steam 플랫폼 데이터 활용, 웹 크롤링 및 API로 리뷰 수집 → 사용자 피드백 기반 분석 가능</p>
+      </div>
+    
+      <!-- 문제 2 -->
+      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+        <h3 class="text-xl font-semibold text-blue-200 mb-2">2. 작업 효율 및 역할 분배 문제</h3>
+        <p class="text-gray-300 mb-1"><strong>문제:</strong> 다양한 접근 시도로 진행 지연</p>
+        <p class="text-gray-300"><strong>해결:</strong> 수집팀/분석팀 역할 분리 → 데이터 확보와 방향성 도출에 집중</p>
+      </div>
+    
+      <!-- 문제 3 -->
+      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+        <h3 class="text-xl font-semibold text-blue-200 mb-2">3. 데이터 수집 중 문제</h3>
+        <p class="text-gray-300 mb-1"><strong>문제:</strong> 요청 제한 발생, 이상치/공백/ASCII 그림 리뷰 등 예외 존재</p>
+        <p class="text-gray-300"><strong>해결:</strong> 요청량 및 슬립 시간 조절 → 게임 약 17,000개, 리뷰 약 22만 건 확보. 이상치/결측치 제거, 포맷 정리</p>
+      </div>
+    
+      <!-- 문제 4 -->
+      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+        <h3 class="text-xl font-semibold text-blue-200 mb-2">4. 성공/비성공 게임 정의 문제</h3>
+        <p class="text-gray-300 mb-1"><strong>문제:</strong> 명확한 기준 선정 어려움 (Steam Awards, 논문, 성과 지표 등)</p>
+        <p class="text-gray-300"><strong>해결:</strong> 최고 수익 & 최고 평가 게임 선정, 비교 대상으로 무작위 게임 → 분석 통해 기준 신뢰성 확보</p>
+      </div>
+    
+      <!-- 문제 5 -->
+      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+        <h3 class="text-xl font-semibold text-blue-200 mb-2">5. 모델링 성능 문제</h3>
+        <p class="text-gray-300 mb-1"><strong>문제:</strong> 로컬 하드웨어 제한 → F1 score 저하</p>
+        <p class="text-gray-300"><strong>해결:</strong> Colab Free로 일부 분류 성공, 전체 리뷰는 Databricks ML GPU 클러스터 활용 → 전체 데이터 분류 성공</p>
+      </div>
+    
+      <!-- 문제 6 -->
+      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+        <h3 class="text-xl font-semibold text-blue-200 mb-2">6. 수집 데이터 불균형</h3>
+        <p class="text-gray-300 mb-1"><strong>문제:</strong> 게임당 리뷰 200개 고정 → 리뷰 기간 불균형</p>
+        <p class="text-gray-300"><strong>해결:</strong> 대시보드에 기간 슬라이서 적용, 추후 리뷰 데이터 확장 가능</p>
+      </div>
+    
     </div>
+
 
     <!-- 기대 효과 -->
     <h2 class="text-3xl font-bold text-blue-200 mb-4">기대 효과</h2>
