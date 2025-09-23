@@ -10,6 +10,9 @@
     img.section-img { @apply rounded-2xl shadow-lg my-6 mx-auto transition hover:shadow-2xl hover:scale-105; object-fit: contain; }
     img.gallery-img { @apply rounded-xl shadow-md mx-auto transition hover:shadow-xl hover:scale-105; object-fit: contain; }
     .hover-box:hover { @apply scale-105 shadow-2xl transition; }
+    h2::before {
+      content: "📌 ";
+    }
   </style>
 </head>
 <body class="bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100">
@@ -71,6 +74,7 @@
     <h2 class="text-3xl font-bold text-blue-200 mb-6">팀원 구성 및 역할</h2>
     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xl text-gray-300">
+        <!-- 팀원 카드 반복 -->
         <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
           <h3 class="font-bold mb-2">김시온</h3>
           <ul class="list-disc list-inside">
@@ -141,7 +145,7 @@
     </div>
 
     <!-- 데이터 수집 -->
-    <h2 class="text-3xl font-bold text-blue-200 mb-4">📊 데이터 수집</h2>
+    <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 수집</h2>
     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
       <img src="collect_pl.png" alt="데이터 수집 구조도" class="section-img" />
       <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
@@ -153,7 +157,7 @@
     </div>
 
     <!-- 데이터 전처리 -->
-    <h2 class="text-3xl font-bold text-blue-200 mb-4">🧹 데이터 전처리</h2>
+    <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 전처리</h2>
     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
       <img src="dataflow_pl.png" alt="데이터 전처리 흐름도" class="section-img w-4/5" />
       <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
@@ -166,45 +170,36 @@
     </div>
 
     <!-- 데이터 분석 -->
-    <h2 class="text-3xl font-bold text-blue-200 mb-4">🔎 데이터 분석</h2>
+    <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 분석</h2>
     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 space-y-10">
       <img src="anal_pl.png" alt="데이터 분석 구조도" class="section-img" />
-
-
-
       <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
         <li>분석과 통계를 통한 전체 게임 중 상위 게임 선정: 상위게임 추천 리뷰 비율 ≥ 77%</li>
         <li>날짜별 리뷰 개수 분포, 출시년도, 가격, 할인율</li>
         <li>유저 리뷰 커뮤니케이션 활성도 분석 (답글, 반응, 좋아요/싫어요)</li>
         <li>상위 게임과 일반 게임 비교: 리뷰 수정율, 리뷰 답변수, 2주간 플레이 시간 등 컬럼 비교</li>
         <li>상위 게임 긍정적 컬럼 비율 ↑, 부정적 컬럼 비율 ↓</li>
-      <div class="flex flex-col md:flex-row gap-6">
-        <img src="success_game.png" class="section-img w-1/2" alt="상위게임 지표" />
-        <div class="flex flex-col gap-4 w-1/2">
-          <img src="success_game1.png" class="gallery-img w-full" />
-          <img src="success_game2.png" class="gallery-img w-full" />
+        <div class="flex flex-col md:flex-row gap-6">
+          <img src="success_game.png" class="section-img w-1/2" alt="상위게임 지표" />
+          <div class="flex flex-col gap-4 w-1/2">
+            <img src="success_game1.png" class="gallery-img w-full" />
+            <img src="success_game2.png" class="gallery-img w-full" />
+          </div>
         </div>
-      </div>
-        
         <li>샘플 불균형 → 등분산성 위배, 정규성 가정 미충족 → 비모수 검정 수행</li>
         <li>반복 검증: 다른 조건에서도 동일 경향 확인 (수치형, 범주형, 시계열)</li>
       </ul>
-
       <img src="early_violin.png" class="section-img" alt="비모수 검정 결과" />
-
       <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
         <li>리뷰 기반 클러스터링 → RPG 장르 KPI: 높은 내러티브 몰입도</li>
         <li>허깅페이스 GTE Large 모델 적용 (<a href="https://huggingface.co/datasets/ilos-vigil/steam-review-aspect-dataset" class="text-blue-400 hover:underline">데이터셋 링크</a>)</li>
         <li>샘플 부족 → 키워드 9개 → 7개, Macro F1 63% → 87%</li>
       </ul>
       <img src="model.png" class="section-img mt-6" alt="모델 구조" />
-
     </div>
 
-
-        <!-- 대시보드 전체 -->
-    <h2 class="text-3xl font-bold text-blue-200 mb-4">📊 대시보드</h2>
-    
+    <!-- 대시보드 -->
+    <h2 class="text-3xl font-bold text-blue-200 mb-4">대시보드</h2>
     <div class="space-y-8">
       <!-- 시작 페이지 -->
       <div>
@@ -214,8 +209,7 @@
           <img src="dash1.png" alt="대시보드 1 - 시작 페이지" class="gallery-img w-full" />
         </div>
       </div>
-    
-      <!-- 무료 대시보드 -->
+      <!-- 유저 클러스터링 및 만족도 분석 -->
       <div>
         <h3 class="text-2xl font-semibold text-blue-300 mb-4">유저 클러스터링 및 만족도 분석</h3>
         <div class="space-y-6">
@@ -233,7 +227,6 @@
           </div>
         </div>
       </div>
-    
       <!-- 유료 대시보드 -->
       <div>
         <h3 class="text-2xl font-semibold text-blue-300 mb-4">유료 대시보드</h3>
@@ -262,57 +255,40 @@
       </div>
     </div>
 
-
-
-    
     <!-- 문제 상황 발생 및 해결 -->
     <h2 class="text-3xl font-bold text-blue-200 mb-4">문제 상황 발생 및 해결</h2>
     <div class="space-y-6">
-      
-      <!-- 문제 1 -->
       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
         <h3 class="text-xl font-semibold text-blue-200 mb-2">1. 데이터 선정 문제</h3>
         <p class="text-gray-300 mb-1"><strong>문제:</strong> E-commerce 데이터 부족 및 출처 불명 → 데이터셋 선정 어려움</p>
         <p class="text-gray-300"><strong>해결:</strong> Steam 플랫폼 데이터 활용, 웹 크롤링 및 API로 리뷰 수집 → 사용자 피드백 기반 분석 가능</p>
       </div>
-    
-      <!-- 문제 2 -->
       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
         <h3 class="text-xl font-semibold text-blue-200 mb-2">2. 작업 효율 및 역할 분배 문제</h3>
         <p class="text-gray-300 mb-1"><strong>문제:</strong> 다양한 접근 시도로 진행 지연</p>
         <p class="text-gray-300"><strong>해결:</strong> 수집팀/분석팀 역할 분리 → 데이터 확보와 방향성 도출에 집중</p>
       </div>
-    
-      <!-- 문제 3 -->
       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
         <h3 class="text-xl font-semibold text-blue-200 mb-2">3. 데이터 수집 중 문제</h3>
         <p class="text-gray-300 mb-1"><strong>문제:</strong> 요청 제한 발생, 이상치/공백/ASCII 그림 리뷰 등 예외 존재</p>
         <p class="text-gray-300"><strong>해결:</strong> 요청량 및 슬립 시간 조절 → 게임 약 17,000개, 리뷰 약 22만 건 확보. 이상치/결측치 제거, 포맷 정리</p>
       </div>
-    
-      <!-- 문제 4 -->
       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
         <h3 class="text-xl font-semibold text-blue-200 mb-2">4. 성공/비성공 게임 정의 문제</h3>
         <p class="text-gray-300 mb-1"><strong>문제:</strong> 명확한 기준 선정 어려움 (Steam Awards, 논문, 성과 지표 등)</p>
         <p class="text-gray-300"><strong>해결:</strong> 최고 수익 & 최고 평가 게임 선정, 비교 대상으로 무작위 게임 → 분석 통해 기준 신뢰성 확보</p>
       </div>
-    
-      <!-- 문제 5 -->
       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
         <h3 class="text-xl font-semibold text-blue-200 mb-2">5. 모델링 성능 문제</h3>
         <p class="text-gray-300 mb-1"><strong>문제:</strong> 로컬 하드웨어 제한 → F1 score 저하</p>
         <p class="text-gray-300"><strong>해결:</strong> Colab Free로 일부 분류 성공, 전체 리뷰는 Databricks ML GPU 클러스터 활용 → 전체 데이터 분류 성공</p>
       </div>
-    
-      <!-- 문제 6 -->
       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
         <h3 class="text-xl font-semibold text-blue-200 mb-2">6. 수집 데이터 불균형</h3>
         <p class="text-gray-300 mb-1"><strong>문제:</strong> 게임당 리뷰 200개 고정 → 리뷰 기간 불균형</p>
         <p class="text-gray-300"><strong>해결:</strong> 대시보드에 기간 슬라이서 적용, 추후 리뷰 데이터 확장 가능</p>
       </div>
-    
     </div>
-
 
     <!-- 기대 효과 -->
     <h2 class="text-3xl font-bold text-blue-200 mb-4">기대 효과</h2>
