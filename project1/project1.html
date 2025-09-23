@@ -192,14 +192,77 @@
       </ul>
 
       <img src="early_violin.png" class="section-img" alt="비모수 검정 결과" />
-      <p class="text-xl text-gray-300">
-        <li>리뷰 기반 클러스터링 → RPG 장르 KPI: 높은 내러티브 몰입도 </li>
-        <li>허깅페이스 GTE Large 모델 적용 (<a href="https://huggingface.co/datasets/ilos-vigil/steam-review-aspect-dataset" class="text-blue-400 hover:underline">데이터셋 링크</a>)  </li>
-        <li>샘플 부족 → 키워드 9개 → 7개, Macro F1 63% → 87%</li>
-      </p>
-      <img src="model.png" class="section-img" alt="모델 구조" />
+      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+        <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+          <li>리뷰 기반 클러스터링 → RPG 장르 KPI: 높은 내러티브 몰입도</li>
+          <li>허깅페이스 GTE Large 모델 적용 (<a href="https://huggingface.co/datasets/ilos-vigil/steam-review-aspect-dataset" class="text-blue-400 hover:underline">데이터셋 링크</a>)</li>
+          <li>샘플 부족 → 키워드 9개 → 7개, Macro F1 63% → 87%</li>
+        </ul>
+        <img src="model.png" class="section-img mt-6" alt="모델 구조" />
+      </div>
     </div>
 
+
+    <!-- 대시보드 -->
+    <h2 class="text-3xl font-bold text-blue-200 mb-4">📊 대시보드</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Dash 1 -->
+      <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-blue-200 mb-2">대시보드 1</h3>
+        <img src="dash1.png" alt="대시보드 1" class="gallery-img" />
+        <p class="text-gray-300 mt-2">게임별 리뷰 점수 분포 및 KPI 시각화</p>
+      </div>
+      <!-- Dash 2 -->
+      <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-blue-200 mb-2">대시보드 2</h3>
+        <img src="dash2.png" alt="대시보드 2" class="gallery-img" />
+        <p class="text-gray-300 mt-2">유저 클러스터링 및 만족도 분석</p>
+      </div>
+      <!-- Dash 3 -->
+      <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-blue-200 mb-2">대시보드 3</h3>
+        <img src="dash3.png" alt="대시보드 3" class="gallery-img" />
+        <p class="text-gray-300 mt-2">시간대별 리뷰 반응 및 상호작용 시각화</p>
+      </div>
+      <!-- Dash 4 -->
+      <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-blue-200 mb-2">대시보드 4</h3>
+        <img src="dash4.png" alt="대시보드 4" class="gallery-img" />
+        <p class="text-gray-300 mt-2">상위 게임과 일반 게임 비교 분석</p>
+      </div>
+      <!-- Dash 5 -->
+      <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-blue-200 mb-2">대시보드 5</h3>
+        <img src="dash5.png" alt="대시보드 5" class="gallery-img" />
+        <p class="text-gray-300 mt-2">리뷰 수정율 및 답변수 시각화</p>
+      </div>
+      <!-- Dash 6 -->
+      <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-blue-200 mb-2">대시보드 6</h3>
+        <img src="dash6.png" alt="대시보드 6" class="gallery-img" />
+        <p class="text-gray-300 mt-2">2주간 플레이 시간 분석</p>
+      </div>
+      <!-- Dash 7 -->
+      <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-blue-200 mb-2">대시보드 7</h3>
+        <img src="dash7.png" alt="대시보드 7" class="gallery-img" />
+        <p class="text-gray-300 mt-2">유저 리뷰 키워드 기반 내러티브 몰입도 분석</p>
+      </div>
+      <!-- Dash 8 -->
+      <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-blue-200 mb-2">대시보드 8</h3>
+        <img src="dash8.png" alt="대시보드 8" class="gallery-img" />
+        <p class="text-gray-300 mt-2">리뷰 클러스터링 결과 시각화</p>
+      </div>
+      <!-- Dash 9 -->
+      <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+        <h3 class="text-xl font-bold text-blue-200 mb-2">대시보드 9</h3>
+        <img src="dash9.png" alt="대시보드 9" class="gallery-img" />
+        <p class="text-gray-300 mt-2">전체 분석 결과 종합 KPI 대시보드</p>
+      </div>
+    </div>
+
+    
     <!-- 문제 상황 발생 및 해결 -->
     <h2 class="text-3xl font-bold text-blue-200 mb-4">문제 상황 발생 및 해결</h2>
     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
