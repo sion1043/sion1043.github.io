@@ -1,1 +1,94 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>프로젝트 2 | ROAD 2 AIR</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+    img.section-img { @apply rounded-2xl shadow-lg my-6 mx-auto transition hover:shadow-2xl hover:scale-105; object-fit: contain; }
+    img.gallery-img { @apply rounded-xl shadow-md mx-auto transition hover:shadow-xl hover:scale-105; object-fit: contain; }
+    .hover-box:hover { @apply scale-105 shadow-2xl transition; }
+    h2::before { content: "📌 "; }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100">
 
+  <!-- Header -->
+  <header class="bg-gray-950 py-6 shadow-lg sticky top-0 z-50">
+    <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+      <a href="../index.html" class="text-blue-400 hover:underline">← 메인으로 돌아가기</a>
+    </div>
+  </header>
+
+  <!-- Intro -->
+  <section class="max-w-6xl mx-auto px-6 py-12 text-center">
+    <img src="road2air_logo.png" alt="ROAD 2 AIR 로고" class="mx-auto w-64 h-auto mb-8 drop-shadow-lg hover:scale-105 transition" />
+    <h1 class="text-5xl font-extrabold text-blue-200 mb-6">공항 출국 전 종합 서비스 앱·웹 (ROAD 2 AIR)</h1>
+    <div class="flex flex-wrap justify-center gap-3">
+      <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">Python</span>
+      <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">SQL</span>
+      <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">Power BI</span>
+      <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">Cosmos DB</span>
+      <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">Azure Stream Analytics</span>
+      <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">Azure ML</span>
+    </div>
+    <p class="text-gray-400 mt-6 text-lg">📅 2025.07 - 2025.08 (약 1개월) | 👥 팀원 5명</p>
+    <p class="text-gray-400 text-lg">👉 역할: 데이터 수집·분석 파이프라인 구축, Power BI 대시보드 시각화</p>
+  </section>
+
+  <!-- Main Content -->
+  <main class="max-w-6xl mx-auto px-6 space-y-16">
+
+    <!-- 프로젝트 개요 -->
+    <h2 class="text-3xl font-bold text-blue-200 mb-4">프로젝트 개요</h2>
+    <div class="hover-box bg-gradient-to-r from-[#243c4a] via-[#1c2d36] to-[#1e3644] rounded-3xl shadow-2xl p-10">
+      <p class="text-xl text-gray-300">
+        출국 전 불편함을 한 번에 해결할 수 있는 실시간 데이터 기반 앱·웹 서비스 구축
+      </p>
+    </div>
+
+    <!-- 비즈니스 모델 -->
+    <h2 class="text-3xl font-bold text-blue-200 mb-4">비즈니스 모델</h2>
+    <div class="hover-box bg-gradient-to-r from-[#243c4a] via-[#1c2d36] to-[#1e3644] rounded-3xl shadow-2xl p-10">
+      <p class="text-xl text-gray-300">
+        공항, 항공사, 상업시설의 프로모션/광고 연계로 비즈니스 가치 실현
+      </p>
+    </div>
+
+    <!-- 서비스 차별점 -->
+    <h2 class="text-3xl font-bold text-blue-200 mb-4">서비스 차별점</h2>
+    <div class="hover-box bg-gradient-to-r from-[#243c4a] via-[#1c2d36] to-[#1e3644] rounded-3xl shadow-2xl p-10">
+      <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+        <li>다양한 접속환경 및 언어 지원</li>
+        <li>실시간 대시보드 및 네비게이션 제공</li>
+        <li>통합 챗봇 서비스 (Azure OpenAI + STT 지원)</li>
+      </ul>
+    </div>
+
+    <!-- 프로젝트 내용 -->
+    <h2 class="text-3xl font-bold text-blue-200 mb-4">프로젝트 내용</h2>
+    <div class="hover-box bg-gradient-to-r from-[#243c4a] via-[#1c2d36] to-[#1e3644] rounded-3xl shadow-2xl p-10 space-y-6">
+      <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+        <li>Google Forms 설문을 통해 실제 사용자 불편 수집 → 서비스 구상</li>
+        <li>인천공항 API를 Azure Function App(Time Trigger)으로 실시간 데이터 수집</li>
+        <li>Azure Stream Analytics 전처리 후 Cosmos DB 저장</li>
+        <li>Power BI Direct Query로 실시간 대시보드 시각화</li>
+        <li>Azure OpenAI 기반 통합 챗봇 서비스 구현</li>
+        <li>카카오맵 API + 공항 상업 시설 데이터 → 내비게이션 서비스 구축</li>
+        <li>Azure Static Web/App으로 웹·앱 UI 구현</li>
+        <li>다국어 지원 (한국어, 영어, 일본어 등)</li>
+      </ul>
+    </div>
+
+    <!-- 대시보드 (예시) -->
+    <h2 class="text-3xl font-bold text-blue-200 mb-4">대시보드 (시각화 예시)</h2>
+    <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+      <img src="road2air_dashboard.png" alt="ROAD 2 AIR 대시보드 예시" class="gallery-img w-full" />
+      <p class="text-gray-400 text-center mt-4">Power BI 실시간 대시보드 시각화 예시</p>
+    </div>
+
+  </main>
+</body>
+</html>
