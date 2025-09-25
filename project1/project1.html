@@ -1,187 +1,308 @@
 <!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>프로젝트 1 | Steam 플랫폼 게임 성공요인 분석</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
-        img.section-img { @apply rounded-2xl shadow-lg my-6 mx-auto transition hover:shadow-2xl hover:scale-105; object-fit: contain; }
-        img.gallery-img { @apply rounded-xl shadow-md mx-auto transition hover:shadow-xl hover:scale-105; object-fit: contain; }
-        .hover-box:hover { @apply scale-105 shadow-2xl transition; }
-        h2::before {
-            content: "📌 ";
-        }
-        .image-caption {
-            @apply text-sm text-gray-500 mt-2 text-center;
-        }
-    </style>
-</head>
-<body class="bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100">
+ <html lang="ko">
+ <head>
+   <meta charset="UTF-8" />
+   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <title>프로젝트 1 | Steam 플랫폼 게임 성공요인 분석</title>
+   <script src="https://cdn.tailwindcss.com"></script>
+   <style>
+     body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; }
+     img.section-img { @apply rounded-2xl shadow-lg my-6 mx-auto transition hover:shadow-2xl hover:scale-105; object-fit: contain; }
+     img.gallery-img { @apply rounded-xl shadow-md mx-auto transition hover:shadow-xl hover:scale-105; object-fit: contain; }
+     .hover-box:hover { @apply scale-105 shadow-2xl transition; }
+     h2::before {
+       content: "📌 ";
+     }
+   </style>
+ </head>
+ <body class="bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100">
 
-    <header class="bg-gray-950 py-6 shadow-lg sticky top-0 z-50">
-        <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
-            <a href="../index.html" class="text-blue-400 hover:underline">← 메인으로 돌아가기</a>
-        </div>
-    </header>
+   <header class="bg-gray-950 py-6 shadow-lg sticky top-0 z-50">
+     <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
+       <a href="../index.html" class="text-blue-400 hover:underline">← 메인으로 돌아가기</a>
+     </div>
+   </header>
 
-    <section class="max-w-6xl mx-auto px-6 py-12 text-center">
-        <img src="logo.png" alt="프로젝트 로고" class="mx-auto w-64 h-auto mb-8 drop-shadow-lg hover:scale-105 transition" />
-        <h1 class="text-5xl font-extrabold text-blue-200 mb-6">Steam 플랫폼 게임 성공요인 분석 및 시각화</h1>
-        <div class="flex flex-wrap justify-center gap-3">
-            <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition" style="margin-top: 10px;">Python</span>
-            <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition" style="margin-top: 10px;">SQL</span>
-            <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition" style="margin-top: 10px;">Selenium</span>
-            <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition" style="margin-top: 10px;">Databricks</span>
-            <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition" style="margin-top: 10px;">Power BI</span>
-        </div>
-        <p class="text-gray-400 mt-6 text-lg"> <strong>기간:</strong> 2025. 05 - 2025. 06 (약 1개월)</p>
-        <p class="text-gray-400 text-lg"> <strong>역할:</strong> 데이터 수집·분석 파이프라인 구축, Power BI 대시보드 시각화</p>
-    </section>
+   <section class="max-w-6xl mx-auto px-6 py-12 text-center">
+     <img src="logo.png" alt="프로젝트 로고" class="mx-auto w-64 h-auto mb-8 drop-shadow-lg hover:scale-105 transition" />
+     <h1 class="text-5xl font-extrabold text-blue-200 mb-6">Steam 플랫폼 게임 성공요인 분석 및 시각화</h1>
+     <div class="flex flex-wrap justify-center gap-3">
+       <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">Python</span>
+       <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">SQL</span>
+       <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">Selenium</span>
+       <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">Databricks</span>
+       <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">Power BI</span>
+     </div>
+     <p class="text-gray-400 mt-6 text-lg"> <strong>기간:</strong> 2025. 05 - 2025. 06 (약 1개월)</p>
+     <p class="text-gray-400 text-lg"> <strong>역할:</strong> 데이터 수집·분석 파이프라인 구축, Power BI 대시보드 시각화</p>
+   </section>
 
-    <main class="max-w-6xl mx-auto px-6 space-y-16">
+   <main class="max-w-6xl mx-auto px-6 space-y-16">
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">프로젝트 목표</h2>
-        <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-            <ul class="list-disc list-inside space-y-3 text-xl text-gray-300">
-                <li>Steam 게임의 성공 요인을 분석하여, 게임 개발 및 출시 전략 수립에 도움을 주는 인사이트를 도출하고, Power BI를 통해 시각화 대시보드를 구축하는 것입니다.</li>
-            </ul>
-        </div>
+     <h2 class="text-3xl font-bold text-blue-200 mb-4">프로젝트 목표</h2>
+     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+       <ul class="list-disc list-inside space-y-3 text-xl text-gray-300">
+         <li>게임 개발사 대상 리뷰 관리 및 운영 지원 B2B 대시보드 제공</li>
+         <li>Steam 리뷰 데이터 분석을 통해 게임의 성공 요인 도출</li>
+       </ul>
+     </div>
 
-        ---
+     <h2 class="text-3xl font-bold text-blue-200 mb-4">프로젝트 배경</h2>
+     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+       <ul class="list-disc list-inside space-y-3 text-xl text-gray-300">
+         <li>Steam 리뷰는 게임 품질·만족도·문제점·인기 등을 실시간 반영</li>
+         <li>리뷰 점수와 개수는 상점 노출·추천 알고리즘·판매량과 직결</li>
+         <li>유저 리뷰 데이터 관리는 게임의 성공과 지속성에 중요한 역할</li>
+       </ul>
+     </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">프로젝트 배경</h2>
-        <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-            <ul class="list-disc list-inside space-y-3 text-xl text-gray-300">
-                <li>Steam 플랫폼은 전 세계 PC 게임 시장의 70% 이상을 차지하는 거대 플랫폼입니다.</li>
-                <li>하루에도 수많은 게임이 출시되지만 대부분의 게임은 실패를 경험합니다.</li>
-                <li>성공 요인을 분석함으로써 게임 개발자들이 시장에서 성공할 수 있는 길을 제시하고자 합니다.</li>
-            </ul>
-        </div>
+     <h2 class="text-3xl font-bold text-blue-200 mb-4">프로젝트 필요성</h2>
+     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+       <ul class="list-disc list-inside space-y-3 text-xl text-gray-300">
+         <li>개발사와 유저 간 소통 채널 확보</li>
+         <li>리뷰 데이터 인사이트 도출로 성공 가능성 향상</li>
+         <li>리뷰 기반 게임 개선 및 업데이트 방향성 지원</li>
+         <li>리뷰 반응 추적을 통한 유저 니즈 파악</li>
+       </ul>
+     </div>
 
-        ---
+         <h2 class="text-3xl font-bold text-blue-200 mb-4">서비스 차별점</h2>
+     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+       <ul class="list-disc list-inside space-y-3 text-xl text-gray-300">
+         <li>리뷰 수정율, 위험 리뷰, 유저 이탈 분석 등 성공/실패 패턴을 직관적으로 볼 수 있는 지표 설계</li>
+         <li>크롤링 + API 결합으로 대용량의 데이터를 통한 신뢰성 확보</li>
+         <li>Power BI 대시보드로 시각적 직관성과 실시간 탐색성 강화</li>
+         <li>게임사·퍼블리셔가 전략적으로 활용할 수 있는 인사이트 제공</li>
+         <li>데이터 불균형을 보완하는 기간 슬라이서와 대시보드 상호작용 기능</li>
+         <li>마케팅 팀이 없는 소규모 개발사도 인사이트를 얻고 보완할 수 있음</li>
+       </ul>
+     </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">전체 파이프라인</h2>
-        <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-            <img src="pipeline.png" alt="전체 파이프라인 구조도" class="section-img w-3/4" />
-        </div>
 
-        ---
+     <h2 class="text-3xl font-bold text-blue-200 mb-6">팀원 구성 및 역할</h2>
+     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xl text-gray-300">
+         <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
+           <h3 class="font-bold mb-2">김시온</h3>
+           <ul class="list-disc list-inside">
+             <li>Azure Resource Manager</li>
+             <li>데이터 수집 및 크롤링 환경 구축</li>
+             <li>Azure Databricks 파이프라인 설계</li>
+             <li>리뷰 데이터 크롤링 및 전처리</li>
+             <li>ERD 구조 및 데이터베이스 관리</li>
+             <li>Power BI 연동 및 대시보드 테스트</li>
+           </ul>
+         </div>
+         <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
+           <h3 class="font-bold mb-2">송누림</h3>
+           <ul class="list-disc list-inside">
+             <li>Project Leader</li>
+             <li>분석 주제 및 시나리오 기획</li>
+             <li>Feature 후보 도출 및 정리</li>
+             <li>EDA 진행</li>
+             <li>분석 인사이트 도출 및 공유</li>
+             <li>대시보드 항목 구성 및 발표자료 정리</li>
+           </ul>
+         </div>
+         <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
+           <h3 class="font-bold mb-2">김태연</h3>
+           <ul class="list-disc list-inside">
+             <li>Azure-Git, Resource Manager</li>
+             <li>리뷰 텍스트마이닝 및 모델링</li>
+             <li>감정 분석 모델 설계 및 테스트</li>
+             <li>리뷰데이터 Feature 도출 및 라벨링</li>
+             <li>데이터셋 GOLD 레이어 작성</li>
+             <li>Power BI 시각화 준비</li>
+           </ul>
+         </div>
+         <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
+           <h3 class="font-bold mb-2">김지민</h3>
+           <ul class="list-disc list-inside">
+             <li>Project Manager</li>
+             <li>Steam API 크롤링 구조 설계 및 리팩토링</li>
+             <li>리뷰데이터 수집 및 전처리 코드 제작</li>
+             <li>데이터 병합 및 Naming Convention 정의</li>
+             <li>데이터 분석 파이프라인 관리</li>
+             <li>발표자료 제작 지원</li>
+           </ul>
+         </div>
+         <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
+           <h3 class="font-bold mb-2">이민지</h3>
+           <ul class="list-disc list-inside">
+             <li>Git Resource Manager</li>
+             <li>유저 클러스터링 및 Feature 설계</li>
+             <li>Feature 후보군 통계 검증</li>
+             <li>리뷰데이터 전처리 및 분석</li>
+             <li>분석 인사이트 정리 및 공유</li>
+             <li>Power BI 시각화 기획</li>
+           </ul>
+         </div>
+         <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
+           <h3 class="font-bold mb-2">윤지찬</h3>
+           <ul class="list-disc list-inside">
+             <li>Azure Resource Manager</li>
+             <li>리뷰데이터 크롤링 테스트</li>
+             <li>API 수집 모듈 설계 및 코드 작성</li>
+             <li>데이터베이스 관리 및 ERD 작성 지원</li>
+             <li>데이터셋 전처리 지원</li>
+             <li>발표자료 내용 취합 및 최종 검수</li>
+           </ul>
+         </div>
+       </div>
+     </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 수집 및 전처리</h2>
-        <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-            <div class="flex flex-col md:flex-row gap-6 items-center">
-                <div class="w-full md:w-1/2">
-                    <img src="crawl.png" alt="셀레니움 웹 크롤링" class="gallery-img w-full" />
-                </div>
-                <div class="w-full md:w-1/2">
-                    <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
-                        <li><strong>데이터:</strong> Kaggle의 'Steam Store Games' 데이터셋을 기반으로 성공 게임의 특성을 파악했습니다.</li>
-                        <li><strong>추가 데이터 수집:</strong> 기존 데이터셋의 부족한 부분을 보완하기 위해 Selenium과 Requests를 이용해 약 1,100개의 게임에 대한 추가 데이터를 수집했습니다.</li>
-                        <li><strong>수집항목:</strong>
-                            <ul class="list-disc list-inside text-lg ml-6 space-y-1">
-                                <li>장르별 게임 순위</li>
-                                <li>게임별 태그 및 리뷰 수</li>
-                                <li>출시 후 첫 30일 간의 가격 변동</li>
-                                <li>한국어 지원 여부</li>
-                                <li>업적 수</li>
-                                <li>멀티플레이어 지원 여부</li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-            <div class="flex flex-col md:flex-row gap-6 mt-10">
-                <div class="w-full md:w-1/2">
-                    <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
-                        <li><strong>Databricks 활용:</strong> 수집된 데이터는 Azure Databricks에서 PySpark를 이용하여 클렌징, 정규화, 결측치 처리 등 전처리 작업을 수행했습니다.</li>
-                        <li><strong>SQL DB 저장:</strong> 최종 전처리된 데이터는 Azure SQL Database에 저장하여 Power BI와 연동했습니다.</li>
-                    </ul>
-                </div>
-                <div class="w-full md:w-1/2">
-                    <img src="proc.png" alt="데이터 전처리 흐름도" class="gallery-img w-full" />
-                </div>
-            </div>
-        </div>
+     <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 수집</h2>
+     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+       <img src="collect_pl.png" alt="데이터 수집 구조도" class="section-img" />
+       <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+         <li>Steam API & Selenium 활용</li>
+         <li>RPG 인기 게임 200 + 최고 평점 200 → Top-tier 선정</li>
+         <li>랜덤 샘플 1,000개 → Other 게임</li>
+         <li>최종 1,037개 게임 리뷰 200건씩 수집</li>
+       </ul>
+     </div>
 
-        ---
+     <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 전처리</h2>
+     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+       <img src="dataflow_pl.png" alt="데이터 전처리 흐름도" class="section-img w-4/5" />
+       <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+         <li>결측치 처리 (프로필 비공개, 플레이시간, 리뷰 작성 당시 플레이시간 결측)</li>
+         <li>비유효 데이터 삭제 (정식/얼리액세스 출시일 이전 리뷰 제거)</li>
+         <li>이상치 처리 (마지막 플레이 일자 1970년 1월 1일 → 삭제)</li>
+         <li>파생컬럼 생성</li>
+         <li>리뷰 텍스트 전처리: 영어/숫자 이외 → 제거, 이모지/URL/HTML/특수문자/구두점 제거, 유니코드 표준화, 공백 정리, 불용어 처리 등</li>
+       </ul>
+     </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 분석 및 시각화</h2>
-        <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-            <h3 class="text-2xl font-semibold text-blue-300 mb-4">Power BI 대시보드 구축</h3>
-            <div class="flex flex-col md:flex-row gap-6 mt-6">
-                <div class="w-full md:w-1/2">
-                    <img src="dashboard.png" alt="Power BI 대시보드" class="gallery-img w-full" />
-                </div>
-                <div class="w-full md:w-1/2">
-                    <img src="dashboard_2.png" alt="Power BI 대시보드 2" class="gallery-img w-full" />
-                </div>
-            </div>
-            <ul class="list-disc list-inside text-xl text-gray-300 space-y-2 mt-6">
-                <li>Power BI를 통해 Steam 게임의 성공 요인을 다각도로 분석할 수 있는 대시보드를 구축했습니다.</li>
-                <li><strong>주요 분석 항목:</strong>
-                    <ul class="list-disc list-inside text-lg ml-6 space-y-1">
-                        <li>장르, 태그, 가격, 리뷰 등 다양한 변수와 성공 여부의 상관관계</li>
-                        <li>게임 출시 후 30일 내 가격 변화가 판매량에 미치는 영향</li>
-                        <li>게임의 특성(싱글/멀티플레이, 업적 수 등)과 유저 평가의 관계</li>
-                    </ul>
-                </li>
-                <li>대시보드를 통해 직관적인 데이터 탐색과 인사이트 도출이 가능하도록 설계했습니다.</li>
-            </ul>
-        </div>
+     <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 분석</h2>
+     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 space-y-10">
+       <img src="anal_pl.png" alt="데이터 분석 구조도" class="section-img" />
+       <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+         <li>분석과 통계를 통한 전체 게임 중 상위 게임 선정: 상위게임 추천 리뷰 비율 ≥ 77%</li>
+         <li>날짜별 리뷰 개수 분포, 출시년도, 가격, 할인율</li>
+         <li>유저 리뷰 커뮤니케이션 활성도 분석 (답글, 반응, 좋아요/싫어요)</li>
+         <li>상위 게임과 일반 게임 비교: 리뷰 수정율, 리뷰 답변수, 2주간 플레이 시간 등 컬럼 비교</li>
+         <li>상위 게임 긍정적 컬럼 비율 ↑, 부정적 컬럼 비율 ↓</li>
+         <div class="flex flex-col md:flex-row gap-6">
+           <img src="success_game.png" class="section-img w-1/2" alt="상위게임 지표" />
+           <div class="flex flex-col gap-4 w-1/2">
+             <img src="success_game1.png" class="gallery-img w-full" />
+             <img src="success_game2.png" class="gallery-img w-full" />
+           </div>
+         </div>
+         <li>샘플 불균형 → 등분산성 위배, 정규성 가정 미충족 → 비모수 검정 수행</li>
+         <li>반복 검증: 다른 조건에서도 동일 경향 확인 (수치형, 범주형, 시계열)</li>
+       </ul>
+       <img src="early_violin.png" class="section-img" alt="비모수 검정 결과" />
+       <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+         <li>리뷰 기반 클러스터링 → RPG 장르 KPI: 높은 내러티브 몰입도</li>
+         <li>허깅페이스 GTE Large 모델 적용 (<a href="https://huggingface.co/datasets/ilos-vigil/steam-review-aspect-dataset" class="text-blue-400 hover:underline">데이터셋 링크</a>)</li>
+         <li>샘플 부족 → 키워드 9개 → 7개, Macro F1 63% → 87%</li>
+       </ul>
+       <img src="model.png" class="section-img mt-6" alt="모델 구조" />
+     </div>
 
-        ---
+     <h2 class="text-3xl font-bold text-blue-200 mb-4">대시보드</h2>
+     <div class="space-y-8">
+       <div>
+         <h3 class="text-2xl font-semibold text-blue-300 mb-4">시작 페이지</h3>
+         <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+           <h4 class="text-xl font-bold text-blue-200 mb-2">게임별 리뷰 점수 분포 및 KPI 시각화</h4>
+           <img src="dash1.png" alt="대시보드 1 - 시작 페이지" class="gallery-img w-full" />
+         </div>
+       </div>
+       <div>
+         <h3 class="text-2xl font-semibold text-blue-300 mb-4">무료 대시보드</h3>
+         <div class="space-y-6">
+           <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+             <h4 class="text-xl font-bold text-blue-200 mb-2">홈페이지</h4>
+             <img src="dash2.png" alt="대시보드 2 - 홈페이지" class="gallery-img w-full" />
+           </div>
+           <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+             <h4 class="text-xl font-bold text-blue-200 mb-2">리뷰 수정율 페이지</h4>
+             <img src="dash3.png" alt="대시보드 3 - 리뷰 수정율 페이지" class="gallery-img w-full" />
+           </div>
+           <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+             <h4 class="text-xl font-bold text-blue-200 mb-2">리뷰 근황 페이지</h4>
+             <img src="dash4.png" alt="대시보드 4 - 리뷰 근황 페이지" class="gallery-img w-full" />
+           </div>
+         </div>
+       </div>
+       <div>
+         <h3 class="text-2xl font-semibold text-blue-300 mb-4">유료 대시보드</h3>
+         <div class="space-y-6">
+           <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+             <h4 class="text-xl font-bold text-blue-200 mb-2">유저 총합 페이지</h4>
+             <img src="dash5.png" alt="대시보드 5 - 유저 총합 페이지" class="gallery-img w-full" />
+           </div>
+           <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+             <h4 class="text-xl font-bold text-blue-200 mb-2">리뷰 분류 페이지</h4>
+             <img src="dash6.png" alt="대시보드 6 - 리뷰 분류 페이지" class="gallery-img w-full" />
+           </div>
+           <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+             <h4 class="text-xl font-bold text-blue-200 mb-2">위험 리뷰 페이지</h4>
+             <img src="dash7.png" alt="대시보드 7 - 위험 리뷰 페이지" class="gallery-img w-full" />
+           </div>
+           <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+             <h4 class="text-xl font-bold text-blue-200 mb-2">유저 이탈 분석 페이지</h4>
+             <img src="dash8.png" alt="대시보드 8 - 유저 이탈 분석 페이지" class="gallery-img w-full" />
+           </div>
+           <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
+             <h4 class="text-xl font-bold text-blue-200 mb-2">키워드 분석 트리 페이지</h4>
+             <img src="dash9.png" alt="대시보드 9 - 키워드 분석 트리 페이지" class="gallery-img w-full" />
+           </div>
+         </div>
+       </div>
+     </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">분석 결과 및 인사이트</h2>
-        <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-            <ul class="list-disc list-inside text-xl text-gray-300 space-y-4">
-                <li><strong>장르별 성공:</strong> 분석 결과, 액션, 인디, 어드벤처 장르가 가장 많은 성공 게임을 배출했습니다. 특히 인디 장르는 높은 성장 잠재력을 보여주었습니다.</li>
-                <li><strong>가격 전략:</strong> 출시 후 30일 이내에 가격을 내리는 게임들이 상대적으로 더 많은 판매량을 기록하는 경향을 발견했습니다. 이는 초기 할인 프로모션이 게임의 인지도를 높이는 데 효과적임을 시사합니다.</li>
-                <li><strong>태그 및 리뷰:</strong> 'Survival', 'Horror', 'Pixel Graphics'와 같은 특정 태그가 성공적인 게임에 자주 등장했습니다. 또한 긍정적인 리뷰가 많을수록 판매량이 증가하는 강력한 상관관계를 확인했습니다.</li>
-                <li><strong>한국 시장:</strong> 한국어 지원 여부가 한국 지역 판매량에 직접적인 영향을 미치는 것으로 나타났습니다.</li>
-            </ul>
-            <div class="flex flex-col md:flex-row gap-6 mt-10">
-                <div class="w-full md:w-1/2">
-                    <img src="bi1_steam.png" alt="분석 결과 1" class="gallery-img w-full" />
-                </div>
-                <div class="w-full md:w-1/2">
-                    <img src="bi2_steam.png" alt="분석 결과 2" class="gallery-img w-full" />
-                </div>
-            </div>
-        </div>
+     <h2 class="text-3xl font-bold text-blue-200 mb-4">문제 상황 발생 및 해결</h2>
+     <div class="space-y-6">
+       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+         <h3 class="text-xl font-semibold text-blue-200 mb-2">1. 데이터 선정 문제</h3>
+         <p class="text-gray-300 mb-1"><strong>문제:</strong> E-commerce 데이터 부족 및 출처 불명 → 데이터셋 선정 어려움</p>
+         <p class="text-gray-300"><strong>해결:</strong> Steam 플랫폼 데이터 활용, 웹 크롤링 및 API로 리뷰 수집 → 사용자 피드백 기반 분석 가능</p>
+       </div>
+       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+         <h3 class="text-xl font-semibold text-blue-200 mb-2">2. 작업 효율 및 역할 분배 문제</h3>
+         <p class="text-gray-300 mb-1"><strong>문제:</strong> 다양한 접근 시도로 진행 지연</p>
+         <p class="text-gray-300"><strong>해결:</strong> 수집팀/분석팀 역할 분리 → 데이터 확보와 방향성 도출에 집중</p>
+       </div>
+       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+         <h3 class="text-xl font-semibold text-blue-200 mb-2">3. 데이터 수집 중 문제</h3>
+         <p class="text-gray-300 mb-1"><strong>문제:</strong> 요청 제한 발생, 이상치/공백/ASCII 그림 리뷰 등 예외 존재</p>
+         <p class="text-gray-300"><strong>해결:</strong> 요청량 및 슬립 시간 조절 → 게임 약 17,000개, 리뷰 약 22만 건 확보. 이상치/결측치 제거, 포맷 정리</p>
+       </div>
+       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+         <h3 class="text-xl font-semibold text-blue-200 mb-2">4. 성공/비성공 게임 정의 문제</h3>
+         <p class="text-gray-300 mb-1"><strong>문제:</strong> 명확한 기준 선정 어려움 (Steam Awards, 논문, 성과 지표 등)</p>
+         <p class="text-gray-300"><strong>해결:</strong> 최고 수익 & 최고 평가 게임 선정, 비교 대상으로 무작위 게임 → 분석 통해 기준 신뢰성 확보</p>
+       </div>
+       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+         <h3 class="text-xl font-semibold text-blue-200 mb-2">5. 모델링 성능 문제</h3>
+         <p class="text-gray-300 mb-1"><strong>문제:</strong> 로컬 하드웨어 제한 → F1 score 저하</p>
+         <p class="text-gray-300"><strong>해결:</strong> Colab Free로 일부 분류 성공, 전체 리뷰는 Databricks ML GPU 클러스터 활용 → 전체 데이터 분류 성공</p>
+       </div>
+       <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
+         <h3 class="text-xl font-semibold text-blue-200 mb-2">6. 수집 데이터 불균형</h3>
+         <p class="text-gray-300 mb-1"><strong>문제:</strong> 게임당 리뷰 200개 고정 → 리뷰 기간 불균형</p>
+         <p class="text-gray-300"><strong>해결:</strong> 대시보드에 기간 슬라이서 적용, 추후 리뷰 데이터 확장 가능</p>
+       </div>
+     </div>
 
-        ---
+     <h2 class="text-3xl font-bold text-blue-200 mb-4">기대 효과</h2>
+     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+       <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+         <li>게임 개발사: 리뷰 기반 KPI 파악 및 개선 전략 수립 가능</li>
+         <li>유저: 피드백 반영 게임 개선 → 만족도 상승</li>
+         <li>프로젝트 결과: 분석-모델-대시보드 일괄 제공 → B2B 서비스 구현</li>
+       </ul>
+     </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">문제 상황 발생 및 해결</h2>
-        <div class="space-y-6">
-            <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
-                <h3 class="text-xl font-semibold text-blue-200 mb-2">1. 한글 인코딩 문제</h3>
-                <p class="text-gray-300 mb-1"><strong>문제:</strong> 크롤링한 한글 태그와 게임 제목이 깨져서 저장되는 문제 발생</p>
-                <p class="text-gray-300"><strong>해결:</strong> Selenium의 ChromeOptions에서 `disable-gpu`, `no-sandbox`, `disable-dev-shm-usage` 옵션을 추가하여 UTF-8 인코딩을 강제 적용하고, 데이터 저장 시 인코딩을 명시하여 해결했습니다.</p>
-            </div>
-            <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
-                <h3 class="text-xl font-semibold text-blue-200 mb-2">2. Databricks 라이브러리 설치 문제</h3>
-                <p class="text-gray-300 mb-1"><strong>문제:</strong> Databricks에서 Selenium, Requests 등 필요한 라이브러리 설치 실패</p>
-                <p class="text-gray-300"><strong>해결:</strong> 클러스터 라이브러리 설정에서 `pip install` 명령어를 사용하여 각 라이브러리를 직접 설치하여 해결했습니다.</p>
-            </div>
-        </div>
+   </main>
 
-        ---
+   <footer class="max-w-6xl mx-auto px-6 py-10 text-center text-gray-400">
+     <p>© 2025 김시온 Portfolio | <a href="../index.html" class="text-blue-400 hover:underline">메인으로 돌아가기</a></p>
+   </footer>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">기대 효과</h2>
-        <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-            <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
-                <li>데이터 기반 의사결정을 통해 게임 개발사의 성공 가능성을 높이는 데 기여할 수 있습니다.</li>
-                <li>새로운 게임 출시 전략 수립에 필요한 구체적이고 실용적인 인사이트를 제공합니다.</li>
-                <li>Steam 게임 시장의 트렌드 변화를 지속적으로 모니터링하고 예측하는 기반을 마련합니다.</li>
-            </ul>
-        </div>
-    </main>
-
-    <footer class="max-w-6xl mx-auto px-6 py-10 text-center text-gray-400">
-        <p>© 2025 김시온 Portfolio | <a href="../index.html" class="text-blue-400 hover:underline">메인으로 돌아가기</a></p>
-    </footer>
-
-</body>
-</html>
+ </body>
+ </html>
