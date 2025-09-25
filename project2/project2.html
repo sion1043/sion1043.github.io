@@ -35,6 +35,10 @@
             <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">Python</span>
             <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">RAG</span>
             <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition">K-means</span>
+            <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition" style="margin-top: 10px;">SQL</span>
+            <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition" style="margin-top: 10px;">Cosmos DB</span>
+            <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition" style="margin-top: 10px;">Azure Stream Analytics</span>
+            <span class="px-4 py-2 bg-gray-700 rounded-full text-xl text-gray-200 hover:bg-gray-600 transition" style="margin-top: 10px;">Azure ML</span>
         </div>
         <p class="text-gray-400 mt-6 text-lg"> <strong>기간:</strong> 2025. 05 - 2025. 06 (약 1개월)</p>
         <p class="text-gray-400 text-lg"> <strong>역할:</strong> 데이터 기반 공항 이용객 문제 해결 서비스 개발</p>
@@ -102,6 +106,7 @@
                         <li>데이터 수집, 파이프 라인</li>
                         <li>Power BI, Azure ML</li>
                         <li>챗-봇 서비스(RAG)</li>
+                        <li>데이터 분석</li>
                     </ul>
                 </div>
                 <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
@@ -123,7 +128,7 @@
                     <h3 class="font-bold mb-2">심형은</h3>
                     <ul class="list-disc list-inside">
                         <li>데이터 수집, ML</li>
-                        <li>서비스 기획, 사용자 분석</li>
+                        <li>서비스 기획, 데이터 분석</li>
                     </ul>
                 </div>
                 <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
@@ -224,26 +229,63 @@
             </ul>
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xl text-gray-300">
                 <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
-                    <h3 class="font-bold mb-2">시간 효율 중시 출장러</h3>
-                    <ul class="list-disc list-inside text-lg">
-                        <li>항공 지연 우려 -> 지연 항공 알림</li>
-                        <li>공항까지 소요시간 불확실 -> 최적 경로 안내: 우리집-공항</li>
-                        <li>주차위치, 잔여석 불확실 -> 공항 주차장 정보</li>
-                    </ul>
+                    <h3 class="font-bold mb-2 text-center">시간 효율 중시 출장러</h3>
+                    <div class="flex flex-col md:flex-row justify-between">
+                        <div class="w-full md:w-1/2">
+                            <h4 class="font-bold text-blue-200 mb-2">불만사항</h4>
+                            <ul class="list-disc list-inside text-lg">
+                                <li>항공 지연 우려</li>
+                                <li>공항까지 소요시간 불확실</li>
+                                <li>주차위치, 잔여석 불확실</li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h4 class="font-bold text-blue-200 mb-2">필요한 서비스</h4>
+                            <ul class="list-disc list-inside text-lg">
+                                <li>지연 항공 알림</li>
+                                <li>최적 경로 안내: 우리집-공항</li>
+                                <li>공항 주차장 정보</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
-                    <h3 class="font-bold mb-2">케어 안심형 여행자</h3>
-                    <ul class="list-disc list-inside text-lg">
-                        <li>아이/노약자 동행, 앱 조작 및 시설 찾기 어려움 -> 챗봇 서비스+음성 입력</li>
-                        <li>필요한 정보를 한 번에 보기를 원함 -> 한 눈에 보는 공항 대시보드</li>
-                    </ul>
+                    <h3 class="font-bold mb-2 text-center">케어 안심형 여행자</h3>
+                    <div class="flex flex-col md:flex-row justify-between">
+                        <div class="w-full md:w-1/2">
+                            <h4 class="font-bold text-blue-200 mb-2">불만사항</h4>
+                            <ul class="list-disc list-inside text-lg">
+                                <li>앱 조작, 시설 찾기 어려움 (아이/노약자 동행)</li>
+                                <li>필요한 정보를 한 번에 보기를 원함</li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h4 class="font-bold text-blue-200 mb-2">필요한 서비스</h4>
+                            <ul class="list-disc list-inside text-lg">
+                                <li>챗봇 서비스 + 음성 입력</li>
+                                <li>한 눈에 보는 공항 대시보드</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
                 <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
-                    <h3 class="font-bold mb-2">찍고 공유하는 탐험가</h3>
-                    <ul class="list-disc list-inside text-lg">
-                        <li>항공 지연 시 할거리/볼거리 부족 -> 챗봇 서비스+외국어 기능</li>
-                        <li>포토존, 맛집, SNS용 찍을거리 필요 -> 최적 경로 안내: 공항 내 포토존, 맛집</li>
-                    </ul>
+                    <h3 class="font-bold mb-2 text-center">찍고 공유하는 탐험가</h3>
+                    <div class="flex flex-col md:flex-row justify-between">
+                        <div class="w-full md:w-1/2">
+                            <h4 class="font-bold text-blue-200 mb-2">불만사항</h4>
+                            <ul class="list-disc list-inside text-lg">
+                                <li>항공 지연 시 할거리/볼거리 부족</li>
+                                <li>포토존, 맛집, SNS용 찍을거리 필요</li>
+                            </ul>
+                        </div>
+                        <div class="w-full md:w-1/2">
+                            <h4 class="font-bold text-blue-200 mb-2">필요한 서비스</h4>
+                            <ul class="list-disc list-inside text-lg">
+                                <li>챗봇 서비스 + 외국어 기능</li>
+                                <li>최적 경로 안내: 공항 내 포토존, 맛집</li>
+                            </ul>
+                        </div>
+                    </div>
                 </div>
             </div>
             <h3 class="text-2xl font-semibold text-blue-300 mb-4 mt-10">2. 인천공항 데이터 기반 검증</h3>
@@ -260,17 +302,17 @@
                 <h3 class="text-2xl font-semibold text-blue-300 mb-4">서비스 1. AI 챗-봇</h3>
                 <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
                     <h4 class="text-xl font-bold text-blue-200 mb-2">AI 챗-봇 서비스</h4>
-                    <img src="aicb1.png" alt="AI 챗-봇 구조" class="gallery-img w-full" />
+                    <img src="aicb1.png" alt="AI 챗-봇 구조" class="gallery-img w-1/2" />
                     <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mt-4">
                         <li>기존 cosmos DB에 저장된 데이터를 벡터 임베딩하여 다른 컨테이너에 저장했습니다.</li>
                         <li>Azure open ai에서 GPT-4.1-mini 모델을 사용하여 챗-봇을 구현했습니다.</li>
                     </ul>
-                    <img src="aicb2.png" alt="챗-봇 서비스 화면" class="gallery-img w-full mt-4" />
+                    <img src="aicb2.png" alt="챗-봇 서비스 화면" class="gallery-img w-1/2 mt-4" />
                     <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mt-4">
                         <li>사용자가 Static Web App의 UI에 질문을 입력하면 Azure Functions의 HTTP 트리거로 전달됩니다.</li>
                         <li>사용자의 질문을 text-embedding-3-small 모델로 벡터화하여 Cosmos DB에 저장된 벡터들과 cos 유사도 기반으로 검색합니다.</li>
                     </ul>
-                    <img src="aicb3.png" alt="챗-봇 응답" class="gallery-img w-full mt-4" />
+                    <img src="aicb3.png" alt="챗-봇 응답" class="gallery-img w-1/2 mt-4" />
                     <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mt-4">
                         <li>생성된 응답을 Azure Function에서 다시 Static Web App로 반환하여 사용자에게 응답 출력됩니다.</li>
                     </ul>
@@ -344,7 +386,7 @@
                 <h3 class="text-2xl font-semibold text-blue-300 mb-4">서비스 3. 공항 길찾기</h3>
                 <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
                     <h4 class="text-xl font-bold text-blue-200 mb-2">메인 페이지</h4>
-                    <img src="navi1.png" alt="길찾기 메인 페이지" class="gallery-img w-full" />
+                    <img src="navi1.png" alt="길찾기 메인 페이지" class="gallery-img w-1/2" />
                     <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mt-4">
                         <li>공항 내 상업시설 데이터와 kakao map api, T-map api를 통하여 공항 내, 외에서 길찾기 기능을 제공합니다.</li>
                     </ul>
@@ -377,12 +419,12 @@
                 <h3 class="text-2xl font-semibold text-blue-300 mb-4">서비스 4. 지연 항공 알림 서비스</h3>
                 <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
                     <h4 class="text-xl font-bold text-blue-200 mb-2">지연 항공 알림</h4>
-                    <img src="delay1.png" alt="지연 항공 알림 구조" class="gallery-img w-full" />
+                    <img src="delay1.png" alt="지연 항공 알림 구조" class="gallery-img w-1/2" />
                     <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mt-4">
                         <li>실시간 항공편 및 기상 데이터를 사용했습니다.</li>
                         <li>Timer Trigger Function이 지연 항공편 데이터를 감지하여 Teams Webhook으로 실시간 알림을 전송합니다.</li>
                     </ul>
-                    <img src="delay2.png" alt="Azure 논리 앱" class="gallery-img w-full mt-4" />
+                    <img src="delay2.png" alt="Azure 논리 앱" class="gallery-img w-1/2 mt-4" />
                     <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mt-4">
                         <li>논리 앱(Logic APP)이 Teams에 메시지를 감지하여 Cosmos DB에 저장합니다.</li>
                     </ul>
