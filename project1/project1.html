@@ -153,7 +153,7 @@
 
      <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 수집</h2>
      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-       <img src="collect_pl.png" alt="데이터 수집 구조도" class="section-img" />
+       <img src="collect_pl.png" alt="데이터 수집 구조도" class="section-img w-full" />
        <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
          <li>Steam API & Selenium 활용</li>
          <li>RPG 인기 게임 200 + 최고 평점 200 → Top-tier 선정</li>
@@ -164,7 +164,7 @@
 
      <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 전처리</h2>
      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-       <img src="dataflow_pl.png" alt="데이터 전처리 흐름도" class="section-img w-4/5" />
+       <img src="dataflow_pl.png" alt="데이터 전처리 흐름도" class="section-img w-full" />
        <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
          <li>결측치 처리 (프로필 비공개, 플레이시간, 리뷰 작성 당시 플레이시간 결측)</li>
          <li>비유효 데이터 삭제 (정식/얼리액세스 출시일 이전 리뷰 제거)</li>
@@ -176,7 +176,7 @@
 
      <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 분석</h2>
      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 space-y-10">
-       <img src="anal_pl.png" alt="데이터 분석 구조도" class="section-img" />
+       <img src="anal_pl.png" alt="데이터 분석 구조도" class="section-img w-full" />
        <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
          <li>분석과 통계를 통한 전체 게임 중 상위 게임 선정: 상위게임 추천 리뷰 비율 ≥ 77%</li>
          <li>날짜별 리뷰 개수 분포, 출시년도, 가격, 할인율</li>
@@ -186,20 +186,20 @@
          <div class="flex flex-col md:flex-row gap-6">
            <img src="success_game.png" class="section-img w-1/2" alt="상위게임 지표" />
            <div class="flex flex-col gap-4 w-1/2">
-             <img src="success_game1.png" class="gallery-img w-full" />
-             <img src="success_game2.png" class="gallery-img w-full" />
+             <img src="success_game1.png" class="gallery-img w-3/4" />
+             <img src="success_game2.png" class="gallery-img w-3/4" />
            </div>
          </div>
          <li>샘플 불균형 → 등분산성 위배, 정규성 가정 미충족 → 비모수 검정 수행</li>
          <li>반복 검증: 다른 조건에서도 동일 경향 확인 (수치형, 범주형, 시계열)</li>
        </ul>
-       <img src="early_violin.png" class="section-img" alt="비모수 검정 결과" />
+       <img src="early_violin.png" class="section-img w-full" alt="비모수 검정 결과" />
        <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
          <li>리뷰 기반 클러스터링 → RPG 장르 KPI: 높은 내러티브 몰입도</li>
          <li>허깅페이스 GTE Large 모델 적용 (<a href="https://huggingface.co/datasets/ilos-vigil/steam-review-aspect-dataset" class="text-blue-400 hover:underline">데이터셋 링크</a>)</li>
          <li>샘플 부족 → 키워드 9개 → 7개, Macro F1 63% → 87%</li>
        </ul>
-       <img src="model.png" class="section-img mt-6" alt="모델 구조" />
+       <img src="model.png" class="section-img w-full" alt="모델 구조" />
      </div>
 
      <h2 class="text-3xl font-bold text-blue-200 mb-4">대시보드</h2>
