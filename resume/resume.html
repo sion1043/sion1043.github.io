@@ -20,14 +20,21 @@
     .job{margin-bottom:18px;padding:12px;border:1px solid #eee;border-radius:8px}
     .project{margin-bottom:18px;padding:12px;border-left:4px solid #187BB1;background:#fdfefe;border-radius:4px}
     hr{border:0;border-top:2px solid #187BB1;margin:12px 0 20px 0}
+    .copy-alert {display:none;position:absolute;background:#187BB1;color:white;padding:6px 12px;border-radius:6px;font-size:13px;}
+    .link {color:#187BB1;text-decoration:none;margin-right:12px;}
   </style>
 </head>
 <body>
   <div class="container">
     <header class="info">
       <h1>김시온 | 데이터 분석가 · 데이터 사이언티스트</h1>
-      <p>📧 Email: ksmon117@naver.com | 💻 GitHub: sion1043 | 🔗 LinkedIn: 시온-김-460786345</p>
       <hr />
+      <p>
+        📧 <span id="email" style="cursor:pointer;color:#187BB1;text-decoration:underline;">ksmon117@naver.com</span> |
+        💻 <a href="https://github.com/sion1043" target="_blank" class="link">GitHub</a> |
+        🔗 <a href="https://www.linkedin.com/in/시온-김-460786345" target="_blank" class="link">LinkedIn</a>
+      </p>
+      <div id="alert" class="copy-alert">복사되었습니다!</div>
     </header>
 
     <section class="section">
@@ -54,6 +61,37 @@
         <span class="tag">Azure Stream Analytics</span>
         <span class="tag">Cosmos DB</span>
       </div>
+
+      <h3>Python</h3>
+      <ul>
+        <li>Python(PyTorch) 활용 AI 연구 역량</li>
+        <li>Vision 딥러닝 모델 숙련도 및 사전학습 경험 (Transformer, ViT, CNN) / 석사과정</li>
+        <li>비디오 임베딩 딥러닝 모델 숙련도 (CLIP, VLM, Embedding) / 헥토</li>
+        <li>추천 시스템 딥러닝 모델 숙련도 (LightGCN, DeepFM) / 헥토</li>
+        <li>VLM 연구 대비 LLM 연구 및 파인튜닝 경험 (LoRA, PEFT, LLM) / 경연 참가</li>
+        <li>머신러닝과 딥러닝에 대한 수학적 이해와 통계적 지식 / ADsP 자격증</li>
+      </ul>
+
+      <h3>Power BI</h3>
+      <ul>
+        <li>실시간 대시보드 구축 및 Direct Query 활용</li>
+        <li>데이터 시각화 및 KPI 기반 분석 경험</li>
+        <li>대용량 데이터 분석 결과 시각화 최적화</li>
+      </ul>
+
+      <h3>Databricks</h3>
+      <ul>
+        <li>파이프라인 기반 데이터 수집/전처리 자동화</li>
+        <li>메달리온 아키텍처 기반 데이터 관리 경험</li>
+        <li>대규모 데이터 ETL 및 분석 경험</li>
+      </ul>
+
+      <h3>Azure</h3>
+      <ul>
+        <li>Azure Functions 기반 실시간 데이터 처리</li>
+        <li>Azure Stream Analytics 활용 이벤트 스트리밍 분석</li>
+        <li>Cosmos DB 및 Azure ML 연동 경험</li>
+      </ul>
     </section>
 
     <section class="section">
@@ -110,5 +148,19 @@
       </ul>
     </section>
   </div>
+
+  <script>
+    const emailEl = document.getElementById('email');
+    const alertEl = document.getElementById('alert');
+
+    emailEl.addEventListener('click', () => {
+      navigator.clipboard.writeText('ksmon117@naver.com').then(() => {
+        alertEl.style.display = 'block';
+        alertEl.style.top = (emailEl.offsetTop - 30) + 'px';
+        alertEl.style.left = emailEl.offsetLeft + 'px';
+        setTimeout(() => { alertEl.style.display = 'none'; }, 1500);
+      });
+    });
+  </script>
 </body>
 </html>
