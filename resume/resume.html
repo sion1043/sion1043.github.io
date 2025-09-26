@@ -6,7 +6,7 @@
   <title>김시온 | 데이터 분석가 · 데이터 사이언티스트</title>
   <style>
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#f9fafb;color:#111;line-height:1.6;margin:0;padding:20px}
-    .container{max-width:900px;margin:0 auto;background:#fff;padding:40px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.08);position:relative;z-index:1}
+    .container{max-width:900px;margin:0 auto;background:#fff;padding:40px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.08)}
     h1,h2,h3{margin:0 0 12px;color:#187BB1}
     h1{font-size:28px}
     h2{font-size:20px;margin-top:32px}
@@ -16,22 +16,23 @@
     li{margin-bottom:4px}
     .info{margin-bottom:20px}
     .section{margin-bottom:28px}
+    .tag{display:inline-block;background:#eef6fb;color:#187BB1;padding:4px 8px;border-radius:6px;margin:2px;font-size:13px}
     .job{margin-bottom:18px;padding:12px;border:1px solid #eee;border-radius:8px}
     .project{margin-bottom:18px;padding:12px;border-left:4px solid #187BB1;background:#fdfefe;border-radius:4px}
     hr{border:0;border-top:2px solid #187BB1;margin:12px 0 20px 0}
     .copy-alert {display:none;position:absolute;background:#187BB1;color:white;padding:6px 12px;border-radius:6px;font-size:13px;}
     .link {color:#187BB1;text-decoration:none;margin-right:12px;}
 
-    /* 스킬 알약 1.5배 확대 + 호버 */
+    /* 스킬 알약 호버 */
     .skill-pill {
       display: inline-block;
       background-color: #187BB1;
       color: white;
-      padding: 6px 18px;
-      border-radius: 30px;
-      font-size: 1.35rem;
-      margin: 4px 7px 4px 0;
-      transition: transform 0.2s, background-color 0.2s;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin: 3px 5px 3px 0;
+      transition: all 0.2s;
       cursor: default;
     }
     .skill-pill:hover {
@@ -39,39 +40,39 @@
       transform: scale(1.1);
     }
 
-    /* 사이드바 */
+    /* 좌측 사이드바 */
     .sidebar {
       position: fixed;
-      left: 10px;
-      top: 50%;
-      transform: translateY(-50%);
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 12px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-      z-index: 1000;
+      top: 50px;
+      left: 0;
+      width: 180px;
+      height: 100%;
+      background: #f0f4f8;
+      border-right: 1px solid #ddd;
+      padding: 20px;
+      box-sizing: border-box;
     }
-    .sidebar h3 {margin:0 0 8px 0; font-size:14px; color:#187BB1;}
+    .sidebar h3 {margin:0 0 12px 0; font-size:16px; color:#187BB1;}
+    .sidebar hr {border:0;border-top:1px solid #187BB1;margin:8px 0;}
     .sidebar a {
-      display: block;
-      margin-bottom: 6px;
-      color: #187BB1;
-      text-decoration: none;
-      font-weight: 500;
+      display:block;
+      margin:6px 0;
+      text-decoration:none;
+      color:#187BB1;
+      font-weight:500;
     }
-    .sidebar a:hover { text-decoration: underline; }
+    .sidebar a:hover { text-decoration:underline; }
 
-    /* 맨위로 버튼 1.5배 확대 */
+    /* 우측 맨위로 버튼 */
     .top-btn {
       position: fixed;
       right: 20px;
       bottom: 20px;
       background: #187BB1;
       color: white;
-      padding: 15px 24px;
+      padding: 12px 18px;
       border-radius: 50%;
-      font-size: 24px;
+      font-size: 20px;
       cursor: pointer;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       z-index: 1000;
@@ -82,17 +83,18 @@
 </head>
 <body>
 
-  <!-- 사이드바 -->
+  <!-- 좌측 사이드바 -->
   <div class="sidebar">
     <h3>목차</h3>
-    <a href="#intro">간략 소개</a>
-    <a href="#skills">핵심 역량</a>
-    <a href="#projects">프로젝트</a>
-    <a href="#education">학력/교육</a>
-    <a href="#certs">자격증/수상</a>
+    <hr/>
+    <a href="#intro">섹션1: 간략 소개</a>
+    <a href="#skills">섹션2: 핵심 역량</a>
+    <a href="#projects">섹션3: 프로젝트</a>
+    <a href="#education">섹션4: 학력/교육</a>
+    <a href="#certs">섹션5: 자격증/수상</a>
   </div>
 
-  <!-- 맨위로 버튼 -->
+  <!-- 우측 맨위로 버튼 -->
   <div class="top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</div>
 
   <div class="container">
@@ -102,8 +104,7 @@
       <p>
         📧 <span id="email" style="cursor:pointer;color:#187BB1;text-decoration:underline;">ksmon117@naver.com</span> |
         💻 <a href="https://github.com/sion1043" target="_blank" class="link">GitHub</a> |
-        🔗 <a href="https://www.linkedin.com/in/시온-김-460786345" target="_blank" class="link">LinkedIn</a> |
-        🌐 <a href="https://sion1043.github.io/" target="_blank" class="link">Portfolio</a>
+        🔗 <a href="https://www.linkedin.com/in/시온-김-460786345" target="_blank" class="link">LinkedIn</a>
       </p>
       <div id="alert" class="copy-alert">복사되었습니다!</div>
     </header>
@@ -135,7 +136,6 @@
         <span class="skill-pill">Azure Stream Analytics</span>
         <span class="skill-pill">Cosmos DB</span>
       </div>
-      <!-- 기존 나머지 내용 그대로 유지 -->
 
       <h2>Python · SQL</h2>
       <ul>
@@ -181,7 +181,7 @@
         <li>ML/DL 모델링과 데이터 파이프라인 설계 학습 및 실습</li>
         <li>최신 데이터 분석·클라우드 기술 트렌드 파악 및 개인 프로젝트를 통한 적용 경험</li>
       </ul>
-      
+
       <h2>도메인 지식 활용 및 협업 역량</h2>
       <ul>
         <li>금융, 게임, 클라우드 데이터 등 다양한 도메인 분석 경험</li>
@@ -209,7 +209,7 @@
           <li>Power BI로 시각화된 대시보드 제작 (리뷰 수정율, 리뷰 근황, 유저 종합, 리뷰 분류, 위험 리뷰, 유저 이탈 분석, 키워드 트리)</li>
         </ul>
       </div>
-    
+
       <div class="project">
         <h2>공항 출국 전 종합 서비스 앱·웹 (ROAD 2 AIR)</h2>
         <div class="skills">
@@ -233,7 +233,32 @@
           <li>웹·앱 UI 구현 및 다양한 접속환경 지원</li>
         </ul>
       </div>
+    </section>
 
+    <section class="section" id="education">
+      <h2>학력</h2>
+      <hr />
+      <p>수원대학교, 전자공학과 학사 (2018.03 ~ 2025.02)</p>
+
+      <h2>교육</h2>
+      <hr />
+      <ul>
+        <li>ICT 이노베이션 스퀘어 - AI(중급) 과정 우수 수료 (2023.07)</li>
+        <li>Microsoft, 대한상공회의소 - MS Data School 1st 수료 (2025.04 ~ 2025.09)</li>
+      </ul>
+    </section>
+
+    <section class="section" id="certs">
+      <h2>자격증 / 수상</h2>
+      <hr />
+      <ul>
+        <li>정보처리기사 (2024.06.18)</li>
+        <li>SQLD (2024.12.13)</li>
+        <li>DP-900 (2025.08.26)</li>
+        <li>OPIC IM1 (2024.07.21)</li>
+        <li>컴퓨터활용능력 2급 (2024.11.01)</li>
+      </ul>
+    </section>
   </div>
 
   <script>
