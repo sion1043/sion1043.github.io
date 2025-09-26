@@ -10,21 +10,46 @@
         img.section-img { @apply rounded-2xl shadow-lg my-6 mx-auto transition hover:shadow-2xl hover:scale-105; object-fit: contain; }
         img.gallery-img { @apply rounded-xl shadow-md mx-auto transition hover:shadow-xl hover:scale-105; object-fit: contain; }
         .hover-box:hover { @apply scale-105 shadow-2xl transition; }
-        h2::before {
+        /* h2::before {
             content: "📌 ";
-        }
+        } */
         .image-caption {
             @apply text-sm text-gray-500 mt-2 text-center;
+        }
+        /* 목차 스타일 */
+        .toc {
+            @apply bg-gray-900 text-gray-200 p-6 rounded-2xl mb-12 shadow-lg;
+        }
+        .toc a {
+            @apply block py-1 hover:text-blue-400 transition;
+        }
+        .back-to-top {
+            @apply fixed bottom-6 right-6 bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-500 transition cursor-pointer;
         }
     </style>
 </head>
 <body class="bg-gradient-to-b from-gray-900 to-gray-800 text-gray-100">
 
+    <!-- 포트폴리오 돌아가기 -->
     <header class="bg-gray-950 py-6 shadow-lg sticky top-0 z-50">
         <div class="max-w-6xl mx-auto px-6 flex items-center justify-between">
             <a href="../index.html" class="text-blue-400 hover:underline">← 메인으로 돌아가기</a>
         </div>
     </header>
+
+    <!-- 목차 -->
+    <section class="max-w-6xl mx-auto px-6 toc">
+        <h2 class="text-2xl font-bold text-blue-200 mb-4">목차</h2>
+        <a href="#project-goal">프로젝트 목표</a>
+        <a href="#project-background">프로젝트 배경</a>
+        <a href="#project-necessity">프로젝트 필요성</a>
+        <a href="#team-role">팀원 구성 및 역할</a>
+        <a href="#pipeline">전체 파이프라인</a>
+        <a href="#data-collection">데이터 수집</a>
+        <a href="#data-preprocessing">데이터 전처리</a>
+        <a href="#data-analysis">데이터 분석</a>
+        <a href="#services">서비스</a>
+    </section>
 
     <section class="max-w-6xl mx-auto px-6 py-12 text-center">
         <img src="logo.png" alt="프로젝트 로고" class="mx-auto w-64 h-auto mb-8 drop-shadow-lg hover:scale-105 transition" />
@@ -47,14 +72,14 @@
 
     <main class="max-w-6xl mx-auto px-6 space-y-16">
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">프로젝트 목표</h2>
+        <h2 id="project-goal" class="text-3xl font-bold text-blue-200 mb-4">프로젝트 목표</h2>
         <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
             <ul class="list-disc list-inside space-y-3 text-xl text-gray-300">
                 <li>공항 이용객들이 출국 전에 마주하는 다양한 문제들(길 찾기, 주차, 빠른 출국장 등)을 해결할 수 있는 올인원 서비스 제공</li>
             </ul>
         </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">프로젝트 배경</h2>
+        <h2 id="project-background" class="text-3xl font-bold text-blue-200 mb-4">프로젝트 배경</h2>
         <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
             <ul class="list-disc list-inside space-y-3 text-xl text-gray-300">
                 <li>인천공항은 연간 수천만 명이 이용하는 거대한 허브로, 다양한 고객의 요구를 충족시키는 것이 중요합니다.</li>
@@ -63,7 +88,7 @@
             </ul>
         </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">프로젝트 필요성</h2>
+        <h2 id="project-necessity" class="text-3xl font-bold text-blue-200 mb-4">프로젝트 필요성</h2>
         <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
             <ul class="list-disc list-inside space-y-3 text-xl text-gray-300">
                 <li>한국항공협회에 따르면 인천공항 이용객들이 활성화가 필요하다고 느끼는 요소 중 40%가 교통, 대기시간, 편의시설 개선이었습니다.</li>
@@ -98,7 +123,7 @@
             </div>
         </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-6">팀원 구성 및 역할</h2>
+        <h2 id="team-role" class="text-3xl font-bold text-blue-200 mb-6">팀원 구성 및 역할</h2>
         <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
             <div class="grid grid-cols-1 md:grid-cols-3 gap-6 text-xl text-gray-300">
                 <div class="p-4 rounded-xl bg-gray-800 hover:scale-105 hover:shadow-2xl transition">
@@ -155,12 +180,12 @@
             </div>
         </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">전체 파이프라인</h2>
+        <h2 id="pipeline" class="text-3xl font-bold text-blue-200 mb-4">전체 파이프라인</h2>
         <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
             <img src="Summary_Pipeline.png" alt="전체 파이프라인 구조도" class="section-img" />
         </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 수집</h2>
+        <h2 id="data-collection" class="text-3xl font-bold text-blue-200 mb-4">데이터 수집</h2>
         <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
             <img src="coldata.png" alt="데이터 수집 구조도" class="section-img" />
             <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
@@ -172,7 +197,7 @@
             </ul>
         </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 전처리</h2>
+        <h2 id="data-preprocessing" class="text-3xl font-bold text-blue-200 mb-4">데이터 전처리</h2>
         <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
             <img src="procdata.png" alt="데이터 전처리 흐름도 1" class="section-img" />
             <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
@@ -186,7 +211,7 @@
             </ul>
         </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">데이터 분석</h2>
+        <h2  id="data-analysis" class="text-3xl font-bold text-blue-200 mb-4">데이터 분석</h2>
         <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 space-y-10">
             <h3 class="text-2xl font-semibold text-blue-300 mb-4">1. google forms를 통한 설문 데이터 분석</h3>
             <div class="flex flex-col md:flex-row gap-6">
@@ -302,7 +327,7 @@
             </ul>
         </div>
 
-        <h2 class="text-3xl font-bold text-blue-200 mb-4">서비스</h2>
+        <h2 id="services" class="text-3xl font-bold text-blue-200 mb-4">서비스</h2>
         <div class="space-y-8">
             <div>
                 <h3 class="text-2xl font-semibold text-blue-300 mb-4">서비스 1. AI 챗-봇</h3>
@@ -470,7 +495,7 @@
             </ul>
         </div>
     </main>
-
+    <div class="back-to-top" onclick="window.scrollTo({ top: 0, behavior: 'smooth' });">↑ 맨 위로</div>
     <footer class="max-w-6xl mx-auto px-6 py-10 text-center text-gray-400">
         <p>© 2025 김시온 Portfolio | <a href="../index.html" class="text-blue-400 hover:underline">메인으로 돌아가기</a></p>
     </footer>
