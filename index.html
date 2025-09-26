@@ -44,7 +44,10 @@
         <li><a href="#communication" class="block text-gray-300 hover:text-blue-400 transition duration-150">커뮤니케이션</a></li>
       </ul>
     </nav>
-
+        <!-- 오른쪽 맨 위로 버튼 -->
+    <button id="scrollTopBtn" class="fixed bottom-10 right-10 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-400 transition">
+      ↑ 맨 위로
+    </button>
     <main class="flex-grow lg:ml-64">
 
       <header class="max-w-5xl mx-auto py-12 px-6 flex flex-col md:flex-row items-center gap-8 relative">
@@ -270,16 +273,25 @@
           📋 <a href="https://sion1043.github.io/resume/resume.html" target="_blank" class="link"> Resume</a>
         </p>
       </footer>
+
+
+  <script>
+    // 맨 위로 스크롤
+    const scrollTopBtn = document.getElementById('scrollTopBtn');
+    scrollTopBtn.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  </script>
     </main>
   </div>
 
-  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
+  <!-- <button onclick="window.scrollTo({top: 0, behavior: 'smooth'})" 
           class="fixed bottom-8 right-8 bg-blue-500 text-white p-4 rounded-full shadow-lg hover:bg-blue-600 transition-colors duration-300 z-50">
     <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 10l7-7m0 0l7 7m-7-7v18" />
     </svg>
     <span class="sr-only">맨 위로 돌아가기</span>
-  </button>
+  </button> -->
   
 </body>
 </html>
