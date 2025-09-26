@@ -43,15 +43,16 @@
     /* 좌측 사이드바 */
     .sidebar {
       position: fixed;
-      top: 50px;
+      top: 50px; 
       left: 0;
       width: 180px;
-      height: 100%;
+      height: calc(100% - 50px); /* 상단 50px 제외한 나머지 전체 높이 */
+      padding: 20px;
       background: #f0f4f8;
       border-right: 1px solid #ddd;
-      padding: 20px;
       box-sizing: border-box;
     }
+
     .sidebar h3 {margin:0 0 12px 0; font-size:16px; color:#187BB1;}
     .sidebar hr {border:0;border-top:1px solid #187BB1;margin:8px 0;}
     .sidebar a {
@@ -85,13 +86,13 @@
 
   <!-- 좌측 사이드바 -->
   <div class="sidebar">
-    <h3>목차</h3>
+    <h1>목차</h3>
     <hr/>
-    <a href="#intro">섹션1: 간략 소개</a>
-    <a href="#skills">섹션2: 핵심 역량</a>
-    <a href="#projects">섹션3: 프로젝트</a>
-    <a href="#education">섹션4: 학력/교육</a>
-    <a href="#certs">섹션5: 자격증/수상</a>
+    <a href="#intro"><h2>간략 소개</h2></a>
+    <a href="#skills"><h2>핵심 역량</h2></a>
+    <a href="#projects"><h2>프로젝트</h2></a>
+    <a href="#education"><h2>학력/교육</h2></a>
+    <a href="#certs"><h2>자격증/수상</h2></a>
   </div>
 
   <!-- 우측 맨위로 버튼 -->
@@ -104,7 +105,8 @@
       <p>
         📧 <span id="email" style="cursor:pointer;color:#187BB1;text-decoration:underline;">ksmon117@naver.com</span> |
         💻 <a href="https://github.com/sion1043" target="_blank" class="link">GitHub</a> |
-        🔗 <a href="https://www.linkedin.com/in/시온-김-460786345" target="_blank" class="link">LinkedIn</a>
+        🔗 <a href="https://www.linkedin.com/in/시온-김-460786345" target="_blank" class="link">LinkedIn</a> |
+        📋 <a href="https://sion1043.github.io/" target="_blank" class="link">Portfolio</a>
       </p>
       <div id="alert" class="copy-alert">복사되었습니다!</div>
     </header>
