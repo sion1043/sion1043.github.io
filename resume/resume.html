@@ -6,7 +6,7 @@
   <title>김시온 | 데이터 분석가 · 데이터 사이언티스트</title>
   <style>
     body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#f9fafb;color:#111;line-height:1.6;margin:0;padding:20px}
-    .container{max-width:900px;margin:0 auto;background:#fff;padding:40px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.08)}
+    .container{max-width:900px;margin:0 auto;background:#fff;padding:40px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.08);position:relative;z-index:1}
     h1,h2,h3{margin:0 0 12px;color:#187BB1}
     h1{font-size:28px}
     h2{font-size:20px;margin-top:32px}
@@ -16,15 +16,83 @@
     li{margin-bottom:4px}
     .info{margin-bottom:20px}
     .section{margin-bottom:28px}
-    .tag{display:inline-block;background:#eef6fb;color:#187BB1;padding:4px 8px;border-radius:6px;margin:2px;font-size:13px}
     .job{margin-bottom:18px;padding:12px;border:1px solid #eee;border-radius:8px}
     .project{margin-bottom:18px;padding:12px;border-left:4px solid #187BB1;background:#fdfefe;border-radius:4px}
     hr{border:0;border-top:2px solid #187BB1;margin:12px 0 20px 0}
     .copy-alert {display:none;position:absolute;background:#187BB1;color:white;padding:6px 12px;border-radius:6px;font-size:13px;}
     .link {color:#187BB1;text-decoration:none;margin-right:12px;}
+    
+    /* 스킬 알약 */
+    .skill-pill {
+      display: inline-block;
+      background-color: #187BB1;
+      color: white;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 0.9rem;
+      margin: 3px 5px 3px 0;
+      transition: transform 0.2s, background-color 0.2s;
+      cursor: default;
+    }
+    .skill-pill:hover {
+      background-color: #105a8b;
+      transform: scale(1.1);
+    }
+
+    /* 사이드바 */
+    .sidebar {
+      position: fixed;
+      left: 10px;
+      top: 50%;
+      transform: translateY(-50%);
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      padding: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+      z-index: 1000;
+    }
+    .sidebar a {
+      display: block;
+      margin-bottom: 8px;
+      color: #187BB1;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .sidebar a:hover { text-decoration: underline; }
+
+    /* 맨위로 버튼 */
+    .top-btn {
+      position: fixed;
+      right: 20px;
+      bottom: 20px;
+      background: #187BB1;
+      color: white;
+      padding: 10px 16px;
+      border-radius: 50%;
+      font-size: 16px;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      z-index: 1000;
+      transition: background 0.2s;
+    }
+    .top-btn:hover { background: #105a8b; }
   </style>
 </head>
 <body>
+
+  <!-- 사이드바 -->
+  <div class="sidebar">
+    <a href="#intro">간략 소개</a>
+    <a href="#skills">핵심 역량</a>
+    <a href="#projects">프로젝트</a>
+    <a href="#education">학력/교육</a>
+    <a href="#certs">자격증/수상</a>
+  </div>
+
+  <!-- 맨위로 버튼 -->
+  <div class="top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑</div>
+
   <div class="container">
     <header class="info">
       <h1>김시온 | 데이터 분석가 · 데이터 사이언티스트</h1>
@@ -37,7 +105,7 @@
       <div id="alert" class="copy-alert">복사되었습니다!</div>
     </header>
 
-    <section class="section">
+    <section class="section" id="intro">
       <h2>간략 소개</h2>
       <hr />
       <p>안녕하세요. 클라우드 프로젝트 경험이 있는 데이터 분석가 · 데이터 사이언티스트 김시온입니다.  
@@ -46,8 +114,7 @@
       앞으로도 꾸준히 성장하며 데이터로부터 의미 있는 가치를 창출하는 데이터 분석가 · 데이터 사이언티스트가 되고자 합니다.</p>
     </section>
 
-
-    <section class="section">
+    <section class="section" id="skills">
       <h2>핵심 역량</h2>
       <hr />
       <div>
@@ -65,7 +132,7 @@
         <span class="skill-pill">Azure Stream Analytics</span>
         <span class="skill-pill">Cosmos DB</span>
       </div>
-      
+      <!-- 여기에 기존 나머지 내용 그대로 유지 -->
       <style>
       .skill-pill {
         display: inline-block;
@@ -178,51 +245,6 @@
             <li>카카오맵 API + 공항 상업 시설 데이터로 내비게이션 서비스 구축</li>
             <li>웹·앱 UI 구현 및 다양한 접속환경 지원</li>
           </ul>
-        </div>
-      </section>
-      
-      <style>
-      .skills {
-        margin: 10px 0;
-      }
-      .skill-pill {
-        display: inline-block;
-        background-color: #187BB1;
-        color: white;
-        padding: 4px 10px;
-        border-radius: 20px;
-        font-size: 0.9rem;
-        margin: 2px 4px 2px 0;
-      }
-      </style>
-
-
-    <section class="section">
-      <h2>학력</h2>
-      <hr />
-      <p>수원대학교, 전자공학과 학사 (2018.03 ~ 2025.02)</p>
-    </section>
-
-    <section class="section">
-      <h2>교육</h2>
-      <hr />
-      <ul>
-        <li>ICT 이노베이션 스퀘어 - AI(중급) 과정 우수 수료 (2023.07)</li>
-        <li>Microsoft, 대한상공회의소 - MS Data School 1st 수료 (2025.04 ~ 2025.09)</li>
-      </ul>
-    </section>
-
-    <section class="section">
-      <h2>자격증 / 수상</h2>
-      <hr />
-      <ul>
-        <li>정보처리기사 (2024.06.18)</li>
-        <li>SQLD (2024.12.13)</li>
-        <li>DP-900 (2025.08.26)</li>
-        <li>OPIC IM1 (2024.07.21)</li>
-        <li>컴퓨터활용능력 2급 (2024.11.01)</li>
-      </ul>
-    </section>
   </div>
 
   <script>
@@ -240,3 +262,4 @@
   </script>
 </body>
 </html>
+
