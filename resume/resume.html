@@ -1,184 +1,145 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ko">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>데이터 분석가 이력서 — 9개 섹션 템플릿</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI 리서치 엔지니어 김가람 이력서</title>
   <style>
-    :root{--accent:#187BB1;--muted:#6b7280;--paper:#ffffff;--bg:#f6f8fb;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
-    body{background:var(--bg);padding:28px;color:#111}
-    .card{max-width:900px;margin:0 auto;background:var(--paper);border-radius:12px;box-shadow:0 8px 24px rgba(16,24,40,0.06);overflow:hidden}
-    .container{padding:28px;display:grid;grid-template-columns:1fr 300px;gap:28px}
-    header{display:flex;flex-direction:column;gap:8px}
-    .name{font-size:24px;font-weight:700;color:#0f172a}
-    .subtitle{color:var(--muted);font-size:14px}
-    .left{min-width:0}
-    .section{margin-bottom:16px}
-    .section h2{margin:0 0 8px;font-size:13px;color:var(--accent)}
-    .info-list{display:flex;flex-direction:column;gap:6px}
-    .pill{display:inline-block;padding:6px 10px;border-radius:8px;background:#f1f8ff;color:var(--accent);font-weight:600;font-size:13px}
-    .box{background:#fff;border:1px solid #eef2f7;border-radius:8px;padding:12px}
-    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{background:#f3f4f6;padding:8px 10px;border-radius:6px;font-size:13px}
-    .project{border-left:4px solid #eef4fb;padding:10px;border-radius:6px;background:#fff}
-    ul.clean{margin:0;padding-left:18px}
-    .aside{display:flex;flex-direction:column;gap:12px}
-    footer{padding:12px 28px;border-top:1px solid #eef2f7;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.01))}
-    @media (max-width:960px){.container{grid-template-columns:1fr;padding:18px}.aside{order:99}}
+    body {
+      font-family: "Noto Sans KR", sans-serif;
+      line-height: 1.6;
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fdfdfd;
+      color: #333;
+    }
+    h1, h2, h3 {
+      color: #187BB1;
+      margin-top: 24px;
+    }
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .contact {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+    .section {
+      margin-bottom: 40px;
+    }
+    ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+    .skills-table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    .skills-table th, .skills-table td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    .skills-table th {
+      background: #f0f4f8;
+    }
   </style>
 </head>
 <body>
-  <div class="card">
-    <div class="container">
-      <main class="left">
-        <header>
-          <div class="name" id="full-name">홍길동</div>
-          <div class="subtitle" id="one-liner">Python · SQL · 데이터 시각화 · 통계 분석 / 인사이트 도출</div>
-        </header>
+  <header>
+    <h1>AI 리서치 엔지니어 김가람</h1>
+    <p class="contact">
+      📧 Email: rkfka1401@gmail.com | 
+      💻 GitHub: <a href="https://github.com/HiMyNameIsDavidKim" target="_blank">HiMyNameIsDavidKim</a> |
+      📄 Paper: FCViT |
+      ✍ Blog: <a href="https://davidlds.tistory.com" target="_blank">Tistory</a>
+    </p>
+  </header>
 
-        <!-- 2. 개인정보 -->
-        <section class="section">
-          <h2>2. 개인정보</h2>
-          <div class="box info-list">
-            <div><strong>이름</strong>: <span id="p_name" class="placeholder">홍길동</span></div>
-            <div><strong>전화번호</strong>: <span id="p_phone" class="placeholder">010-1234-5678</span></div>
-            <div><strong>이메일</strong>: <span id="p_email" class="placeholder">example@email.com</span></div>
-            <div><strong>주소 (선택)</strong>: <span id="p_addr" class="placeholder">서울특별시</span></div>
-            <div><strong>링크</strong>: <span id="p_links" class="placeholder">GitHub / 노션 / 블로그 / LinkedIn</span></div>
-          </div>
-        </section>
+  <section class="section">
+    <h2>간략 소개</h2>
+    <p>안녕하세요. 트랜스포머 연구 경험이 있는 AI 리서치 엔지니어 김가람 입니다. ... 앞으로도 꾸준히 성장해서 전설적인 AI 리서치 엔지니어가 되고자 합니다.</p>
+  </section>
 
-        <!-- 3. 핵심 역량 및 스킬 -->
-        <section class="section">
-          <h2>3. 핵심 역량 및 스킬</h2>
-          <div class="box">
-            <p id="summary_short" class="placeholder">예: Python & SQL 기반 데이터 전처리 및 분석 역량 보유. KPI 설계·모니터링, 리포트 자동화 경험.</p>
-            <div style="margin-top:10px" class="skill-list" id="skill_tags">
-              <span class="skill">Python (pandas)</span>
-              <span class="skill">SQL</span>
-              <span class="skill">Tableau / PowerBI</span>
-              <span class="skill">통계분석</span>
-              <span class="skill">A/B 테스트</span>
-            </div>
-          </div>
-        </section>
+  <section class="section">
+    <h2>핵심 역량</h2>
+    <ul>
+      <li>Python(PyTorch) 활용 AI 연구 역량 – Vision, VLM, 추천 시스템, LLM</li>
+      <li>AI 모델 활용 서비스 개발 – 데이터 정제, 모델 개발, 인프라 구축, 배포</li>
+      <li>주도적으로 학습하고 성장하는 역량 – 최신 AI 논문 리뷰, 프롬프트 활용</li>
+      <li>도메인 지식 활용 – 추천 시스템, 제조업 AI 검사</li>
+      <li>복잡한 문제를 이해하기 쉽게 설명하는 역량 – 다수 협력업체와 협업 경험</li>
+    </ul>
+  </section>
 
-        <!-- 4. 경력(직무 관련) -->
-        <section class="section">
-          <h2>4. 경력 (직무 관련)</h2>
-          <div id="work_experience">
-            <!-- 반복 블록 템플릿 -->
-            <div class="box" style="margin-bottom:10px">
-              <div style="display:flex;justify-content:space-between;align-items:center">
-                <div><strong>회사명 (부서) · 직급</strong> <div class="muted" style="font-size:13px">근무기간: 2022.03 – 2024.06</div></div>
-                <div style="font-size:13px;color:var(--muted)">주요성과: 리포트 자동화로 분석시간 30% 단축</div>
-              </div>
-              <p class="placeholder">업무 요약: 서비스 운영 데이터 분석, KPI 관리, 리포트 자동화 등</p>
-            </div>
-          </div>
-        </section>
+  <section class="section">
+    <h2>경력 요약</h2>
+    <ul>
+      <li><b>Hecto</b>, AI개발자 (2025.03 ~ 재직 중)</li>
+      <li><b>IDEA Lab.</b>, 대학원 연구 (2023.02 ~ 2025.02)</li>
+      <li><b>LG디스플레이</b>, AI빅데이터 직무 (2020.11 ~ 2022.09)</li>
+      <li><b>트라이큐빅스코리아</b>, AI연구 인턴 (2018.12 ~ 2019.01)</li>
+    </ul>
+  </section>
 
-        <!-- 5. 프로젝트(직무 관련) -->
-        <section class="section">
-          <h2>5. 프로젝트 (직무 관련)</h2>
-          <div id="projects_list">
-            <article class="project" style="margin-bottom:10px">
-              <div style="display:flex;justify-content:space-between;align-items:flex-start">
-                <div>
-                  <strong>프로젝트명</strong>
-                  <div style="font-size:13px;color:var(--muted)">기간: 2023.03 – 2023.06 · 팀 규모: 3명</div>
-                </div>
-                <div style="font-size:13px;color:var(--muted)">역할: 데이터 분석 / 모델링 / 시각화</div>
-              </div>
-              <div style="margin-top:8px">
-                <strong>사용기술</strong>: Python, SQL, Tableau
-                <p class="placeholder">주요 내용: 분석 목적 · 방법론 · 결과 / 임팩트(수치화)</p>
-              </div>
-            </article>
-          </div>
-        </section>
+  <section class="section">
+    <h2>주요 경력 및 프로젝트</h2>
+    <h3>(주)헥토 (2025 ~ )</h3>
+    <ul>
+      <li>비디오 임베딩 모델 연구 – CLIP, VLM 기반 추천 모델</li>
+      <li>쇼핑 추천 시스템 연구 – BERT, LLM, DeepFM</li>
+      <li>추천 시스템 인프라 구축 – Airflow, Kafka, Redis, Docker</li>
+    </ul>
 
-        <!-- 6. 대외활동(직무 관련) -->
-        <section class="section">
-          <h2>6. 대외활동 (직무 관련)</h2>
-          <div class="box">
-            <ul class="clean">
-              <li class="placeholder">데이터 경진대회(해커톤) 참가 — 예: 2022 OO 해커톤 우수상</li>
-              <li class="placeholder">오픈소스/블로그 기여 — 데이터 분석 관련 글 게재</li>
-            </ul>
-          </div>
-        </section>
+    <h3>IDEA Lab. 석사과정 (2023 ~ 2025)</h3>
+    <ul>
+      <li>직소퍼즐 기반 Vision Transformer 연구, SOTA 달성</li>
+      <li>논문 등재: Expert Systems with Applications 외</li>
+    </ul>
 
-        <!-- 7. 교육사항(직무 관련) -->
-        <section class="section">
-          <h2>7. 교육사항 (직무 관련)</h2>
-          <div class="box">
-            <ul class="clean">
-              <li class="placeholder">데이터 사이언스 부트캠프 — 2022 (예: OO 아카데미)</li>
-              <li class="placeholder">온/오프라인 강의: 통계, 머신러닝, SQL 고급 과정</li>
-            </ul>
-          </div>
-        </section>
+    <h3>LG디스플레이 (2020 ~ 2022)</h3>
+    <ul>
+      <li>애플워치 패널 검사 자동화 알고리즘 설계 및 운영</li>
+      <li>AI 빅데이터 기반 Feature engineering, F1 score 개선</li>
+    </ul>
 
-        <!-- 8. 학력사항 -->
-        <section class="section">
-          <h2>8. 학력사항</h2>
-          <div class="box">
-            <div><strong>대학교명</strong> — 전공 (졸업연도)</div>
-            <div class="muted" style="margin-top:6px">관련과목: 통계학, 데이터베이스, 알고리즘 등</div>
-          </div>
-        </section>
+    <h3>트라이큐빅스코리아 (2018 ~ 2019)</h3>
+    <ul>
+      <li>OCR 알고리즘 연구 (Tesseract + OpenCV)</li>
+      <li>AI 자동판매기 인식률 개선</li>
+    </ul>
+  </section>
 
-        <!-- 9. 첨부파일(포트폴리오) -->
-        <section class="section">
-          <h2>9. 첨부파일 (포트폴리오)</h2>
-          <div class="box">
-            <p class="placeholder">포트폴리오 링크 또는 첨부파일명: GitHub / Notion / PDF (예: portfolio.pdf)</p>
-          </div>
-        </section>
+  <section class="section">
+    <h2>개별 프로젝트</h2>
+    <ul>
+      <li>SK그룹 AI경연 – LLM 경량화, LoRA/ONNX 활용</li>
+      <li>Kaggle 프로젝트 – 사기 탐지, 광고 최적화</li>
+    </ul>
+  </section>
 
-        <!-- 10. 자기소개서(필요시) -->
-        <section class="section">
-          <h2>10. 자기소개서 (필요시)</h2>
-          <div class="box">
-            <p class="placeholder">간단한 자기소개서 전문 또는 요약문을 여기에 입력하세요. (지원 동기, 핵심 역량, 입사 후 포부 등)</p>
-          </div>
-        </section>
+  <section class="section">
+    <h2>학력</h2>
+    <ul>
+      <li>경희대학교 대학원 (석사), 정보디스플레이학 (2023 ~ 2025)</li>
+      <li>경희대학교, 정보디스플레이학/정보전자신소재공학 (2014 ~ 2020)</li>
+    </ul>
+  </section>
 
-      </main>
+  <section class="section">
+    <h2>교육</h2>
+    <ul>
+      <li>제로베이스 데이터분석 교육 (2024)</li>
+      <li>네이버클라우드 AIaaS 개발자 교육 (2022)</li>
+    </ul>
+  </section>
 
-      <aside class="aside">
-        <div class="box">
-          <h3 style="margin:0 0 8px">요약 카드</h3>
-          <div style="font-size:13px;color:var(--muted)">주요 기술</div>
-          <div class="skill-list" style="margin-top:8px">
-            <span class="skill">Python</span>
-            <span class="skill">SQL</span>
-            <span class="skill">Tableau</span>
-            <span class="skill">Pandas</span>
-          </div>
-          <div style="margin-top:10px;font-size:13px;color:var(--muted)">총 경력: <strong id="total_years">3년</strong></div>
-        </div>
-
-        <div class="box">
-          <h3 style="margin:0 0 8px">연락처</h3>
-          <div style="font-size:13px;color:var(--muted)">이메일 / 전화번호 / 링크</div>
-        </div>
-
-        <div class="box">
-          <h3 style="margin:0 0 8px">작성 팁</h3>
-          <ul class="clean" style="font-size:13px;color:var(--muted)">
-            <li>각 항목은 핵심만, 2~4줄 권장</li>
-            <li>성과는 수치로 기재(비율/시간/금액 등)</li>
-            <li>직무 관련 내용 우선 서술</li>
-          </ul>
-        </div>
-      </aside>
-    </div>
-    <footer>
-      <div style="max-width:900px;margin:0 auto;padding:12px 28px;color:var(--muted);font-size:13px">템플릿을 복사해 본인 내용으로 채워넣으세요. PDF로 저장하려면 브라우저의 인쇄 > PDF 저장을 사용하세요.</div>
-    </footer>
-  </div>
-</body>
-</html>
+  <section class="section">
+    <h2>자격증</h2>
+    <ul>
+      <li>ADsP (2023)</li>
+      <li>OPIC IM1 (2024)</li>
+      <li>HSK 4급 (2019)</li>
