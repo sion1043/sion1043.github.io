@@ -3,176 +3,181 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>데이터 분석가 이력서 - 템플릿</title>
+  <title>데이터 분석가 이력서 — 9개 섹션 템플릿</title>
   <style>
-    :root{--accent:#187BB1;--muted:#6b7280;--bg:#ffffff;--paper:#fbfdff;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;}
-    body{background:linear-gradient(180deg, #f5f7fb 0%, #ffffff 100%);padding:32px;font-family:var(--font,Inter),sans-serif;color:#111}
-    .resume{max-width:900px;margin:0 auto;background:var(--paper);border-radius:12px;box-shadow:0 8px 30px rgba(16,24,40,0.06);overflow:hidden}
-    .container{display:grid;grid-template-columns:1fr 360px;gap:32px;padding:36px}
-    header{display:flex;align-items:center;gap:20px}
-    .avatar{width:88px;height:88px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#4aa3d6);display:flex;align-items:center;justify-content:center;color:#fff;font-weight:700}
-    h1{margin:0;font-size:22px}
-    p.lead{margin:4px 0 0;color:var(--muted)}
-    .section{margin-bottom:18px}
-    .section h2{font-size:14px;margin:0 0 10px;color:var(--accent)}
+    :root{--accent:#187BB1;--muted:#6b7280;--paper:#ffffff;--bg:#f6f8fb;font-family:Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial}
+    body{background:var(--bg);padding:28px;color:#111}
+    .card{max-width:900px;margin:0 auto;background:var(--paper);border-radius:12px;box-shadow:0 8px 24px rgba(16,24,40,0.06);overflow:hidden}
+    .container{padding:28px;display:grid;grid-template-columns:1fr 300px;gap:28px}
+    header{display:flex;flex-direction:column;gap:8px}
+    .name{font-size:24px;font-weight:700;color:#0f172a}
+    .subtitle{color:var(--muted);font-size:14px}
+    .left{min-width:0}
+    .section{margin-bottom:16px}
+    .section h2{margin:0 0 8px;font-size:13px;color:var(--accent)}
     .info-list{display:flex;flex-direction:column;gap:6px}
-    .badge{display:inline-block;padding:6px 10px;border-radius:8px;background:#f1f8ff;color:var(--accent);font-weight:600;font-size:13px}
-    .summary{background:#f8fbff;padding:14px;border-radius:8px;border:1px solid #eef6ff}
-    .job{padding:12px;border-radius:8px;border:1px solid #eef2f7;margin-bottom:10px;background:#fff}
-    .job h3{margin:0;font-size:15px}
-    .job .meta{color:var(--muted);font-size:13px;margin-bottom:8px}
-    .job ul{margin:8px 0 0;padding-left:18px}
-    .skills{display:flex;flex-wrap:wrap;gap:8px}
-    .skill{background:#f3f4f6;padding:8px 10px;border-radius:6px;font-size:13px;color:#111}
-    table{width:100%;border-collapse:collapse}
+    .pill{display:inline-block;padding:6px 10px;border-radius:8px;background:#f1f8ff;color:var(--accent);font-weight:600;font-size:13px}
+    .box{background:#fff;border:1px solid #eef2f7;border-radius:8px;padding:12px}
     .two-col{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-    footer{padding:20px 36px;border-top:1px solid #eef2f7;color:var(--muted);font-size:13px}
-    /* print friendly */
-    @media print{body{padding:0} .container{grid-template-columns:1fr 320px;padding:20px} .resume{box-shadow:none}}
-    /* responsive */
-    @media (max-width:880px){.container{grid-template-columns:1fr;padding:20px}.avatar{width:72px;height:72px}.container{gap:16px}}
-    /* placeholder helper */
-    .placeholder{color:var(--muted);font-style:italic}
+    .skill-list{display:flex;flex-wrap:wrap;gap:8px}
+    .skill{background:#f3f4f6;padding:8px 10px;border-radius:6px;font-size:13px}
+    .project{border-left:4px solid #eef4fb;padding:10px;border-radius:6px;background:#fff}
+    ul.clean{margin:0;padding-left:18px}
+    .aside{display:flex;flex-direction:column;gap:12px}
+    footer{padding:12px 28px;border-top:1px solid #eef2f7;background:linear-gradient(180deg,transparent,rgba(0,0,0,0.01))}
+    @media (max-width:960px){.container{grid-template-columns:1fr;padding:18px}.aside{order:99}}
   </style>
 </head>
 <body>
-  <div class="resume" id="resume">
+  <div class="card">
     <div class="container">
-      <!-- LEFT: Main content -->
-      <main>
-        <!-- Header / 기본정보 -->
-        <header class="section">
-          <div class="avatar">이름</div>
-          <div>
-            <h1 id="name">홍길동 <span class="placeholder">(여기에 이름 입력)</span></h1>
-            <p class="lead" id="headline">Python · SQL · 데이터 시각화 · 통계 기반 인사이트 도출</p>
-            <div style="margin-top:8px;display:flex;gap:8px;flex-wrap:wrap">
-              <span class="badge" id="phone">연락처: 010-1234-5678</span>
-              <span class="badge" id="email">이메일: example@email.com</span>
-              <span class="badge" id="location">주소: 서울특별시</span>
-            </div>
-            <div style="margin-top:8px;color:var(--muted);font-size:13px">링크: <span id="links" class="placeholder">GitHub / 노션 / 블로그 등</span></div>
-          </div>
+      <main class="left">
+        <header>
+          <div class="name" id="full-name">홍길동</div>
+          <div class="subtitle" id="one-liner">Python · SQL · 데이터 시각화 · 통계 분석 / 인사이트 도출</div>
         </header>
 
-        <!-- 한 줄 요약 / 핵심역량 요약 -->
+        <!-- 2. 개인정보 -->
         <section class="section">
-          <h2>한 줄 요약 / 핵심역량</h2>
-          <div class="summary" id="one-liner">
-            <p class="placeholder">예: Python & SQL 기반 데이터 전처리 및 분석 역량 보유. 서비스 운영 데이터 분석 및 KPI 관리 경험 있음. 인사이트 기반 개선 제안 가능.</p>
+          <h2>2. 개인정보</h2>
+          <div class="box info-list">
+            <div><strong>이름</strong>: <span id="p_name" class="placeholder">홍길동</span></div>
+            <div><strong>전화번호</strong>: <span id="p_phone" class="placeholder">010-1234-5678</span></div>
+            <div><strong>이메일</strong>: <span id="p_email" class="placeholder">example@email.com</span></div>
+            <div><strong>주소 (선택)</strong>: <span id="p_addr" class="placeholder">서울특별시</span></div>
+            <div><strong>링크</strong>: <span id="p_links" class="placeholder">GitHub / 노션 / 블로그 / LinkedIn</span></div>
           </div>
         </section>
 
-        <!-- 주요 경력 요약 / 경력 핵심 성과 -->
+        <!-- 3. 핵심 역량 및 스킬 -->
         <section class="section">
-          <h2>주요 경력 요약 / 핵심 성과</h2>
-          <div id="career-summary">
-            <!-- 반복 가능한 블록: company -->
-            <article class="job">
-              <h3>회사명 (부서) · 직급</h3>
-              <div class="meta">근무기간: 2022.03 – 2024.06</div>
-              <p class="placeholder">업무 요약: 서비스 운영 데이터 분석, 리포트 자동화 등. 성과: 리포트 자동화로 분석 소요 시간 30% 절감, 캠페인 개선으로 클릭률 15% 증가.</p>
-            </article>
+          <h2>3. 핵심 역량 및 스킬</h2>
+          <div class="box">
+            <p id="summary_short" class="placeholder">예: Python & SQL 기반 데이터 전처리 및 분석 역량 보유. KPI 설계·모니터링, 리포트 자동화 경험.</p>
+            <div style="margin-top:10px" class="skill-list" id="skill_tags">
+              <span class="skill">Python (pandas)</span>
+              <span class="skill">SQL</span>
+              <span class="skill">Tableau / PowerBI</span>
+              <span class="skill">통계분석</span>
+              <span class="skill">A/B 테스트</span>
+            </div>
           </div>
         </section>
 
-        <!-- 프로젝트 / 경력 상세 -->
+        <!-- 4. 경력(직무 관련) -->
         <section class="section">
-          <h2>프로젝트 / 경력 상세</h2>
-          <div id="projects">
-            <!-- 프로젝트 템플릿: 복사해서 여러개 추가 -->
-            <article class="job">
-              <h3>프로젝트명 / 업무명</h3>
-              <div class="meta">기간: 2023.03 – 2023.06 · 팀 규모: 3명</div>
-              <div class="two-col">
+          <h2>4. 경력 (직무 관련)</h2>
+          <div id="work_experience">
+            <!-- 반복 블록 템플릿 -->
+            <div class="box" style="margin-bottom:10px">
+              <div style="display:flex;justify-content:space-between;align-items:center">
+                <div><strong>회사명 (부서) · 직급</strong> <div class="muted" style="font-size:13px">근무기간: 2022.03 – 2024.06</div></div>
+                <div style="font-size:13px;color:var(--muted)">주요성과: 리포트 자동화로 분석시간 30% 단축</div>
+              </div>
+              <p class="placeholder">업무 요약: 서비스 운영 데이터 분석, KPI 관리, 리포트 자동화 등</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 5. 프로젝트(직무 관련) -->
+        <section class="section">
+          <h2>5. 프로젝트 (직무 관련)</h2>
+          <div id="projects_list">
+            <article class="project" style="margin-bottom:10px">
+              <div style="display:flex;justify-content:space-between;align-items:flex-start">
                 <div>
-                  <strong>역할/책임</strong>
-                  <p class="placeholder">데이터 수집 / 전처리 / 모델링 / 시각화 / 인사이트 도출 / 발표</p>
-                  <strong>사용 기술 / 툴</strong>
-                  <p class="placeholder">Python (pandas, scikit-learn), SQL, Tableau</p>
+                  <strong>프로젝트명</strong>
+                  <div style="font-size:13px;color:var(--muted)">기간: 2023.03 – 2023.06 · 팀 규모: 3명</div>
                 </div>
-                <div>
-                  <strong>주요 내용</strong>
-                  <p class="placeholder">분석 목적 및 방법론 서술</p>
-                  <strong>결과 & 임팩트</strong>
-                  <p class="placeholder">예: 전환율 8%p 상승, 월간 리포트 작성시간 20시간 단축</p>
-                </div>
+                <div style="font-size:13px;color:var(--muted)">역할: 데이터 분석 / 모델링 / 시각화</div>
+              </div>
+              <div style="margin-top:8px">
+                <strong>사용기술</strong>: Python, SQL, Tableau
+                <p class="placeholder">주요 내용: 분석 목적 · 방법론 · 결과 / 임팩트(수치화)</p>
               </div>
             </article>
           </div>
         </section>
 
-        <!-- 기술 스킬 / 역량 -->
+        <!-- 6. 대외활동(직무 관련) -->
         <section class="section">
-          <h2>기술 스킬 / 역량</h2>
-          <div class="skills" id="skills">
-            <span class="skill">Python (pandas, numpy)</span>
-            <span class="skill">SQL</span>
-            <span class="skill">Tableau / PowerBI</span>
-            <span class="skill">통계분석 / A/B 테스트</span>
-            <span class="skill">머신러닝(기초)</span>
-          </div>
-        </section>
-
-        <!-- 대외활동 / 수상 / 자격증 / 교육 -->
-        <section class="section">
-          <h2>대외활동 · 수상 · 자격증 · 교육</h2>
-          <ul>
-            <li class="placeholder">해커톤 참가, 공모전 수상, SQLD 등 자격증 기재</li>
-          </ul>
-        </section>
-
-        <!-- 학력 -->
-        <section class="section">
-          <h2>학력</h2>
-          <p class="placeholder">대학교명 / 전공 / 졸업연도 / (학점 등)</p>
-        </section>
-
-        <!-- 추가사항 / 기타 -->
-        <section class="section">
-          <h2>추가사항 / 기타</h2>
-          <p class="placeholder">외국어(토익/TOEIC 등), 관심 분야, 포트폴리오 접근 방법 등</p>
-        </section>
-      </main>
-
-      <!-- RIGHT: Sidebar -->
-      <aside>
-        <section class="section">
-          <h2>요약 카드</h2>
-          <div style="padding:12px;border-radius:10px;border:1px solid #eef2f7;background:#fff">
-            <strong>핵심 스킬</strong>
-            <div class="skills" style="margin-top:8px">
-              <span class="skill">Python</span>
-              <span class="skill">SQL</span>
-              <span class="skill">Tableau</span>
-              <span class="skill">A/B 테스트</span>
-            </div>
-            <div style="margin-top:12px;font-size:13px;color:var(--muted)">총 경력: <strong id="years">3년</strong></div>
-          </div>
-        </section>
-
-        <section class="section">
-          <h2>교육/자격</h2>
-          <div style="padding:12px;border-radius:10px;border:1px solid #eef2f7;background:#fff">
-            <ul style="margin:0;padding-left:18px;color:var(--muted)">
-              <li>SQLD (예: 2024)</li>
-              <li>데이터 사이언스 부트캠프 (예: 2022)</li>
+          <h2>6. 대외활동 (직무 관련)</h2>
+          <div class="box">
+            <ul class="clean">
+              <li class="placeholder">데이터 경진대회(해커톤) 참가 — 예: 2022 OO 해커톤 우수상</li>
+              <li class="placeholder">오픈소스/블로그 기여 — 데이터 분석 관련 글 게재</li>
             </ul>
           </div>
         </section>
 
+        <!-- 7. 교육사항(직무 관련) -->
         <section class="section">
-          <h2>Contact</h2>
-          <div style="padding:12px;border-radius:10px;border:1px solid #eef2f7;background:#fff;color:var(--muted)">
-            <p style="margin:6px 0">상담/문의: <span id="contact">010-1234-5678</span></p>
-            <p style="margin:6px 0">GitHub: <span id="gh" class="placeholder">github.com/username</span></p>
+          <h2>7. 교육사항 (직무 관련)</h2>
+          <div class="box">
+            <ul class="clean">
+              <li class="placeholder">데이터 사이언스 부트캠프 — 2022 (예: OO 아카데미)</li>
+              <li class="placeholder">온/오프라인 강의: 통계, 머신러닝, SQL 고급 과정</li>
+            </ul>
           </div>
         </section>
 
+        <!-- 8. 학력사항 -->
+        <section class="section">
+          <h2>8. 학력사항</h2>
+          <div class="box">
+            <div><strong>대학교명</strong> — 전공 (졸업연도)</div>
+            <div class="muted" style="margin-top:6px">관련과목: 통계학, 데이터베이스, 알고리즘 등</div>
+          </div>
+        </section>
+
+        <!-- 9. 첨부파일(포트폴리오) -->
+        <section class="section">
+          <h2>9. 첨부파일 (포트폴리오)</h2>
+          <div class="box">
+            <p class="placeholder">포트폴리오 링크 또는 첨부파일명: GitHub / Notion / PDF (예: portfolio.pdf)</p>
+          </div>
+        </section>
+
+        <!-- 10. 자기소개서(필요시) -->
+        <section class="section">
+          <h2>10. 자기소개서 (필요시)</h2>
+          <div class="box">
+            <p class="placeholder">간단한 자기소개서 전문 또는 요약문을 여기에 입력하세요. (지원 동기, 핵심 역량, 입사 후 포부 등)</p>
+          </div>
+        </section>
+
+      </main>
+
+      <aside class="aside">
+        <div class="box">
+          <h3 style="margin:0 0 8px">요약 카드</h3>
+          <div style="font-size:13px;color:var(--muted)">주요 기술</div>
+          <div class="skill-list" style="margin-top:8px">
+            <span class="skill">Python</span>
+            <span class="skill">SQL</span>
+            <span class="skill">Tableau</span>
+            <span class="skill">Pandas</span>
+          </div>
+          <div style="margin-top:10px;font-size:13px;color:var(--muted)">총 경력: <strong id="total_years">3년</strong></div>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px">연락처</h3>
+          <div style="font-size:13px;color:var(--muted)">이메일 / 전화번호 / 링크</div>
+        </div>
+
+        <div class="box">
+          <h3 style="margin:0 0 8px">작성 팁</h3>
+          <ul class="clean" style="font-size:13px;color:var(--muted)">
+            <li>각 항목은 핵심만, 2~4줄 권장</li>
+            <li>성과는 수치로 기재(비율/시간/금액 등)</li>
+            <li>직무 관련 내용 우선 서술</li>
+          </ul>
+        </div>
       </aside>
     </div>
     <footer>
-      ✦ 작성 팁: 각 항목은 최대 2-3줄로 간결히. 숫자/성과 중심으로 기입하세요.
+      <div style="max-width:900px;margin:0 auto;padding:12px 28px;color:var(--muted);font-size:13px">템플릿을 복사해 본인 내용으로 채워넣으세요. PDF로 저장하려면 브라우저의 인쇄 > PDF 저장을 사용하세요.</div>
     </footer>
   </div>
 </body>
