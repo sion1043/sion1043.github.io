@@ -68,35 +68,22 @@
 
     /* 우측 맨위로 버튼 */
     .top-btn {
-      display: inline-block;
-      right: 20px;
-      bottom: 20px;
+      position: fixed;        /* 화면에 고정 */
+      right: 20px;            /* 오른쪽 여백 */
+      bottom: 20px;           /* 아래쪽 여백 */
       background-color: #187BB1;
       color: white;
-      padding: 4px 12px;
-      border-radius: 20px;
+      padding: 8px 16px;      /* 알약 모양에 맞는 패딩 */
+      border-radius: 20px;    /* pill 형태 */
       font-size: 0.9rem;
-      margin: 3px 5px 3px 0;
       cursor: pointer;
-      transition: all 0.2s;
-      cursor: default;
       box-shadow: 0 2px 8px rgba(0,0,0,0.2);
       z-index: 1000;
       transition: background 0.2s;
-      /* position: fixed;
-      right: 20px;
-      bottom: 20px;
-      background: #187BB1;
-      color: white;
-      padding: 12px 18px;
-      border-radius: 8px;
-      font-size: 20px;
-      cursor: pointer;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-      z-index: 1000;
-      transition: background 0.2s; */
     }
-    .top-btn:hover { background: #105a8b; }
+    .top-btn:hover {
+      background: #105a8b;
+    }
   </style>
 </head>
 <body>
