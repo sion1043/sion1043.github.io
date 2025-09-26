@@ -21,6 +21,11 @@
   <meta property="og:image" content="sion.png">
   <meta property="og:type" content="website">
 </head>
+
+        <!-- 오른쪽 맨 위로 버튼 -->
+<button id="scrollTopBtn" class="fixed bottom-10 right-10 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-400 transition">
+  ↑ 맨 위로
+</button>
 <body class="bg-[#151d23] text-gray-100">
 
   <div class="flex">
@@ -46,10 +51,6 @@
     </nav>
 
     <main class="flex-grow lg:ml-64">
-        <!-- 오른쪽 맨 위로 버튼 -->
-    <button id="scrollTopBtn" class="fixed bottom-10 right-10 bg-blue-500 text-white px-4 py-2 rounded-full shadow-lg hover:bg-blue-400 transition">
-      ↑ 맨 위로
-    </button>
       <header class="max-w-5xl mx-auto py-12 px-6 flex flex-col md:flex-row items-center gap-8 relative">
         <img src="sion.png" alt="sion" class="w-24 h-21 rounded-xl shadow-2xl border-4 border-gray-600" />
         <div>
@@ -275,13 +276,7 @@
       </footer>
 
 
-  <script>
-    // 맨 위로 스크롤
-    const scrollTopBtn = document.getElementById('scrollTopBtn');
-    scrollTopBtn.addEventListener('click', () => {
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    });
-  </script>
+
     </main>
   </div>
 
@@ -294,4 +289,11 @@
   </button> -->
   
 </body>
+  <script>
+  // 맨 위로 스크롤
+  const scrollTopBtn = document.getElementById('scrollTopBtn');
+  scrollTopBtn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  });
+</script>
 </html>
