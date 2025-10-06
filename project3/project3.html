@@ -238,17 +238,17 @@
             <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
             
               <!-- 개요 -->
-              <p class="text-xl text-gray-300 leading-relaxed mb-6">
-                전처리 및 분석은 ELT 방식으로 Azure PostgreSQL에 데이터를 저장하고 Databricks에서 메달리온 아키텍처(Medallion Architecture)에 따라 진행.
-              </p>
+              <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                <li>전처리 및 분석은 ELT 방식으로 Azure PostgreSQL에 데이터를 저장하고 Databricks에서 메달리온 아키텍처(Medallion Architecture)에 따라 진행</li>
+              </ul>   
               <img src="proc1.png" alt="데이터 전처리 흐름도" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
 
             
               <!-- 1. 브론즈 레이어 -->
               <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">1. 브론즈 레이어(Bronze Layer)</h3>
-              <p class="text-xl text-gray-300 leading-relaxed mb-4">
-                기존 PostgreSQL 데이터 저장.
-              </p>
+              <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                <li>기존 PostgreSQL 데이터</li>
+              </ul>     
             
               <!-- 2. 실버 레이어 -->
               <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">2. 실버 레이어(Silver Layer)</h3>
