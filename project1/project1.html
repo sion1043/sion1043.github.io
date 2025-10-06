@@ -188,7 +188,7 @@
 
      <h2 id="데이터수집" class="text-3xl font-bold text-blue-200 mb-4">데이터 수집</h2>
      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-       <img src="collect_pl.png" alt="데이터 수집 구조도" class="section-img w-full" />
+       <img src="collect_pl.png" alt="데이터 수집 구조도" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
        <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
          <li>Steam API & Selenium 활용</li>
          <li>RPG 인기 게임 200 + 최고 평점 200 → Top-tier 선정</li>
@@ -199,7 +199,7 @@
 
      <h2 id="데이터전처리" class="text-3xl font-bold text-blue-200 mb-4">데이터 전처리</h2>
      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-       <img src="dataflow_pl.png" alt="데이터 전처리 흐름도" class="section-img w-full" />
+       <img src="dataflow_pl.png" alt="데이터 전처리 흐름도" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
        <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
          <li>결측치 처리 (프로필 비공개, 플레이시간, 리뷰 작성 당시 플레이시간 결측)</li>
          <li>비유효 데이터 삭제 (정식/얼리액세스 출시일 이전 리뷰 제거)</li>
@@ -211,20 +211,28 @@
 
      <h2 id="데이터분석" class="text-3xl font-bold text-blue-200 mb-4">데이터 분석</h2>
      <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 space-y-10">
-       <img src="anal_pl.png" alt="데이터 분석 구조도" class="section-img w-full" />
+       <img src="anal_pl.png" alt="데이터 분석 구조도" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
        <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
          <li>분석과 통계를 통한 전체 게임 중 상위 게임 선정: 상위게임 추천 리뷰 비율 ≥ 77%</li>
          <li>날짜별 리뷰 개수 분포, 출시년도, 가격, 할인율</li>
          <li>유저 리뷰 커뮤니케이션 활성도 분석 (답글, 반응, 좋아요/싫어요)</li>
          <li>상위 게임과 일반 게임 비교: 리뷰 수정율, 리뷰 답변수, 2주간 플레이 시간 등 컬럼 비교</li>
          <li>상위 게임 긍정적 컬럼 비율 ↑, 부정적 컬럼 비율 ↓</li>
-         <div class="flex flex-col md:flex-row gap-6">
+         <!-- <div class="flex flex-col md:flex-row gap-6">
            <img src="success_game.png" class="section-img w-1/2" alt="상위게임 지표" />
            <div class="flex flex-col gap-4 w-1/2">
              <img src="success_game1.png" class="gallery-img w-3/4" />
              <img src="success_game2.png" class="gallery-img w-3/4" />
            </div>
-         </div>
+         </div> -->
+          <div class="flex flex-col md:flex-row gap-6">
+            <img src="success_game.png" class="section-img w-1/2 mx-auto rounded-2xl shadow-lg" alt="상위게임 지표" />
+            <div class="flex flex-col gap-4 w-1/2">
+              <img src="success_game1.png" class="gallery-img w-3/4 mx-auto rounded-2xl shadow-lg" alt="상위게임 지표 1"/>
+              <img src="success_game2.png" class="gallery-img w-3/4 mx-auto rounded-2xl shadow-lg" alt="상위게임 지표 2"/>
+            </div>
+          </div>
+
          <li>샘플 불균형 → 등분산성 위배, 정규성 가정 미충족 → 비모수 검정 수행</li>
          <li>반복 검증: 다른 조건에서도 동일 경향 확인 (수치형, 범주형, 시계열)</li>
        </ul>
