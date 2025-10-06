@@ -173,53 +173,59 @@
               <div>
                 <h3 class="text-2xl font-semibold text-blue-300 mb-3">1. 구직자 더미 데이터 생성</h3>
                 <img src="col1.png" alt="구직자 더미 데이터 생성" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
-                <p class="text-xl text-gray-300 leading-relaxed">
-                  개인정보 이슈로 인해 실제 구직자 데이터를 수집할 수 없어, 4개 채용 플랫폼(원티드, 잡코리아, 점핏, 사람인)과 
-                  정부 결제활동·성씨 통계, 전국 법정동 위치 API를 기반으로 분포 유지형 데이터를 생성. 
-                  IPF로 연령·성별·학력 관계 도출, 가우시안 분포와 가중치를 통해 경력 생성, 
-                  경제활동 인구 분포로 근무지·거주지 구성. 최종적으로 1만 건(16개 정보 컬럼 + 12개 스킬 컬럼) 생성.
-                </p>
+                <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                  <li>개인정보 이슈로 인해 실제 구직자 데이터를 수집할 수 없음</li>
+                  <li>4개 채용 플랫폼(원티드, 잡코리아, 점핏, 사람인)과 정부 결제활동·성씨 통계, 전국 법정동 위치 API를 기반으로 분포 유지형 데이터 생성</li>
+                  <li>IPF를 활용하여 연령 · 성별 · 학력 관계 도출</li>
+                  <li>가우시안 분포와 가중치를 통해 연령별 경력 생성</li>
+                  <li>경제활동 인구 분포를 기반으로 근무지와 거주지 생성</li>
+                  <li>원티드 데이터를 통해 직무 · 스킬 · 연봉 생성</li>
+                  <li>최종적으로 10,000건 데이터 생성 (16개 정보 컬럼 + 12개 스킬 컬럼)</li>
+                </ul>
               </div>
             
               <!-- 2. 채용 공고 및 기업 데이터 수집 -->
               <div>
                 <h3 class="text-2xl font-semibold text-blue-300 mb-3">2. 채용 공고 및 기업 데이터 수집</h3>
                 <img src="col2.png" alt="채용 공고 및 기업 데이터 수집" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
-                <p class="text-xl text-gray-300 leading-relaxed">
-                  사람인과 점핏의 크롤링 및 API를 통해 공고 제목, 요구 기술 스택, 마감일 등 6개 테이블 구성.
-                  채용공고 5,308건, 기업 데이터 532건을 수집해 구조화된 데이터베이스 구축.
-                </p>
+                <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                  <li>사람인과 점핏의 크롤링 및 API 활용</li>
+                  <li>공고 제목, 요구 기술 스택, 마감일 등 약 120개의 컬럼, 6개 테이블 구성</li>
+                  <li>채용공고 5,308건, 기업 데이터 532건 수집</li>
+                </ul>
               </div>
             
               <!-- 3. 허깅페이스 모델 데이터 수집 -->
               <div>
                 <h3 class="text-2xl font-semibold text-blue-300 mb-3">3. 허깅페이스 모델 데이터 수집</h3>
-                <img src="col3.png" alt="허깅페이스 모델 데이터 수집" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
-                <p class="text-xl text-gray-300 leading-relaxed">
-                  기술 트렌드 분석을 위해 허깅페이스에서 모델 2,083,155건을 수집하여 AI 기술 변화 추이를 파악.
-                </p>
+                <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                  <li>기술 트렌드 분석을 위해 허깅페이스에서 모델 2,083,155건을 수집하여 AI 기술 변화 추이를 파악</li>
+                </ul>
               </div>
             
               <!-- 4. 클라우드 마이그레이션 -->
               <div>
                 <h3 class="text-2xl font-semibold text-blue-300 mb-3">4. 클라우드 마이그레이션</h3>
+                <img src="col3.png" alt="허깅페이스 모델 데이터 수집" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
                 <img src="col4.png" alt="클라우드 마이그레이션" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
-                <p class="text-xl text-gray-300 leading-relaxed">
-                  확장 서비스의 독립적 관리를 위해 클라우드 마이그레이션 수행.
-                  PaaS 환경으로 이전하여 운영 부담을 최소화하고, ADMS Online을 통한 자동화된 이전으로 관리 효율 향상.
-                </p>
+                <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                  <li>확장 서비스의 독립적 관리를 위해 클라우드로 마이그레이션 수행</li>
+                  <li>PaaS 환경으로 이전하여 운영 부담 최소화</li>
+                  <li>ADMS Online을 통한 자동화된 이전으로 관리 효율 향상</li>
+                </ul>
               </div>
             
               <!-- 5. 실시간 데이터 수집 -->
               <div>
                 <h3 class="text-2xl font-semibold text-blue-300 mb-3">5. 실시간 데이터 수집</h3>
                 <img src="col5.png" alt="실시간 데이터 수집" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
-                <p class="text-xl text-gray-300 leading-relaxed">
-                  구직자 더미 데이터는 기존 분포를 기반으로 100~250개 랜덤 생성,
-                  공고 데이터는 점핏·사람인 신규 공고만, 허깅페이스는 신규 모델만 수집.  
-                  Azure Function App으로 매일 자동 실행되며, Event Hub와 ASA를 통해 실시간 입력 및 적재.  
-                  결과 데이터는 마이그레이션된 PostgreSQL에 저장.
-                </p>
+                <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                  <li>구직자 더미 데이터는 기존 분포를 기반으로 100~250개 랜덤 생성</li>
+                  <li>공고 데이터는 점핏·사람인에서 새로 올라오는 공고만 수집</li>
+                  <li>허깅페이스 모델 데이터는 새로 업데이트된 모델만 수집</li>
+                  <li>Azure Function App을 통해 매일 자동 실행, Event Hub와 ASA로 실시간 입력 및 적재</li>
+                  <li>최종 데이터는 마이그레이션된 PostgreSQL에 저장</li>
+                </ul>
               </div>
             </div>
 
