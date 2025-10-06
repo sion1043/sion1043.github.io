@@ -241,17 +241,19 @@
               <p class="text-xl text-gray-300 leading-relaxed mb-6">
                 전처리 및 분석은 ELT 방식으로 Azure PostgreSQL에 데이터를 저장하고 Databricks에서 메달리온 아키텍처(Medallion Architecture)에 따라 진행.
               </p>
-              <img src="proc1.png" alt="데이터 전처리 흐름도" class="section-img mb-6" />
+              <img src="proc1.png" alt="데이터 전처리 흐름도" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+
             
               <!-- 1. 브론즈 레이어 -->
-              <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">1. 브론즈 레이어</h3>
+              <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">1. 브론즈 레이어(Bronze Layer)</h3>
               <p class="text-xl text-gray-300 leading-relaxed mb-4">
                 기존 PostgreSQL 데이터 저장.
               </p>
             
               <!-- 2. 실버 레이어 -->
-              <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">2. 실버 레이어</h3>
-              <img src="proc2.png" alt="실버 레이어 처리" class="section-img mb-4" />
+              <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">2. 실버 레이어(Silver Layer)</h3>
+              <img src="proc2.png" alt="실버 레이어 처리" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+
               <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
                 <li><strong>유효 컬럼 추출:</strong> 불필요한 컬럼 제거, 스키마 표준화 (점핏·사람인 공통 ID 적용)</li>
                 <li><strong>데이터 정제:</strong> null, 공백, 특수문자 처리 및 데이터 타입 포맷</li>
@@ -260,8 +262,8 @@
               </ul>
             
               <!-- 3. 골드 레이어 -->
-              <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">3. 골드 레이어</h3>
-              <img src="proc3.png" alt="골드 레이어 처리" class="section-img mb-4" />
+              <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">3. 골드 레이어(Gold Layer)</h3>
+              <img src="proc3.png" alt="골드 레이어 처리" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
               <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
                 <li><strong>데이터 집계:</strong> 공고·지원 비율, 스킬별 사용자 수, 연봉 최소/최대 등 집계, 평균/중앙값/비율 계산</li>
                 <li><strong>피처 엔지니어링:</strong> 지원자 숙련도 변수, 시장 점유율, 스킬 통계 등 지표 생성</li>
