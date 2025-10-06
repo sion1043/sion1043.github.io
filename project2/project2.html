@@ -91,7 +91,7 @@
                     <li>실제로 팀원들과 주변 사람들도 이런 불편함을 겪고 있는 것을 확인했습니다.</li>
                 </ul>
                 <div class="flex flex-col items-center mt-6">
-                    <img src="probl1.png" alt="한국항공협회 불편사항" class="section-img w-3/4" />
+                    <img src="probl1.png" alt="한국항공협회 불편사항" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
                     <p class="image-caption">출처: 한국항공협회</p>
                 </div>
                 <ul class="list-disc list-inside space-y-3 text-xl text-gray-300 mt-6">
@@ -111,11 +111,11 @@
                         </div>
                     </div>
                     <div class="w-full md:w-1/2 flex flex-col items-center">
-                        <img src="probl2.png" alt="설문 불편사항 워드클라우드" class="gallery-img w-full" />
+                        <img src="probl2.png" alt="설문 불편사항 워드클라우드" class="gallery-img w-Full mx-auto mb-4 rounded-2xl shadow-lg" />
                     </div>
                 </div>
                 <div class="mt-6">
-                    <img src="resume.png" alt="구글 설문지" class="section-img w-1/2" />
+                    <img src="resume.png" alt="구글 설문지" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
                 </div>
             </div>
 
@@ -188,12 +188,12 @@
 
             <h2 id="전체파이프라인" class="text-3xl font-bold text-blue-200 mb-4">전체 파이프라인</h2>
             <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-                <img src="Summary_Pipeline.png" alt="전체 파이프라인 구조도" class="section-img" />
+                <img src="Summary_Pipeline.png" alt="전체 파이프라인 구조도" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
             </div>
 
             <h2 id="데이터수집" class="text-3xl font-bold text-blue-200 mb-4">데이터 수집</h2>
             <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-                <img src="coldata.png" alt="데이터 수집 구조도" class="section-img" />
+                <img src="coldata.png" alt="데이터 수집 구조도" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
                 <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
                     <li>공공데이터포털을 통해 총 5가지 데이터를 API를 통해 수집했습니다.</li>
                     <li>인천공항의 실시간 주차장 현황, 상업시설 안내, 항공편 및 기상 정보, 출국장 혼잡도 데이터를 포함합니다.</li>
@@ -205,12 +205,12 @@
 
             <h2 id="데이터전처리" class="text-3xl font-bold text-blue-200 mb-4">데이터 전처리</h2>
             <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-                <img src="procdata.png" alt="데이터 전처리 흐름도 1" class="section-img" />
+                <img src="procdata.png" alt="데이터 전처리 흐름도 1" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
                 <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
                     <li>Azure Functions을 통하여 수집된 데이터들은 Event hub로 전달되어 데이터의 실시간 입력을 감지합니다.</li>
                     <li>Azure Stream analytics에서 해당 Event hub를 입력으로 받아 쿼리를 통하여 결측치, 이상치 처리, 파생 컬럼 생성, 정규화, 범주형 데이터 처리 등을 통해 실시간 전처리를 하여 Azure Cosmos DB의 각 컨테이너 출력으로 저장합니다.</li>
                 </ul>
-                <img src="procdata2.png" alt="데이터 전처리 흐름도 2" class="section-img" />
+                <img src="procdata2.png" alt="데이터 전처리 흐름도 2" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
                 <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
                     <li>Cosmos DB의 change feed 기능을 통해 데이터가 삽입되거나 변경될 때 이를 자동으로 감지하여 azure function이 트리거됩니다.</li>
                     <li>해당 데이터는 임베딩 함수를 통해 Azure open ai의 text-embedding-3-small모델을 통해 벡터로 변환되어 diskANN으로 인덱싱되어 cosmos db에 업데이트되어 저장됩니다.</li>
@@ -222,10 +222,10 @@
                 <h3 class="text-2xl font-semibold text-blue-300 mb-4">1. google forms를 통한 설문 데이터 분석</h3>
                 <div class="flex flex-col md:flex-row gap-6">
                     <div class="w-full md:w-1/2">
-                        <img src="azureml.png" alt="Azure ML 모델 구현" class="gallery-img w-full" />
+                        <img src="azureml.png" alt="Azure ML 모델 구현" class="gallery-img w-full mx-auto mb-4 rounded-2xl shadow-lg" />
                     </div>
                     <div class="w-full md:w-1/2">
-                        <img src="kmeans.png" alt="K-means 클러스터링" class="gallery-img w-full" />
+                        <img src="kmeans.png" alt="K-means 클러스터링" class="gallery-img w-full mx-auto mb-4 rounded-2xl shadow-lg" />
                     </div>
                 </div>
                 <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
@@ -260,7 +260,7 @@
                         </ul>
                     </div>
                 </div>
-                <img src="kmeans2.png" alt="K-means 결과" class="section-img w-full" />
+                <img src="kmeans2.png" alt="K-means 결과" class="section-img w-Full mx-auto mb-4 rounded-2xl shadow-lg" />
                 <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
                     <li>이 3가지 분류를 통하여 사용자 특징 파악하여 페르소나를 선정하고 서비스를 기획했습니다.</li>
                 </ul>
@@ -339,17 +339,17 @@
                     <h3 class="text-2xl font-semibold text-blue-300 mb-4">서비스 1. AI 챗-봇</h3>
                     <div class="hover-box bg-gray-800 rounded-2xl shadow-lg p-6">
                         <h4 class="text-xl font-bold text-blue-200 mb-2">AI 챗-봇 서비스</h4>
-                        <img src="aicb1.png" alt="AI 챗-봇 구조" class="gallery-img w-1/2" />
+                        <img src="aicb1.png" alt="AI 챗-봇 구조" class="gallery-img w-1/2 mx-auto mb-4 rounded-2xl shadow-lg" />
                         <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mt-4">
                             <li>기존 cosmos DB에 저장된 데이터를 벡터 임베딩하여 다른 컨테이너에 저장했습니다.</li>
                             <li>Azure open ai에서 GPT-4.1-mini 모델을 사용하여 챗-봇을 구현했습니다.</li>
                         </ul>
-                        <img src="aicb2.png" alt="챗-봇 서비스 화면" class="gallery-img w-1/2 mt-4" />
+                        <img src="aicb2.png" alt="챗-봇 서비스 화면" class="gallery-img w-1/2 mx-auto mb-4 rounded-2xl shadow-lg" />
                         <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mt-4">
                             <li>사용자가 Static Web App의 UI에 질문을 입력하면 Azure Functions의 HTTP 트리거로 전달됩니다.</li>
                             <li>사용자의 질문을 text-embedding-3-small 모델로 벡터화하여 Cosmos DB에 저장된 벡터들과 cos 유사도 기반으로 검색합니다.</li>
                         </ul>
-                        <img src="aicb3.png" alt="챗-봇 응답" class="gallery-img w-1/2 mt-4" />
+                        <img src="aicb3.png" alt="챗-봇 응답" class="gallery-img w-1/2 mx-auto mb-4 rounded-2xl shadow-lg" />
                         <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 mt-4">
                             <li>생성된 응답을 Azure Function에서 다시 Static Web App로 반환하여 사용자에게 응답 출력됩니다.</li>
                         </ul>
