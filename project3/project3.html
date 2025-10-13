@@ -296,21 +296,21 @@
                 <li>Azure Function App의 Timer Trigger를 통해 주기적으로 업데이트 수행</li>
               </ul>
               <img src="RAG3.png" alt="RAG 데이터 파이프라인 개요" class="section-img w-4/5 mx-auto mt-6 mb-4 rounded-2xl shadow-lg" />
-              <hr class="border-t border-gray-600/60 my-8 w-4/5 mx-auto" />
+              <hr class="border-t border-gray-600/60 my-8 w-Full mx-auto" />
               <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
                 <li><strong>스킬 컨테이너:</strong> PostgreSQL 공고 스펙 컬럼을 정제해 중복 제거 후 Cosmos DB에 저장 (총 481개 스킬)</li>
                 <li><strong>업데이트 주기:</strong> 데이터 변동성이 낮아 매월 1일 정각에 자동 업데이트</li>
               </ul>
               <img src="RAG4.png" alt="스킬 컨테이너 구조" class="section-img w-4/5 mx-auto mt-6 mb-4 rounded-2xl shadow-lg" />
               <img src="RAG5.png" alt="스킬 데이터 수집 예시" class="section-img w-4/5 mx-auto mt-6 mb-4 rounded-2xl shadow-lg" />
-              <hr class="border-t border-gray-600/60 my-8 w-4/5 mx-auto" />
+              <hr class="border-t border-gray-600/60 my-8 w-Full mx-auto" />
               <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
                 <li><strong>질문 컨테이너:</strong> 각 스킬에 대해 GPT가 전문성 있는 10개 질문을 생성하고 질문 컨테이너에 저장</li>
                 <li>질문 다양성을 위해 <strong>매주 1회 업데이트</strong></li>
               </ul>
               <img src="RAG6.png" alt="질문 컨테이너 구조" class="section-img w-4/5 mx-auto mt-6 mb-4 rounded-2xl shadow-lg" />
               <img src="RAG7.png" alt="질문 생성 예시" class="section-img w-4/5 mx-auto mt-6 mb-4 rounded-2xl shadow-lg" />
-              <hr class="border-t border-gray-600/60 my-8 w-4/5 mx-auto" />
+              <hr class="border-t border-gray-600/60 my-8 w-Full mx-auto" />
               <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
                 <li><strong>답변 컨테이너:</strong> 질문 컨테이너의 각 질문에 대해 단계별 숙련도 높은 답변 10개를 생성</li>
                 <li>각 답변은 <strong>text-embedding-3-small</strong> 모델을 통해 벡터화되어 저장</li>
@@ -318,7 +318,7 @@
               </ul>
               <img src="RAG8.png" alt="답변 컨테이너 구조" class="section-img w-4/5 mx-auto mt-6 mb-4 rounded-2xl shadow-lg" />
               <img src="RAG9.png" alt="임베딩 변환 과정" class="section-img w-4/5 mx-auto mt-6 mb-4 rounded-2xl shadow-lg" />
-              <hr class="border-t border-gray-600/60 my-8 w-4/5 mx-auto" />
+              <hr class="border-t border-gray-600/60 my-8 w-Full mx-auto" />
               <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
                 <li><strong>숙련도 계산 API:</strong> Azure Function App의 HTTP Trigger를 통해 사용자의 답변을 입력받음</li>
                 <li>10개의 답변 벡터와 사용자의 답변 벡터 간 <strong>COS 유사도</strong>를 측정</li>
