@@ -272,6 +272,87 @@
             
             </div>
 
+            <h2 id="RAG구현" class="text-3xl font-bold text-blue-200 mb-4">RAG 구현</h2>
+            
+            <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+              
+              <!-- 1️⃣ 문제 정의 및 필요성 -->
+              <h3 class="text-2xl font-semibold text-blue-300 mt-2 mb-2">1. 문제 정의 및 필요성</h3>
+              <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                <li>기존 채용 플랫폼은 <strong>기본 스펙 및 단순 키워드 필터</strong>만 제공하며, 기술 스택 중심의 정량적 비교가 어려움</li>
+                <li>같은 기술을 다루더라도 <strong>이해도·숙련도의 차이</strong>가 존재하여 이를 검증하기 어려움</li>
+                <li>기업은 불필요한 서류·면접 리소스를 낭비하고, 구직자는 자신의 기술 숙련도에 대한 <strong>객관적 지표 부재</strong></li>
+                <li>이에 따라 DrawBridge는 <strong>기술 스택 기반 공고 탐색</strong>뿐 아니라, <strong>기술 숙련도 진단 서비스</strong>를 제공</li>
+              </ul>
+              <img src="RAG1.png" alt="사람인 공고 찾기 페이지" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+              <img src="RAG2.png" alt="점핏 공고 찾기 페이지" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+            
+            
+              <!-- 2️⃣ 데이터 파이프라인 -->
+              <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">2. 데이터 파이프라인(Data Pipeline)</h3>
+              <p class="text-xl text-gray-300 mb-2">
+                비정형 데이터를 활용한 RAG의 경우, Cosmos DB를 중심으로 구성하며 GPT-4.1-mini와 text-embedding-3-small 모델을 사용.
+                Azure Function App의 Timer Trigger를 통해 주기적으로 업데이트 수행.
+              </p>
+              <img src="RAG3.png" alt="RAG 데이터 파이프라인 개요" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+            
+              <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                <li><strong>스킬 컨테이너:</strong> PostgreSQL 공고 스펙 컬럼을 정제해 중복 제거 후 Cosmos DB에 저장 (총 481개 스킬)</li>
+                <li><strong>업데이트 주기:</strong> 데이터 변동성이 낮아 매월 1일 정각에 자동 업데이트</li>
+              </ul>
+              <img src="RAG4.png" alt="스킬 컨테이너 구조" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+              <img src="RAG5.png" alt="스킬 데이터 수집 예시" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+            
+              <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                <li><strong>질문 컨테이너:</strong> 각 스킬에 대해 GPT가 전문성 있는 10개 질문을 생성하고 Cosmos DB에 저장</li>
+                <li>질문 다양성을 위해 <strong>매주 1회 업데이트</strong></li>
+              </ul>
+              <img src="RAG6.png" alt="질문 컨테이너 구조" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+              <img src="RAG7.png" alt="질문 생성 예시" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+            
+              <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                <li><strong>답변 컨테이너:</strong> 질문 컨테이너의 각 질문에 대해 단계별 숙련도 높은 답변 10개를 생성</li>
+                <li>각 답변은 <strong>text-embedding-3-small</strong> 모델을 통해 벡터화되어 저장</li>
+                <li>업데이트 주기는 질문 컨테이너와 동일하게 <strong>매주 1회</strong></li>
+              </ul>
+              <img src="RAG8.png" alt="답변 컨테이너 구조" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+              <img src="RAG9.png" alt="임베딩 변환 과정" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+            
+              <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                <li><strong>숙련도 계산 API:</strong> Azure Function App의 HTTP Trigger를 통해 사용자의 답변을 입력받음</li>
+                <li>10개의 답변 벡터와 사용자의 답변 벡터 간 <strong>COS 유사도</strong>를 측정</li>
+                <li>상위 3개의 유사도에 가중치를 부여해 평균값으로 최종 숙련도 산출</li>
+              </ul>
+              <img src="RAG10.png" alt="숙련도 계산 흐름도" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+              <img src="RAG11.png" alt="Azure Function HTTP Trigger 구조" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+            
+            
+              <!-- 3️⃣ 웹 동작 -->
+              <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">3. 웹 동작(Web Operation)</h3>
+              <p class="text-xl text-gray-300 mb-2">
+                DrawBridge 웹사이트 내에서 구직자는 <strong>기술 숙련도 검사</strong> 기능을 이용 가능.
+                (로그인 → 기술 선택 → 질문 확인 및 답변 작성 → 결과 확인)
+              </p>
+              <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                <li>사용자가 작성한 답변은 API 형태로 변환되어 HTTP Trigger로 전송</li>
+                <li>COS 유사도를 기반으로 계산된 숙련도가 UI에 시각화되어 표시됨</li>
+                <li>최종 결과는 별도의 <strong>유저 숙련도 DB</strong>에 저장되어 분석에 활용됨</li>
+              </ul>
+              <img src="RAG12.png" alt="웹 숙련도 검사 과정" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+            
+            
+              <!-- 4️⃣ 벡터 정책 -->
+              <h3 class="text-2xl font-semibold text-blue-300 mt-6 mb-2">4. 벡터 정책(Vector Policy)</h3>
+              <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
+                <li><strong>Distance Function:</strong> COS 유사도 — 벡터의 방향이 의미를 담으므로 적합</li>
+                <li><strong>Index Type:</strong> DiskANN — 대용량 데이터 확장을 고려한 고속 근사 검색 방식</li>
+                <li>추가적으로 <strong>임베딩 품질 유지</strong>를 위해 주기적인 리인덱싱 수행</li>
+              </ul>
+              <img src="RAG13.png" alt="벡터 정책 구조" class="section-img w-4/5 mx-auto mb-4 rounded-2xl shadow-lg" />
+            
+            </div>
+
+            
 
 
             <h2 id="서비스" class="text-3xl font-bold text-blue-200 mb-4">서비스</h2>
