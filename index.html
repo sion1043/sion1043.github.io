@@ -41,9 +41,9 @@
         <li>
           <a href="#projects" class="block text-blue-300 font-semibold hover:text-blue-400 transition duration-150 mt-4">프로젝트</a>
           <ul class="pl-4 mt-1 space-y-1">
-            <li><a href="#project1" class="block text-gray-400 hover:text-blue-400 text-base">ㄴ Steam 플랫폼 게임 성공요인 분석</a></li>
-            <li><a href="#project2" class="block text-gray-400 hover:text-blue-400 text-base">ㄴ 공항 출국 전 종합 서비스 (ROAD 2 AIR)</a></li>
             <li><a href="#project3" class="block text-gray-400 hover:text-blue-400 text-base">ㄴ 기업과 구직자를 연결하는 채용 지원 서비스 (DrawBridge)</a></li>
+            <li><a href="#project2" class="block text-gray-400 hover:text-blue-400 text-base">ㄴ 공항 출국 전 종합 서비스 (ROAD 2 AIR)</a></li>
+            <li><a href="#project1" class="block text-gray-400 hover:text-blue-400 text-base">ㄴ Steam 플랫폼 게임 성공요인 분석</a></li>
           </ul>
         </li>
         <li><a href="#awards" class="block text-gray-300 hover:text-blue-400 transition duration-150 mt-4">자격/수상</a></li>
@@ -166,50 +166,54 @@
       <section id="projects" class="max-w-5xl mx-auto px-6 mb-16">
         <h2 class="text-3xl font-bold text-blue-300 mb-6">프로젝트</h2>
 
-        <div id="project1" class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 mb-10 transform hover:scale-105 transition-transform duration-300">
-          <h3 class="text-2xl font-bold text-blue-200 mb-3">Steam 플랫폼 게임 성공요인 분석 및 시각화</h3>
-          <p class="text-lg text-gray-300 mb-6">기술 스택: Python · SQL · Selenium · Databricks · Power BI</p>
+
+        <div id="project3" class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 mb-10 transform hover:scale-105 transition-transform duration-300">
+          <h3 class="text-2xl font-bold text-blue-200 mb-3">기업과 구직자를 연결하는 채용 지원 서비스 (DrawBridge)</h3>
+          <p class="text-lg text-gray-300 mb-6">기술 스택: Power BI · Python · SQL · RAG · Cosmos DB · Open-Ai · Docker · Azure Migration · Azure Stream Analytics · Azure Function App · React · Tailwind · Cloud Flare</p>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">기간</h4>
-            <p class="text-gray-200">2025. 05 - 2025. 06 (약 1개월)</p>
+            <p class="text-gray-200">2025. 08 - 2025. 09 (약 1개월)</p>
           </div>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">팀원수 / 역할</h4>
-            <p class="text-gray-200">6명 / 데이터 수집·분석 파이프라인 구축, Power BI 대시보드 시각화</p>
+            <p class="text-gray-200">5명 / 데이터 수집·분석, RAG 설계·구현, Power BI 대시보드 시각화, 파이프라인 구축</p>
           </div>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">프로젝트 개요</h4>
-            <p class="text-gray-200">Steam 플랫폼의 다양한 게임 데이터를 분석하여 성공 요인을 파악하고, 게임사들이 자사 게임의 차이점과 발전 방향을 모니터링할 수 있는 대시보드를 제작</p>
+            <p class="text-gray-200"></p>
           </div>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">비즈니스 모델</h4>
-            <p class="text-gray-200">무료/유료 모델로 설계, 무료 체험 후 유료 서비스로 확장 가능</p>
+            <p class="text-gray-200"></p>
           </div>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">서비스 차별점</h4>
-            <p class="text-gray-200">단순 리뷰 수집이 아닌 <u>리뷰 수정율, 위험 리뷰, 유저 이탈 분석</u> 등 게임 성공/실패 패턴을 직관적으로 볼 수 있는 지표를 설계</p>
+            <p class="text-gray-200"></p>
           </div>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">프로젝트 내용</h4>
             <ul class="list-disc list-inside text-gray-200 space-y-2">
-              <li>Steam API와 크롤링으로 <strong>리뷰</strong> · <strong>게임</strong> · <strong>유저</strong> 데이터 대량 수집</li>
-              <li>Databricks 파이프라인으로 <strong>수집/전처리 자동화 및 메달리온 아키텍처 구성</strong></li>
-              <li>수집 데이터를 <strong>통계 검정, 키워드 분석, 반복 검증</strong>으로 분석 후 대시보드 항목 선정</li>
-              <li>Power BI로 시각화된 대시보드 제작(<strong>리뷰 수정율, 리뷰 근황, 유저 종합, 리뷰 분류, 위험 리뷰, 유저 이탈 분석, 키워드 트리</strong>)</li>
+              <li>(수정중)</li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
+              <li></li>
             </ul>
           </div>
 
-          <a href="project1/project1.html" class="block mt-6 text-blue-400 hover:underline">
+          <a href="project3/project3.html" class="block mt-6 text-blue-400 hover:underline">
             🔗 프로젝트 상세보기
           </a>
           </div>
-
 
         <div id="project2" class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 mb-10 transform hover:scale-105 transition-transform duration-300">
           <h3 class="text-2xl font-bold text-blue-200 mb-3">공항 출국 전 종합 서비스 앱·웹 (ROAD 2 AIR)</h3>
@@ -259,55 +263,56 @@
           </a>
           </div>
 
-
-        
-        <div id="project3" class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 mb-10 transform hover:scale-105 transition-transform duration-300">
-          <h3 class="text-2xl font-bold text-blue-200 mb-3">기업과 구직자를 연결하는 채용 지원 서비스 (DrawBridge)</h3>
-          <p class="text-lg text-gray-300 mb-6">기술 스택: Power BI · Python · SQL · RAG · Cosmos DB · Open-Ai · Docker · Azure Migration · Azure Stream Analytics · Azure Function App · React · Tailwind · Cloud Flare</p>
+        <div id="project1" class="bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10 mb-10 transform hover:scale-105 transition-transform duration-300">
+          <h3 class="text-2xl font-bold text-blue-200 mb-3">Steam 플랫폼 게임 성공요인 분석 및 시각화</h3>
+          <p class="text-lg text-gray-300 mb-6">기술 스택: Python · SQL · Selenium · Databricks · Power BI</p>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">기간</h4>
-            <p class="text-gray-200">2025. 08 - 2025. 09 (약 1개월)</p>
+            <p class="text-gray-200">2025. 05 - 2025. 06 (약 1개월)</p>
           </div>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">팀원수 / 역할</h4>
-            <p class="text-gray-200">5명 / 데이터 수집·분석, RAG 설계·구현, Power BI 대시보드 시각화, 파이프라인 구축</p>
+            <p class="text-gray-200">6명 / 데이터 수집·분석 파이프라인 구축, Power BI 대시보드 시각화</p>
           </div>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">프로젝트 개요</h4>
-            <p class="text-gray-200"></p>
+            <p class="text-gray-200">Steam 플랫폼의 다양한 게임 데이터를 분석하여 성공 요인을 파악하고, 게임사들이 자사 게임의 차이점과 발전 방향을 모니터링할 수 있는 대시보드를 제작</p>
           </div>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">비즈니스 모델</h4>
-            <p class="text-gray-200"></p>
+            <p class="text-gray-200">무료/유료 모델로 설계, 무료 체험 후 유료 서비스로 확장 가능</p>
           </div>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">서비스 차별점</h4>
-            <p class="text-gray-200"></p>
+            <p class="text-gray-200">단순 리뷰 수집이 아닌 <u>리뷰 수정율, 위험 리뷰, 유저 이탈 분석</u> 등 게임 성공/실패 패턴을 직관적으로 볼 수 있는 지표를 설계</p>
           </div>
 
           <div class="mb-6">
             <h4 class="text-xl font-semibold text-blue-300 mb-2 border-b border-gray-600 pb-1">프로젝트 내용</h4>
             <ul class="list-disc list-inside text-gray-200 space-y-2">
-              <li>(수정중)</li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
+              <li>Steam API와 크롤링으로 <strong>리뷰</strong> · <strong>게임</strong> · <strong>유저</strong> 데이터 대량 수집</li>
+              <li>Databricks 파이프라인으로 <strong>수집/전처리 자동화 및 메달리온 아키텍처 구성</strong></li>
+              <li>수집 데이터를 <strong>통계 검정, 키워드 분석, 반복 검증</strong>으로 분석 후 대시보드 항목 선정</li>
+              <li>Power BI로 시각화된 대시보드 제작(<strong>리뷰 수정율, 리뷰 근황, 유저 종합, 리뷰 분류, 위험 리뷰, 유저 이탈 분석, 키워드 트리</strong>)</li>
             </ul>
           </div>
 
-          <a href="project3/project3.html" class="block mt-6 text-blue-400 hover:underline">
+          <a href="project1/project1.html" class="block mt-6 text-blue-400 hover:underline">
             🔗 프로젝트 상세보기
           </a>
           </div>
+
+
+
+
+
+        
+
         
       </section>
 
