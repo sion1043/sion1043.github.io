@@ -1126,31 +1126,85 @@
 </div>
 
 
-            <h2 id="문제상황" class="text-3xl font-bold text-blue-200 mb-4">문제 상황 발생 및 해결</h2>
-            <div class="space-y-6">
-                <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
-                    <h3 class="text-xl font-semibold text-blue-200 mb-2">1. 데이터 구조 문제</h3>
-                    <img src="ts1.png" alt="테이블 구조 문제" class="section-img w-4/5" />
-                    <p class="text-gray-300 mb-1"><strong>문제:</strong> 각 테이블별로 의미체계를 만들어 가져올 경우 Power BI Direct Query가 비활성화됨 (현재 Power BI는 다중 의미체계 미지원)</p>
-                    <p class="text-gray-300"><strong>해결:</strong> 모든 테이블을 1개의 테이블로 병합 후 Power BI 내부에서 테이블로 분할했습니다.</p>
-                    <img src="ts2.png" alt="테이블 병합 해결" class="section-img w-4/5" />
+            <h2 id="문제상황" class="text-3xl font-extrabold text-blue-100 mb-6">문제 상황 발생 및 해결</h2>
+            
+            <div class="space-y-12 mt-4">
+            
+                <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+                    <h3 class="text-2xl font-bold text-blue-200 mb-4 pb-2 border-b border-blue-600">1. 실시간 파이프라인 구축 시 환경 종속성 문제</h3>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-xl font-bold text-gray-100 mb-3">문제 상황</h4>
+                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 leading-relaxed">
+                            <li>저희가 하루 한 번 데이터를 자동 수집하기 위해 **function app**을 사용했는데요, 이 때 로컬에서는 잘 돌아가던 코드가 클라우드에서는 에러가 났습니다. 확인해보니, 환경 종속성 문제였습니다.</li>
+                            <li>제 코드 특성상 로컬 환경을 클라우드에 같이 올려야 했는데, 수업시간에 배운 **function app**은 이걸 지원하지 않는 리소스였습니다.</li>
+                        </ul>
+                    </div>
+                    
+                    <hr class="border-t border-gray-600/60 my-10 w-Full mx-auto" />
+            
+                    <div class="mt-6">
+                        <h4 class="text-xl font-bold text-gray-100 mb-3">해결 방안 및 결과</h4>
+                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 leading-relaxed">
+                            <li>**function app이 아니라 container app**을 사용해서, 코드가 구동될 환경까지 함께 배포를 해봤고, 결국 실시간 파이프라인 구축에 성공하였습니다.</li>
+                        </ul>
+                    </div>
+                    
+                    <hr class="border-t border-gray-600/60 my-10 w-Full mx-auto" />
+                    
+                    <div class="mt-6">
+                        <h4 class="text-xl font-bold text-gray-100 mb-3">고려할 점 (Lessons Learned)</h4>
+                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 leading-relaxed">
+                            <li>우선 리소스 자체가 **더 비싼 플랜**이기도 하고요, 또 만든 컨테이너 환경을 올릴 저장소를 **추가 결제**해야 하기 때문에, **비용이 발생**합니다.</li>
+                            <li>코드를 수정할 일이 생기면 **컨테이너까지 매번 다시 배포**를 해야 돼서 초반에 **유지보수가 느렸습니다.**</li>
+                            <li>이런 식의 파이프라인은, 로컬에서 어느 정도 완성을 해둔 다음에 추가로 클라우드 도입을 해보면 좋을 것 같습니다.</li>
+                        </ul>
+                    </div>
                 </div>
-                <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
-                    <h3 class="text-xl font-semibold text-blue-200 mb-2">2. 데이터베이스 선택 문제</h3>
-                    <img src="ts3.png" alt="테이블 병합 후 DB 저장" class="section-img w-4/5" />
-                    <p class="text-gray-300 mb-1"><strong>문제:</strong> 병합된 데이터를 저장할 DB 선택 (Azure Cosmos DB vs Azure SQL DB)</p>
-                    <img src="ts4.png" alt="DB 비교" class="section-img w-4/5" />
-                    <p class="text-gray-300"><strong>해결:</strong> 실시간성이 중요한 데이터와 서비스인 만큼, 처리 속도가 빠르고, 갑작스런 사용량 증가에 대한 대응성이 좋은 Cosmos DB를 선택했습니다.</p>
+                
+                <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
+                    <h3 class="text-2xl font-bold text-blue-200 mb-4 pb-2 border-b border-blue-600">2. 웹서비스 구현 시 로딩 지연 문제 (쿼리 복잡성)</h3>
+                    
+                    <div class="mt-6">
+                        <h4 class="text-xl font-bold text-gray-100 mb-3">문제 상황</h4>
+                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 leading-relaxed">
+                            <li>웹에서 로딩이 너무 오래 걸리는 문제가 있었습니다.</li>
+                            <li>확인해보니 DB에서 데이터를 가져올 때 쓰는 **쿼리가 복잡했기** 때문이었습니다.</li>
+                        </ul>
+                    </div>
+                    
+                    <hr class="border-t border-gray-600/60 my-10 w-Full mx-auto" />
+            
+                    <div class="mt-6">
+                        <h4 class="text-xl font-bold text-gray-100 mb-3">해결 방안 및 결과</h4>
+                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 leading-relaxed">
+                            <li>자주 쓰는 컬럼 3개 정도를 선별해서 **인덱스를 설정**한 결과, 실제 응답속도가 약 **40% 가량 개선**되는 걸 확인할 수 있었습니다.</li>
+                        </ul>
+                    </div>
+                    
+                    <hr class="border-t border-gray-600/60 my-10 w-Full mx-auto" />
+                    
+                    <div class="mt-6">
+                        <h4 class="text-xl font-bold text-gray-100 mb-3">고려할 점 (향후 계획)</h4>
+                        <ul class="list-disc list-inside text-lg text-gray-300 space-y-2 leading-relaxed">
+                            <li>인덱스를 걸면 조회 성능은 좋아지지만, 데이터가 **업데이트 될 때의 성능은 느려지는 문제**가 생깁니다.</li>
+                            <li>앞으로 저희 서비스가 더 잘 돼서 사용자가 늘어나거나 업데이트를 하루 한 번 보다 더 자주 하게 된다면 추가로 **캐싱을 도입하거나 DB를 수평 확장** 하는 등의 방법까지 고려할 필요가 있겠습니다.</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
-
-            <h2 id="기대효과" class="text-3xl font-bold text-blue-200 mb-4">기대 효과</h2>
+            
+            <hr class="border-t-2 border-blue-400/50 my-12 w-Full mx-auto" />
+            
+            <h2 id="기대효과" class="text-3xl font-extrabold text-blue-100 mb-6">기대 효과</h2>
             <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
-                <ul class="list-disc list-inside text-xl text-gray-300 space-y-2">
-                    <li>데이터 기반 맞춤형 서비스 제공으로 공항 이용객의 불편함 해소 및 만족도 향상</li>
-                    <li>실시간 데이터와 AI 챗봇을 활용하여 정보 접근성을 높이고, 공항 이용 경험을 혁신적으로 개선</li>
-                    <li>개인화된 페르소나 분석을 통해 사용자 맞춤형 서비스를 제공함으로써 서비스의 효율성과 가치 증대</li>
-                    <li>실시간 주차장, 혼잡도 등 유용한 정보를 제공하여 공항 운영 효율성 증대에도 기여</li>
+                <img src="effect1.png" alt="플랫폼, 구직자, 기업 관점 기대효과" class="section-img w-4/5 mx-auto my-6 rounded-2xl shadow-lg border border-gray-700" />
+                <ul class="list-disc list-inside text-xl text-gray-300 space-y-4 mt-6 leading-relaxed">
+                    <li>구직자와 구인기업간의 **미스매치 문제 해결**</li>
+                    <li>점핏 플랫폼의 독보적이고 차별화된 서비스를 추가함으로서 **플랫폼 사용자 확보**</li>
+                    <li>구직자는 보다 객관적이고 명확하게 커리어를 확인하고 계획할 수 있음</li>
+                    <li>기업은 서류, 면접 등 채용과정에서 발생하는 **비용 절감**이 가능함</li>
+                    <li>구직난과 구인난 문제를 해결함으로서 **채용시장 활성화**</li>
                 </ul>
             </div>
         </main>
