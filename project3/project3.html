@@ -798,36 +798,36 @@
                         
                         <h3 class="text-xl font-semibold text-blue-200 mb-4">1. 실시간 파이프라인 구축 시 환경 종속성 문제</h3>
                         
-                        <div class="text-gray-300 space-y-2 leading-relaxed pl-4">
-                            <p>• <strong>문제:</strong> Function App 사용 시 로컬 코드가 클라우드에서 에러 발생 (로컬 환경 종속성 문제).</p>
-                            <p>• <strong>해결:</strong> Function App 대신 코드가 구동될 환경을 함께 배포 가능한 <strong>Container App</strong>을 사용하여 파이프라인 구축 성공.</p>
-                            <p>• <strong>고려할 점:</strong> Container App은 **비용이 더 발생**하고, 코드 수정 시 **컨테이너까지 재배포**해야 하는 유지보수 문제가 있으므로, 로컬 완성 후 클라우드 도입을 권장.</p>
-                        </div>
+                        <ul class="list-disc list-inside text-xl text-gray-300 space-y-2 mt-2 leading-relaxed">
+                            <li><strong>문제:</strong> Function App 사용 시 로컬 코드의 selenium 라이브러리에서 에러 발생 (로컬 환경 종속성 문제).</li>
+                            <li><strong>해결:</strong> Function App 대신 코드가 구동될 환경을 함께 배포 가능한 <strong>Container App</strong>을 사용하여 파이프라인 구축 성공.</li>
+                            <li><strong>고려할 점:</strong> Container App은 비용이 더 발생하고, 코드 수정 시 컨테이너까지 재배포해야 하는 유지보수 문제가 있으므로, 로컬 완성 후 클라우드 도입을 권장.</li>
+                        </ul>
                         
                         <hr class="border-t border-gray-600/60 my-6 w-Full mx-auto" />
                         
                         <h3 class="text-xl font-semibold text-blue-200 mb-4 mt-6">2. 웹서비스 구현 시 로딩 지연 문제 (쿼리 복잡성)</h3>
                         
-                        <div class="text-gray-300 space-y-2 leading-relaxed pl-4">
-                            <p>• <strong>문제:</strong> 웹 로딩이 오래 걸림. (DB에서 데이터를 가져오는 **쿼리가 복잡했기 때문**).</p>
-                            <p>• <strong>해결:</strong> 자주 쓰는 컬럼 3개에 **인덱스를 설정**하여 인덱싱 최적화를 시도, 실제 응답속도 **약 40% 개선**.</p>
-                            <p>• <strong>고려할 점:</strong> 인덱스는 조회 성능은 좋으나, 데이터 **업데이트 시 성능이 느려짐**. 향후 사용자 증가 시 **캐싱 도입**이나 **DB 수평 확장**을 고려할 필요가 있음.</p>
-                        </div>
+                        <ul class="list-disc list-inside text-xl text-gray-300 space-y-2 mt-2 leading-relaxed">
+                            <li><strong>문제:</strong> 웹 로딩이 오래 걸림. (DB에서 데이터를 가져오는 쿼리가 복잡했기 때문).</li>
+                            <li><strong>해결:</strong> 자주 쓰는 컬럼 3개에 인덱스를 설정하여 인덱싱 최적화를 시도, 실제 응답속도 약 40% 개선.</li>
+                            <li><strong>고려할 점:</strong> 인덱스는 조회 성능은 좋으나, 데이터 업데이트 시 성능이 느려짐. 향후 사용자 증가 시 캐싱 도입이나 DB 수평 확장을 고려할 필요가 있음.</li>
+                        </ul>
                         
                     </div>
                 </div>
-                
+                 
                 <hr class="border-t-2 border-blue-400/50 my-12 w-Full mx-auto" />
                 
                 <h2 id="기대효과" class="text-3xl font-bold text-blue-200 mb-4">기대 효과</h2>
                 <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-10">
                     <img src="effect1.png" alt="플랫폼·구직자·기업 관점 기대효과" class="section-img w-2/3 mx-auto my-6 rounded-2xl shadow-lg border border-gray-700" />
                     <ul class="list-disc list-inside text-xl text-gray-300 space-y-2 mt-6 leading-relaxed">
-                        <li>**구직자와 구인기업간의 미스매치 문제 해결**</li>
-                        <li>**점핏 플랫폼의 독보적이고 차별화된 서비스를 추가함으로서 플랫폼 사용자 확보**</li>
-                        <li>**구직자는 보다 객관적이고 명확하게 커리어를 확인하고 계획할 수 있음**</li>
-                        <li>**기업은 서류, 면접 등 채용과정에서 발생하는 비용 절감이 가능함**</li>
-                        <li>**구직난과 구인난 문제를 해결함으로서 채용시장 활성화**</li>
+                        <li>구직자와 구인기업간의 미스매치 문제 해결</li>
+                        <li>점핏 플랫폼의 독보적이고 차별화된 서비스를 추가함으로서 플랫폼 사용자 확보</li>
+                        <li>구직자는 보다 객관적이고 명확하게 커리어를 확인하고 계획할 수 있음</li>
+                        <li>기업은 서류, 면접 등 채용과정에서 발생하는 비용 절감이 가능함</li>
+                        <li>구직난과 구인난 문제를 해결함으로서 채용시장 활성화</li>
                     </ul>
                 </div>
         </main>
