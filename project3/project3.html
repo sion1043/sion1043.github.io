@@ -797,7 +797,7 @@
                     <div class="hover-box bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945] rounded-3xl shadow-2xl p-6">
                         
                         <h3 class="text-xl font-semibold text-blue-200 mb-4">1. 실시간 파이프라인 구축 시 환경 종속성 문제</h3>
-                        
+                        <img src="troubleshooting1.png" alt="환경 종속성 문제" class="section-img w-2/3 mx-auto my-6 rounded-2xl shadow-lg border border-gray-700" />
                         <ul class="list-disc list-inside text-xl text-gray-300 space-y-2 mt-2 leading-relaxed">
                             <li><strong>문제:</strong> Function App 사용 시 로컬 코드의 selenium 라이브러리에서 에러 발생 (로컬 환경 종속성 문제).</li>
                             <li><strong>해결:</strong> Function App 대신 코드가 구동될 환경을 함께 배포 가능한 <strong>Container App</strong>을 사용하여 파이프라인 구축 성공.</li>
@@ -807,7 +807,7 @@
                         <hr class="border-t border-gray-600/60 my-6 w-Full mx-auto" />
                         
                         <h3 class="text-xl font-semibold text-blue-200 mb-4 mt-6">2. 웹서비스 구현 시 로딩 지연 문제 (쿼리 복잡성)</h3>
-                        
+                        <img src="troubleshooting2.png" alt="로딩 지연 문제" class="section-img w-2/3 mx-auto my-6 rounded-2xl shadow-lg border border-gray-700" />
                         <ul class="list-disc list-inside text-xl text-gray-300 space-y-2 mt-2 leading-relaxed">
                             <li><strong>문제:</strong> 웹 로딩이 오래 걸림. (DB에서 데이터를 가져오는 쿼리가 복잡했기 때문).</li>
                             <li><strong>해결:</strong> 자주 쓰는 컬럼 3개에 인덱스를 설정하여 인덱싱 최적화를 시도, 실제 응답속도 약 40% 개선.</li>
