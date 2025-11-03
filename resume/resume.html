@@ -27,58 +27,19 @@
     /* 스킬 알약 호버 */
     .skill-pill {
       display: inline-block;
-      background-color: #187BB1; /* 기본 색상 */
+      background-color: #187BB1;
       color: white;
       padding: 4px 12px;
       border-radius: 20px;
       font-size: 0.9rem;
-      margin: 0; /* skills-container에서 gap으로 처리 */
+      margin: 3px 5px 3px 0;
       transition: all 0.2s;
       cursor: default;
-      box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2), 0 1px 2px 0 rgba(0, 0, 0, 0.1); /* shadow-md 대체 */
     }
     .skill-pill:hover {
-      background-color: #105a8b; /* 기본 호버 색상 */
-      transform: scale(1.05); /* 약간의 확대 효과 */
+      background-color: #105a8b;
+      transform: scale(1.1);
     }
-
-    /* --- 핵심 역량 섹션을 위한 추가 CSS (여기서부터 수정 및 추가) --- */
-    /* 핵심 역량 섹션 전용 컨테이너 스타일 */
-    .skills-container {
-      padding: 40px; /* p-10 */
-      border-radius: 12px;
-      margin-bottom: 20px;
-      /* Tailwind의 'bg-gradient-to-r from-[#253746] via-[#1b2a33] to-[#1f3945]' 대체 */
-      background: linear-gradient(to right, #253746, #1b2a33, #1f3945);
-      box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3), 0 4px 6px -2px rgba(0, 0, 0, 0.15); /* shadow-2xl 대체 */
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px; /* flex flex-wrap gap-3 대체 */
-      transition: transform 0.3s ease-in-out;
-    }
-    .skills-container:hover {
-      transform: scale(1.02); /* hover:scale-105 대신 조금만 확대 */
-    }
-
-    /* skill-pill을 위한 다양한 색상 정의 */
-    .pill-blue { background-color: #1d4ed8; color: white; } /* bg-blue-700 */
-    .pill-blue:hover { background-color: #1e3a8a; }
-
-    .pill-green { background-color: #15803d; color: white; } /* bg-green-700 */
-    .pill-green:hover { background-color: #0f5132; }
-
-    .pill-orange { background-color: #ea580c; color: white; } /* bg-orange-600 */
-    .pill-orange:hover { background-color: #b45309; }
-
-    .pill-purple { background-color: #6d28d9; color: white; } /* bg-purple-700 */
-    .pill-purple:hover { background-color: #5b21b6; }
-
-    .pill-amber { background-color: #d97706; color: white; } /* bg-amber-600 */
-    .pill-amber:hover { background-color: #b45309; }
-
-    .pill-sky { background-color: #0369a1; color: white; } /* bg-sky-700 */
-    .pill-sky:hover { background-color: #075985; }
-    /* --- 추가 CSS 끝 --- */
 
     /* 좌측 사이드바 */
     .sidebar {
@@ -172,48 +133,21 @@
     <section class="section" id="skills">
       <h2>핵심 역량</h2>
       <hr />
-            <div class="skills-container">
-                 
-            <span class="skill-pill pill-blue">Python</span>
-            <span class="skill-pill pill-blue">MySQL</span>
-            <span class="skill-pill pill-blue">Oracle SQL</span>
-            <span class="skill-pill pill-blue">C</span>
-            <span class="skill-pill pill-blue">C++</span>
-        
-            <span class="skill-pill pill-green">Pandas</span>
-            <span class="skill-pill pill-green">Matplotlib</span>
-            <span class="skill-pill pill-green">Seaborn</span>
-            <span class="skill-pill pill-green">NumPy</span>
-            <span class="skill-pill pill-green">Scikit-learn</span>
-            <span class="skill-pill pill-green">TensorFlow</span>
-            <span class="skill-pill pill-green">PyTorch</span>
-            <span class="skill-pill pill-green">Requests</span>
-            <span class="skill-pill pill-green">Selenium</span>
-            <span class="skill-pill pill-green">Beautiful Soup</span>
-            
-            <span class="skill-pill pill-orange">GitHub</span>
-            <span class="skill-pill pill-orange">Notion</span>
-            <span class="skill-pill pill-orange">Figma</span>
-        
-            <span class="skill-pill pill-purple">Tableau</span>
-            <span class="skill-pill pill-purple">Power BI</span>
-            <span class="skill-pill pill-purple">MS Fabric</span>
-            
-            <span class="skill-pill pill-amber">PostgreSQL</span>
-            <span class="skill-pill pill-amber">Azure SQL DB</span>
-            <span class="skill-pill pill-amber">Oracle DB</span>
-            <span class="skill-pill pill-amber">MySQL</span>
-            <span class="skill-pill pill-amber">Cosmos DB</span>
-            
-            <span class="skill-pill pill-sky">Azure</span>
-            <span class="skill-pill pill-sky">Azure Databricks</span>
-            <span class="skill-pill pill-sky">Azure Functions</span>
-            <span class="skill-pill pill-sky">Azure Stream Analytics</span>
-            <span class="skill-pill pill-sky">Azure Machine Learning Studio</span>
-            <span class="skill-pill pill-sky">Azure AI Foundry</span>
-            <span class="skill-pill pill-sky">Azure Open AI</span>
-            
-        </div>
+      <div>
+        <span class="skill-pill">Python</span>
+        <span class="skill-pill">MySQL</span>
+        <span class="skill-pill">Oracle SQL</span>
+        <span class="skill-pill">C</span>
+        <span class="skill-pill">C++</span>
+        <span class="skill-pill">GitHub</span>
+        <span class="skill-pill">Power BI</span>
+        <span class="skill-pill">Databricks</span>
+        <span class="skill-pill">Selenium</span>
+        <span class="skill-pill">Azure</span>
+        <span class="skill-pill">Azure Functions</span>
+        <span class="skill-pill">Azure Stream Analytics</span>
+        <span class="skill-pill">Cosmos DB</span>
+      </div>
 
       <h2>Python · SQL</h2>
       <ul>
