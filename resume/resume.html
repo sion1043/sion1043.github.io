@@ -23,26 +23,36 @@
         .copy-alert {display:none;position:absolute;background:#187BB1;color:white;padding:6px 12px;border-radius:6px;font-size:13px;}
         .link {color:#187BB1;text-decoration:none;margin-right:12px;}
 
-        /* 헤더 수정: 이미지와 텍스트를 나란히 배치 */
+        /* ✅ 헤더 수정: 이미지와 텍스트를 나란히 배치 */
         .header-content {
             display: flex;
             align-items: center; /* 세로 중앙 정렬 */
-            margin-bottom: 20px; /* 헤더 아래 여백 추가 */
+            margin-bottom: 20px;
+            padding-top: 10px; /* 상단 여백 추가 */
         }
 
+        /* ✅ 증명사진 크기 지정 및 스타일 */
         .profile-img {
-            width: 120px; /* 증명사진 크기 지정 */
-            height: 120px;
-            object-fit: cover; /* 이미지 비율 유지 */
-            border-radius: 8px; /* 모서리 둥글게 */
-            margin-right: 20px; /* 이미지와 제목 사이 간격 */
+            width: 100px; /* 증명사진처럼 적당한 크기로 지정 */
+            height: 130px; /* 증명사진 비율 (3:4) */
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 25px; /* 이미지와 제목 사이 간격 */
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* 약간의 그림자 */
         }
 
         .header-title h1 {
             margin: 0; /* h1의 기본 margin 제거 */
             font-size: 28px;
-            margin-top: 0; /* 기존 h1의 margin-top 제거 */
+            color: #111; /* 이름은 더 짙은 색으로 강조 */
         }
+        .header-title p {
+            margin-top: 5px;
+            font-size: 18px;
+            color: #187BB1; /* 직무는 메인 색상으로 */
+            font-weight: 500;
+        }
+
 
       
         /* 스킬 알약 호버 */
@@ -128,7 +138,8 @@
                         <div class="header-content">
                 <img src="증사2.jpg" alt="증명사진" class="profile-img">
                 <div class="header-title">
-                    <h1>김시온 | BI 엔지니어 · 데이터 분석가 · 데이터 사이언티스트</h1>
+                    <h1>김시온</h1>
+                    <p>BI 엔지니어 · 데이터 분석가 · 데이터 사이언티스트</p>
                 </div>
             </div>
             <hr />
