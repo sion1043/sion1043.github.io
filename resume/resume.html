@@ -3,46 +3,94 @@
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
-    <title>김시온 | 데이터 전문가 자기소개서</title>
+    <title>김시온 | 데이터 전문가 (BI 엔지니어 · 데이터 분석가/엔지니어/사이언티스트)</title>
     <style>
         body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;background:#f9fafb;color:#111;line-height:1.7;margin:0;padding:0}
         .container{max-width:900px;margin:0 auto;background:#fff;padding:40px;border-radius:12px;box-shadow:0 6px 20px rgba(0,0,0,0.08);margin-left: 220px;max-width: calc(900px - 220px - 40px);}
         h1,h2,h3{margin:0 0 12px;color:#187BB1}
-        h1{font-size:26px;margin-top:32px}
+        h1{font-size:28px;margin-top:32px}
         h2{font-size:20px;margin-top:24px; color:#333; border-bottom: 1px solid #eee; padding-bottom: 5px;}
+        h3{font-size:18px;margin-top:20px; color:#187BB1}
         p{margin:12px 0; text-align: justify;}
+        ul{margin:6px 0 12px 20px;padding:0}
+        li{margin-bottom:6px}
         .info{margin-bottom:20px}
         .section{margin-bottom:45px}
+        .project{margin-bottom:18px;padding:15px;border-left:4px solid #187BB1;background:#fdfefe;border-radius:4px; box-shadow: 0 2px 5px rgba(0,0,0,0.03);}
         hr{border:0;border-top:2px solid #187BB1;margin:12px 0 20px 0}
         .link {color:#187BB1;text-decoration:none;margin-right:12px;}
 
+        /* 헤더 스타일 */
         .header-content { display: flex; align-items: center; margin-bottom: 20px; }
         .profile-img { width: 120px; height: 120px; object-fit: cover; border-radius: 8px; margin-right: 20px; }
-        .header-title h1 { margin: 0; font-size: 28px; }
+        .header-title h1 { margin: 0; font-size: 26px; line-height: 1.3; }
 
-        .skill-pill { display: inline-block; background-color: #187BB1; color: white; padding: 4px 12px; border-radius: 20px; font-size: 0.85rem; margin: 3px 5px 3px 0; }
+        /* 스킬 알약 스타일 */
+        .skill-pill {
+            display: inline-block;
+            background-color: #187BB1;
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 3px 5px 3px 0;
+            transition: all 0.2s;
+            cursor: default;
+        }
+        .skill-pill:hover { background-color: #105a8b; transform: scale(1.05); }
 
-        .sidebar { position: fixed; top: 0; left: 0; width: 200px; height: 100%; padding: 20px; background: #f0f4f8; border-right: 1px solid #ddd; box-sizing: border-box; }
-        .sidebar h1 { font-size: 18px; margin-bottom: 15px; }
-        .sidebar hr { border: 0; border-top: 1px solid #187BB1; margin: 8px 0; }
-        .sidebar a { display: block; margin: 12px 0; text-decoration: none; color: #187BB1; font-weight: 500; font-size: 14px; }
+        /* 사이드바 스타일 (요청하신 크기 및 디자인) */
+        .sidebar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 200px;
+            height: 100%;
+            padding: 25px 20px;
+            background: #f0f4f8;
+            border-right: 1px solid #ddd;
+            box-sizing: border-box;
+        }
+        .sidebar h3 { font-size: 18px; margin-bottom: 10px; color: #187BB1; }
+        .sidebar hr { border: 0; border-top: 1px solid #187BB1; margin: 8px 0 15px 0; }
+        .sidebar a {
+            display: block;
+            margin: 12px 0;
+            text-decoration: none;
+            color: #187BB1;
+            font-weight: 500;
+            font-size: 14px;
+        }
         .sidebar a:hover { text-decoration: underline; }
 
-        .top-btn { position: fixed; right: 20px; bottom: 20px; background-color: #187BB1; color: white; padding: 8px 16px; border-radius: 20px; font-size: 0.9rem; cursor: pointer; z-index: 1000; }
+        /* 맨위로 버튼 */
+        .top-btn {
+            position: fixed;
+            right: 20px;
+            bottom: 20px;
+            background-color: #187BB1;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+        }
     </style>
 </head>
 <body>
 
     <div class="sidebar">
-        <h1>자소서 목차</h1>
+        <h3>목차</h3>
         <hr/>
-        <a href="#growth">1. 성장과정</a>
-        <a href="#personality">2. 성격의 장·단점</a>
-        <a href="#experience">3. 직무 경험 및 경력</a>
-        <a href="#motivation">4. 지원동기</a>
-        <a href="#plan">5. 입사 후 포부</a>
-        <hr/>
-        <a href="#skills">핵심 역량</a>
+        <a href="#intro">1. 간략 소개</a>
+        <a href="#skills">2. 핵심 역량</a>
+        <a href="#personality">3. 성격의 장·단점</a>
+        <a href="#experience">4. 직무 경험 및 프로젝트</a>
+        <a href="#motivation">5. 지원동기 및 포부</a>
+        <a href="#education">6. 학력 및 교육</a>
+        <a href="#certs">7. 자격증 및 수상</a>
     </div>
 
     <div class="top-btn" onclick="window.scrollTo({top:0, behavior:'smooth'})">↑ 맨 위로</div>
@@ -52,7 +100,7 @@
             <div class="header-content">
                 <img src="증사2.jpg" alt="증명사진" class="profile-img">
                 <div class="header-title">
-                    <h1>김시온 | 데이터 전문가 (BI 엔지니어 · 데이터 분석가)</h1>
+                    <h1>김시온 | 데이터 전문가<br>(BI 엔지니어 · 데이터 분석가/엔지니어/사이언티스트)</h1>
                 </div>
             </div>
             <hr />
@@ -64,75 +112,142 @@
             </p>
         </header>
 
-        <section class="section" id="growth">
-            <h1>1. 성장과정</h1>
+        <section class="section" id="intro">
+            <h1>1. 간략 소개</h1>
             <hr />
-            <h2>AI SaaS와의 만남, 데이터의 가능성을 확신으로 바꾸다</h2>
             <p>
-                대학 시절 진행한 캡스톤 디자인 프로젝트는 제 진로의 터닝포인트였습니다. 기존 시스템에 AI SaaS를 접목하여 데이터를 분석하고 시각화하는 과정을 직접 수행하며, 파편화된 데이터가 정교한 분석을 거쳐 비즈니스 의사결정의 핵심 근거로 변모하는 과정에 깊은 매력을 느꼈습니다. 단순한 기술 구현을 넘어 기술이 실제 문제 해결에 기여하는 가치를 목격한 후, 저는 데이터 분석과 엔지니어링 분야에 대한 확신을 가지고 몰입하기 시작했습니다.
-            </p>
-            <p>
-                이후 데이터 전문가로서의 역량을 체계적으로 쌓기 위해 정보처리기사, SQLD, DP-900 등의 자격증을 취득하며 이론적 기초를 견고히 다졌습니다. 이에 그치지 않고 서울 ICT 이노베이션 스퀘어의 AI 중급 과정과 MS Data School에서 총 1,100시간이 넘는 강도 높은 실무 교육을 이수했습니다. 이 과정에서 Python과 SQL은 물론, 클라우드 기반의 데이터 파이프라인 구축까지 폭넓은 기술 스택을 체화하며 실무 현장에서 즉시 기여할 수 있는 데이터 전문가로 성장해 왔습니다.
-            </p>
-        </section>
-
-        <section class="section" id="personality">
-            <h1>2. 성격의 장·단점</h1>
-            <hr />
-            <h2>꼼꼼함으로 확보하는 데이터 신뢰성, 우선순위로 더하는 업무 효율</h2>
-            <p>
-                저의 가장 큰 강점은 데이터의 신뢰성을 끝까지 책임지는 꼼꼼함과 근본적인 문제 해결력입니다. 데이터 분석에서 작은 오류 하나가 결과 전체를 왜곡할 수 있음을 잘 알기에, 전처리 단계와 AI 서비스 구현 시 예외 처리 로직 설계 및 코드 검토에 심혈을 기울입니다. 실제로 '인천공항 올인원 서비스' 프로젝트 당시, 빈번한 API 호출 지연 문제를 해결하기 위해 단순한 수집 주기 조정 대신 재시도 로직과 정교한 모니터링 시스템을 구축하여 파이프라인의 안정성을 99.9%까지 끌어올린 경험이 있습니다. 이러한 집요함은 프로젝트의 완성도를 보장하는 저만의 핵심 자산입니다.
-            </p>
-            <p>
-                반면, 완벽주의적인 성향으로 인해 배포 전 모든 시나리오를 검토하느라 의사결정 속도가 다소 신중해지는 면이 있습니다. 저는 이러한 단점을 보완하기 위해 '우선순위 기반 의사결정 원칙'을 수립하여 협업에 임하고 있습니다. 팀 프로젝트 중 방향성이 분산될 때 '기술적 구현 가능성'과 '비즈니스 가치'라는 명확한 기준을 제시하여 논의를 효율적으로 수렴시킨 것이 대표적인 사례입니다. 이를 통해 업무의 속도와 완성도 사이의 최적의 균형을 찾으며 팀의 생산성을 극대화하는 법을 지속적으로 실천하고 있습니다.
-            </p>
-        </section>
-
-        <section class="section" id="experience">
-            <h1>3. 직무 경험 및 경력</h1>
-            <hr />
-            <h2>실무에 준하는 End-to-End 데이터 파이프라인 구축 경험</h2>
-            <p>
-                비록 신입이지만, 저는 Azure 클라우드 생태계 내에서 데이터 수집부터 최종 시각화까지 이어지는 End-to-End 파이프라인을 직접 설계하고 운영한 실무급 경험을 보유하고 있습니다. MS Data School을 포함한 다양한 프로젝트를 통해 대용량 트래픽 처리를 위한 Event Hub 활용, Stream Analytics를 통한 실시간 전처리, 그리고 Cosmos DB 저장 체계를 구축하며 클라우드 엔지니어링 역량을 증명했습니다. 특히 로컬 환경의 의존성 문제를 해결하기 위해 컨테이너 앱을 도입하여 안정성을 확보하는 등 실무에서 발생할 수 있는 기술적 난제들을 주도적으로 해결해 왔습니다.
-            </p>
-            <p>
-                또한, 최신 AI 기술인 RAG(검색 증강 생성)를 활용하여 '점핏 채용 지원 서비스'의 숙련도 진단 시스템을 구축하고, Steam 플랫폼 분석을 통해 '리뷰 수정률'과 같은 새로운 KPI를 발굴하며 비즈니스 인사이트를 도출하는 성과를 거두었습니다. 이러한 경험은 단순히 데이터를 다루는 법을 넘어, 비즈니스 요구사항을 기술적으로 구체화하는 감각을 익히게 해주었습니다. 저는 정보처리기사, SQLD 등의 전문 지식과 실무 프로젝트로 다져진 적응력을 바탕으로, 입사와 동시에 현업에 녹아들어 가시적인 성과를 낼 준비가 되어 있습니다.
-            </p>
-        </section>
-
-        <section class="section" id="motivation">
-            <h1>4. 지원동기</h1>
-            <hr />
-            <h2>데이터로 비즈니스의 미래를 설계하는 분석 파트너</h2>
-            <p>
-                저는 데이터를 통해 복잡한 문제를 구조화하고, 거기서 도출된 인사이트가 실제 기업의 전략적 의사결정으로 이어질 때 가장 큰 성취감을 느낍니다. 현대 비즈니스 환경에서 데이터는 단순한 정보의 집합을 넘어 기업의 생존과 성장을 결정짓는 핵심 자산입니다. 저는 이러한 데이터의 잠재적 가치를 극대화하여 기업이 직면한 과제들을 해결하고, 더 나은 비즈니스 방향성을 제시하고자 지원하게 되었습니다.
-            </p>
-            <p>
-                특히 수많은 사용자 상호작용이 일어나는 환경에서 고객의 구매 패턴을 분석하거나 이탈률을 예측하여 서비스 효율을 높이는 과정에 깊은 관심을 가지고 있습니다. 그동안 쌓아온 Python, SQL, Azure 클라우드 기술력은 귀사의 방대한 데이터를 효율적으로 관리하고 분석하는 데 최적의 도구가 될 것입니다. 저는 기술적 전문성과 비즈니스적 통찰력을 겸비하여, 단순히 수치를 나열하는 분석가가 아닌 회사의 성장을 견인하는 전략적 파트너로서 함께 나아가고 싶습니다.
-            </p>
-        </section>
-
-        <section class="section" id="plan">
-            <h1>5. 입사 후 포부</h1>
-            <hr />
-            <h2>즉시 전력감을 넘어, 데이터 기반 혁신의 표준이 되겠습니다</h2>
-            <p>
-                입사 후 저의 첫 번째 목표는 귀사의 데이터 인프라와 비즈니스 도메인을 빠르게 숙지하여 '즉시 전력'으로 기여하는 것입니다. 제가 보유한 Azure, Databricks, Power BI 활용 능력을 바탕으로 기존 데이터 파이프라인의 효율성을 점검하고, 실무진들이 실시간으로 정확한 지표를 확인할 수 있는 최적화된 대시보드를 보급하겠습니다. 이를 통해 데이터 기반의 의사결정이 조직 내에 더 신속하고 정확하게 이루어질 수 있도록 인프라적 뒷받침을 다하겠습니다.
-            </p>
-            <p>
-                장기적으로는 비즈니스 속에 숨겨진 'Why'를 찾아내는 대체 불가능한 데이터 전문가로 성장하겠습니다. 단순히 요청받은 데이터를 추출하는 것에 그치지 않고, 머신러닝 모델을 활용한 선제적 시장 예측이나 프로세스 자동화를 통해 비용 절감과 매출 증대에 실질적으로 기여하겠습니다. 끊임없이 변화하는 기술 트렌드를 선도적으로 학습하고 조직에 이식하여, 귀사가 데이터 중심의 혁신을 지속할 수 있도록 이끄는 핵심 인재가 될 것을 약속드립니다.
+                대학 시절 진행한 캡스톤 디자인 프로젝트에서 AI SaaS를 접목하여 데이터를 분석하고 시각화하는 과정을 경험하며 데이터의 무한한 가능성을 발견했습니다. 단순한 기술 구현을 넘어, 파편화된 데이터가 정교한 분석을 통해 비즈니스 의사결정의 핵심 근거로 변모하는 가치를 목격한 후 데이터 전문가로서의 길을 확신하게 되었습니다. 이후 정보처리기사, SQLD 등의 자격증 취득과 함께 MS Data School을 포함한 1,100시간 이상의 실무 교육을 이수하며 전문성을 다졌습니다. 저는 기술적 숙련도와 비즈니스적 통찰력을 바탕으로 기업의 데이터를 가치 있는 자산으로 전환하는 '즉시 전력감' 데이터 인재입니다.
             </p>
         </section>
 
         <section class="section" id="skills">
-            <h1>핵심 역량</h1>
+            <h1>2. 핵심 역량</h1>
             <hr />
             <div>
-                <span class="skill-pill">Python</span> <span class="skill-pill">MySQL</span> <span class="skill-pill">Oracle SQL</span>
-                <span class="skill-pill">Power BI</span> <span class="skill-pill">Databricks</span> <span class="skill-pill">Azure</span>
-                <span class="skill-pill">Azure Functions</span> <span class="skill-pill">Cosmos DB</span> <span class="skill-pill">RAG / OpenAI</span>
-                <span class="skill-pill">ML/DL Modeling</span> <span class="skill-pill">ETL Pipeline</span>
+                <span class="skill-pill">Python</span>
+                <span class="skill-pill">MySQL</span>
+                <span class="skill-pill">Oracle SQL</span>
+                <span class="skill-pill">C</span>
+                <span class="skill-pill">C++</span>
+                <span class="skill-pill">GitHub</span>
+                <span class="skill-pill">Power BI</span>
+                <span class="skill-pill">Databricks</span>
+                <span class="skill-pill">Selenium</span>
+                <span class="skill-pill">Azure</span>
+                <span class="skill-pill">Azure Functions</span>
+                <span class="skill-pill">Azure Stream Analytics</span>
+                <span class="skill-pill">Cosmos DB</span>
             </div>
+
+            <h3>Python · SQL</h3>
+            <ul>
+                <li>Python과 SQL 기초 지식과 프로그래밍 능력 습득 / 정보처리기사, SQLD</li>
+                <li>머신러닝 및 딥러닝 모델링과 하이퍼 파라미터 튜닝 경험 / ICT 이노베이션 스퀘어 AI(중급), MS Data School 1st</li>
+                <li>주요 ML/DL 라이브러리 활용 (TensorFlow, PyTorch, scikit-learn) / ICT 이노베이션 스퀘어 AI(중급), MS Data School 1st</li>
+                <li>주요 데이터 분석 라이브러리 활용 (pandas, numpy) 및 다양한 데이터 분석 경험 / GitHub, MS Data School 1st</li>
+                <li>웹 크롤링 경험 (정적/동적) 및 최적화 기술 활용 (멀티스레딩, 지연 제어, 오류 처리) / 팀 프로젝트</li>
+                <li>결측치 처리, 이상치 탐지, 데이터 변환 등 데이터 전처리 및 탐색적 데이터 분석(EDA) 경험 / 팀 프로젝트</li>
+                <li>Matplotlib, Seaborn 등 시각화 라이브러리를 활용한 데이터 시각화 경험 / MS Data School 1st </li>
+                <li>모델 성능 평가 및 검증 경험 (교차검증, RMSE, Accuracy 등) / ICT 이노베이션 스퀘어 AI(중급)</li>
+            </ul>
+
+            <h3>Power BI</h3>
+            <ul>
+                <li>비즈니스 문제 해결을 위해 데이터 분석 기반 인사이트 도출 및 KPI 시각화 구현 / 팀 프로젝트</li>
+                <li>실시간 수집 데이터 기반 대시보드 설계 및 사용자 관점 UI/UX 고려 / 팀 프로젝트</li>
+                <li>대용량 데이터 처리 및 계산 효율 개선을 통해 시각화 성능 최적화 (테이블 관리, Big O 분석 기반 계산 최적화) / 팀 프로젝트</li>
+                <li>DAX를 활용 및 커스텀 시각화를 통한 고급 시각화 / 팀 프로젝트</li>
+            </ul>
+
+            <h3>Databricks</h3>
+            <ul>
+                <li>파이프라인 기반 데이터 수집 및 전처리 자동화, 스케줄링과 오류 처리 포함 / 팀 프로젝트</li>
+                <li>Unity 카탈로그와 Spark SQL을 활용한 데이터 통합, 관리 및 분석 경험 / MS Data School 1st</li>
+                <li>메달리온 아키텍처 기반으로 원시·정제·엔터프라이즈 데이터 레이어 관리 경험 / 팀 프로젝트</li>
+                <li>대규모 데이터 ETL 처리 및 Spark 기반 분석으로 성능 최적화 경험 / 팀 프로젝트</li>
+            </ul>
+
+            <h3>Azure</h3>
+            <ul>
+                <li>Cosmos DB, Azure SQL DB, PostgreSQL 등 다양한 클라우드 데이터베이스 관리 및 최적화 경험 / MS Data School 1st</li>
+                <li>Azure Functions, Event Hub, Stream Analytics를 활용한 실시간 데이터 파이프라인 구축 및 관리 / MS Data School 1st</li>
+                <li>Data Factory를 활용한 ETL 파이프라인 설계 및 자동화 / MS Data School 1st</li>
+                <li>Foundry, Azure OpenAI 기반 RAG(정보 검색 기반 생성 AI) 구현 / 팀 프로젝트</li>
+                <li>클라우드 환경 배포 및 모니터링 경험, 리소스 관리 및 최적화 / 팀 프로젝트</li>
+                <li>DevOps 연계 CI/CD를 통한 데이터 파이프라인 자동화 및 관리 경험 / 팀 프로젝트</li>
+            </ul>
+
+            <h3>도메인 지식 및 협업 역량</h3>
+            <ul>
+                <li>이커머스, 게임, 항공, 채용 등 다양한 도메인 데이터 분석 및 인사이트 도출</li>
+                <li>Jira, Git, 기술 문서화(API 명세서 등)를 통한 개발-분석 파트간 원활한 소통</li>
+            </ul>
+        </section>
+
+        <section class="section" id="personality">
+            <h1>3. 성격의 장·단점</h1>
+            <hr />
+            <p>
+                저의 가장 큰 강점은 데이터의 신뢰성을 끝까지 책임지는 꼼꼼함과 근본적인 문제 해결력입니다. 작은 오류가 분석 전체를 왜곡할 수 있기에, 저는 전처리 단계에서 예외 처리 로직 설계에 가장 많은 공을 들입니다. 실제 '인천공항 올인원 서비스' 프로젝트 당시, API 호출 지연 문제를 단순히 수집 주기를 늘려 해결하는 대신 정교한 재시도(Retry) 로직과 모니터링 시스템을 구축하여 파이프라인의 안정성을 99.9%까지 확보한 성과가 있습니다.
+            </p>
+            <p>
+                반면 완벽주의 성향으로 인해 배포 전 검토 시간이 다소 길어지는 면이 있으나, 이를 보완하기 위해 '우선순위 기반 의사결정 원칙'을 수립했습니다. '비즈니스 가치'와 '기술적 구현 가능성'이라는 명확한 기준을 바탕으로 팀 내 의견을 조율하고 의사결정 속도를 높임으로써, 업무의 완성도와 효율성 사이의 최적의 균형을 유지하고 있습니다.
+            </p>
+        </section>
+
+        <section class="section" id="experience">
+            <h1>4. 직무 경험 및 프로젝트</h1>
+            <hr />
+            <p>
+                신입이지만 실무에 준하는 End-to-End 데이터 프로젝트를 주도하며 현업 투입 시 즉각적인 성과를 낼 수 있는 역량을 쌓았습니다. Azure 환경에서 데이터 수집부터 시각화까지 이어지는 전체 파이프라인을 직접 구축하고 운영해 본 경험은 저만의 독보적인 강점입니다.
+            </p>
+            
+            <div class="project">
+                <h3>인천공항 출국 전 종합 서비스 (ROAD 2 AIR)</h3>
+                <p>Azure Function App과 Stream Analytics를 활용해 실시간 공공 데이터를 수집하고 전처리하는 파이프라인을 구축했습니다. Power BI Direct Query 연동을 통해 사용자에게 지연 없는 실시간 대시보드를 제공하며 엔지니어링 역량을 증명했습니다.</p>
+            </div>
+
+            <div class="project">
+                <h3>점핏 채용 지원 서비스 (DrawBridge)</h3>
+                <p>기존 채용 시장의 주관적 평가 한계를 극복하기 위해 Azure OpenAI(GPT-4.1)와 Cosmos DB를 연동한 RAG 기반 숙련도 진단 시스템을 설계했습니다. 벡터 유사도 측정을 통해 객관적인 분석 지표를 생성하는 성과를 거두었습니다.</p>
+            </div>
+
+            <div class="project">
+                <h3>Steam 게임 성공요인 분석</h3>
+                <p>Databricks를 활용한 메달리온 아키텍처 기반의 대규모 데이터 처리 시스템을 운영했습니다. 통계적 검정과 텍스트 마이닝을 통해 '리뷰 수정률'과 같은 새로운 KPI를 발굴하며 게임사에 실질적인 마케팅 인사이트를 제공했습니다.</p>
+            </div>
+        </section>
+
+        <section class="section" id="motivation">
+            <h1>5. 지원동기 및 입사 후 포부</h1>
+            <hr />
+            <p>
+                데이터가 비즈니스의 생존과 성장을 결정짓는 핵심 자산이 된 지금, 저는 단순한 기술자가 아닌 기업의 전략적 파트너로서 기여하고자 합니다. 제가 보유한 Python, SQL, 클라우드 기술력은 귀사의 방대한 데이터를 효율적으로 관리하고 비즈니스 가치를 창출하는 데 최적의 도구가 될 것입니다.
+            </p>
+            <p>
+                입사 후 첫째, 보유한 Azure 및 Power BI 숙련도를 바탕으로 현업에 즉시 투입되어 데이터 인프라 고도화에 기여하는 '즉시 전력'이 되겠습니다. 둘째, 비즈니스 도메인에 대한 깊은 이해를 바탕으로 데이터 속에 숨겨진 'Why'를 찾아내는 대체 불가능한 전문가로 성장하겠습니다. 끊임없는 학습과 적용을 통해 회사의 성장을 견인하는 핵심 인재가 될 것을 약속드립니다.
+            </p>
+        </section>
+
+        <section class="section" id="education">
+            <h1>6. 학력 및 교육</h1>
+            <hr />
+            <p><strong>수원대학교</strong> | 전자공학과 학사 졸업 (2018.03 - 2025.02)</p>
+            <ul>
+                <li>Microsoft & 대한상공회의소 : MS Data School 1st 수료 (956시간)</li>
+                <li>서울 ICT 이노베이션 스퀘어 : AI 중급 과정 우수 수료 (160시간)</li>
+            </ul>
+        </section>
+
+        <section class="section" id="certs">
+            <h1>7. 자격증 및 수상</h1>
+            <hr />
+            <ul>
+                <li>정보처리기사 (한국산업인력공단)</li>
+                <li>SQLD (한국데이터산업진흥원)</li>
+                <li>DP-900: Azure Data Fundamentals (Microsoft)</li>
+                <li>OPIc IM1</li>
+            </ul>
         </section>
     </div>
 
